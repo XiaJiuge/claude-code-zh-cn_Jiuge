@@ -11,10 +11,6 @@
       "chinese": "\"自动编辑\""
     },
     {
-      "original": "\"Plan mode\"",
-      "chinese": "\"计划模式\""
-    },
-    {
       "original": "Tired of repeating yourself? Tell Claude to remember what you’ve told it using CLAUDE.md.",
       "chinese": "无需重复指令。通过 CLAUDE.md 记录已知信息，让 Claude 拥有持久记忆。"
     },
@@ -105,6 +101,22 @@
     {
       "original": "\"Open Claude Code Extension configuration\"",
       "chinese": "\"打开 Claude Code 扩展配置\""
+    },
+    {
+      "original": "\"Connect new sessions to claude.ai/code automatically so you can view and control them from the web.\"",
+      "chinese": "\"自动将新会话连接至 claude.ai/code，以便您在网页端查看和控制。\""
+    },
+    {
+      "original": "\"Enable Remote Control for all sessions\"",
+      "chinese": "\"为所有会话开启远程控制\""
+    },
+    {
+      "original": "\"Show only your prompts and Claude's responses\"",
+      "chinese": "\"仅显示您的提示词与 Claude 的回复\""
+    },
+    {
+      "original": "\"Focus view\"",
+      "chinese": "\"专注视图\""
     },
     {
       "original": "\"View help docs\"",
@@ -765,6 +777,26 @@
       "chinese": "\"详情\""
     },
     {
+      "original": "\"Grep\"",
+      "chinese": "\"文本正则搜索\""
+    },
+    {
+      "original": "\"Search\"",
+      "chinese": "\"搜索\""
+    },
+    {
+      "original": "\"TodoWrite\"",
+      "chinese": "\"待办写入\""
+    },
+    {
+      "original": "\"Glob\"",
+      "chinese": "\"文件路径匹配\""
+    },
+    {
+      "original": "\"ReadCoalesced\"",
+      "chinese": "\"合并读取\""
+    },
+    {
       "original": "\"What to do first? Ask about this codebase or we can start writing code.\"",
       "chinese": "\"接下来做什么？您可以先询问关于此代码库的问题，或者我们直接开始编写代码。\""
     },
@@ -926,6 +958,10 @@
       "chinese": "\"切换快速模式 (仅限 Opus 4.6)\""
     },
     {
+      "original": "\"Toggle fast mode for faster responses (Opus only)\"",
+      "chinese": "\"切换快速模式以获取更快的回复 (仅限 Opus)\""
+    },
+    {
       "original": "\"Toggle fast mode for faster responses (Opus 4.6 only)\"",
       "chinese": "\"开启快速模式以获得更快的响应 (仅限 Opus 4.6)\""
     },
@@ -1024,6 +1060,10 @@
     {
       "original": "\"Manage permission settings\"",
       "chinese": "\"管理权限设置\""
+    },
+    {
+      "original": "\"MCP servers\"",
+      "chinese": "\"MCP 服务端\""
     },
     {
       "original": "\"Configure Model Context Protocol servers\"",
@@ -1410,6 +1450,48 @@
       "chinese": "\"计划模式\""
     },
     {
+      "original": "\"Auto\"",
+      "chinese": "\"自动模式\""
+    },
+    {
+      "original": "\"Manual\"",
+      "chinese": "\"手动模式\""
+    },
+    {
+      "original": "\"Max\"",
+      "chinese": "\"最大\"",
+      "regex": true,
+      "flags": "gi"
+    },
+    {
+      "original": "\"medium\"",
+      "chinese": "\"中等\"",
+      "regex": true,
+      "flags": "gi"
+    },
+    {
+      "original": "\"low\"",
+      "chinese": "\"低\"",
+      "regex": true,
+      "flags": "gi"
+    },
+    {
+      "original": "\"high\"",
+      "chinese": "\"高\"",
+      "regex": true,
+      "flags": "gi"
+    },
+    {
+      "original": "\"Extra high\"",
+      "chinese": "\"极高\"",
+      "regex": true,
+      "flags": "gi"
+    },
+    {
+      "original": "\"Ultracode - xhigh + workflows\"",
+      "chinese": "\"Ultracode - 极高 + 工作流\""
+    },
+    {
       "original": "\"Click to cycle effort level\"",
       "chinese": "\"点击切换思考强度\""
     },
@@ -1428,6 +1510,10 @@
     {
       "original": "\"Press Shift-Tab twice, or click the mode picker twice, to cycle into Plan Mode. This forces Claude to write a detailed plan before it can edit any code.\"",
       "chinese": "\"按两次 Shift+Tab 或点击两次模式选择器，切换到计划模式。此模式会强制 Claude 在编辑代码前先撰写详细计划。\""
+    },
+    {
+      "original": "\"Claude will approve actions that pass a safety check and pause for anything risky\"",
+      "chinese": "\"Claude 将自动放行通过安全检查的操作，并在遇到风险时暂停\""
     },
     {
       "original": "\"Allow fetching this url?\"",
