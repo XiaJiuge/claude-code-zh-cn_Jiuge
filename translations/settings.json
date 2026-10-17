@@ -34,7 +34,48 @@
     "claudeCode.usePythonEnvironment": "**使用 Python 环境：** 运行 Claude 时自动激活工作区的 Python 环境。需要 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) 扩展。"
   },
   "enumDescriptions": {
-    "claudeCode.initialPermissionMode": ["默认：使用默认权限模式", "自动接受编辑：自动接受文件编辑", "计划模式：在编辑前先制定计划", "绕过权限：跳过所有权限确认"],
-    "claudeCode.preferredLocation": ["侧边栏（右侧）", "面板（新标签页）"]
+    "claudeCode.initialPermissionMode": [
+      "默认：使用默认权限模式",
+      "自动接受编辑：自动接受文件编辑",
+      "计划模式：在编辑前先制定计划",
+      "绕过权限：跳过所有权限确认"
+    ],
+    "claudeCode.preferredLocation": [
+      "侧边栏（右侧）",
+      "面板（新标签页）"
+    ]
+  },
+  "commands": {
+    "claude-vscode.editor.open": "Claude Code: 在新标签页中打开",
+    "claude-vscode.editor.openLast": "Claude Code: 打开",
+    "claude-vscode.primaryEditor.open": "Claude Code: 在主编辑器中打开",
+    "claude-vscode.window.open": "Claude Code: 在新窗口中打开",
+    "claude-vscode.createWorktree": "Claude Code: 创建 Git 工作树",
+    "claude-vscode.sidebar.open": "Claude Code: 在侧边栏中打开",
+    "claude-vscode.newConversation": "Claude Code: 新建对话",
+    "claude-vscode.reopenClosedSession": "Claude Code: 重新打开已关闭的会话",
+    "claude-vscode.update": "Claude Code: 更新扩展",
+    "claude-vscode.focus": "Claude Code: 聚焦输入框",
+    "claude-vscode.focusLastMessage": "Claude Code: 聚焦最后一条消息",
+    "claude-vscode.blur": "Claude Code: 取消聚焦输入框",
+    "claude-vscode.logout": "Claude Code: 退出登录",
+    "claude-vscode.terminal.open": "Claude Code: 在终端中打开",
+    "claude-vscode.acceptProposedDiff": "Claude Code: 接受建议的更改",
+    "claude-vscode.rejectProposedDiff": "Claude Code: 拒绝建议的更改",
+    "claude-vscode.acceptProposedHunk": "Claude Code: 接受光标处的更改",
+    "claude-vscode.rejectProposedHunk": "Claude Code: 拒绝光标处的更改",
+    "claude-vscode.acceptProposedHunkFromBar": "Claude Code: 接受此更改",
+    "claude-vscode.rejectProposedHunkFromBar": "Claude Code: 拒绝此更改",
+    "claude-vscode.insertAtMention": "Claude Code: 插入 @ 引用",
+    "claude-vscode.installPlugin": "Claude Code: 安装插件",
+    "claude-code.acceptProposedDiff": "Claude Code: 接受建议的更改",
+    "claude-code.rejectProposedDiff": "Claude Code: 拒绝建议的更改",
+    "claude-code.insertAtMentioned": "Claude Code: 插入提及内容",
+    "claude-vscode.showLogs": "Claude Code: 显示日志",
+    "claude-vscode.toggleFocusView": "Claude Code: 切换专注视图",
+    "claude-vscode.openWalkthrough": "Claude Code: 打开演练",
+    "claude-vscode.markSessionUnread": "Claude Code: 将会话标记为未读",
+    "claude-vscode.renameSessionTab": "Claude Code: 重命名会话标签页",
+    "claude-vscode.addSessionTabToGroup": "Claude Code: 将会话标签页添加到组"
   }
 }

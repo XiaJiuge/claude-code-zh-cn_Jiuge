@@ -12,6 +12,26 @@
 - ✅ **自动备份**：修改前自动创建备份文件
 - ✅ **一键还原**：随时还原到原版
 - ✅ **更新检测**：Claude Code 更新后自动重新汉化
+- ✅ **版本感知**：Claude Code 或汉化规则升级后自动按新版本重新汉化，不会还原成旧版文件
+
+> **当前版本范围**：仅汉化 Claude Code 的 Webview 聊天界面；设置面板（`package.json`）翻译在本版本中暂时关闭。
+
+## 安装
+
+### 从 `.vsix` 手动安装
+
+1. 打开 VS Code 扩展视图（`Ctrl+Shift+X`）
+2. 点击右上角 `...` → **从 VSIX 安装…**
+3. 选择 `claude-code-zhcn-1.5.2.vsix`
+4. 重新加载窗口
+
+也可以在命令行安装：
+
+```bash
+code --install-extension claude-code-zhcn-1.5.2.vsix
+```
+
+安装后扩展会在启动时自动应用汉化。若界面未生效，请执行命令 **Claude Code 汉化: 重新加载汉化**，或重新打开聊天窗口。
 
 ## 使用方法
 
@@ -112,20 +132,22 @@
 2. **查找 webview 文件**：找到 `webview/index.js` 文件（Claude Code 的界面文本所在位置）
 3. **创建备份**：在修改前创建 `.bak` 备份文件
 4. **应用汉化**：按照 前置规则 → 内置规则 → 后置规则 的顺序替换文本
-5. **写入文件**：将汉化后的内容写回 webview 文件
-6. **重新加载**：提示用户重新加载窗口以生效
+5. **写入文件**：将汉化后的内容原子写回 webview 文件
+6. **记录版本**：保存 Claude Code 版本与规则版本，下次启动时据此判断是否需要重新汉化
+7. **重新加载**：提示用户重新加载窗口以生效
 
 ## 项目结构
 
 ```
-f:\Desktop\hanhua\
+claude-code-zh-cn/
 ├── lib/
 │   ├── backup.js          # 备份管理器
 │   ├── config.js          # 配置管理器
 │   ├── locator.js         # 扩展定位器
 │   └── translator.js      # 翻译引擎
 ├── translations/
-│   └── built-in.json      # 内置翻译规则（100+ 条）
+│   └── built-in.json      # 内置 Webview 翻译规则（1802 条）
+├── test/                  # IPC 协议保护测试
 ├── extension.js           # 扩展主入口
 ├── package.json           # 扩展配置
 └── README.md              # 本文档
@@ -145,6 +167,11 @@ MIT License
 ## 贡献
 
 欢迎提交 Issue 和 Pull Request！
+
+## 作者
+
+- zstings
+- XiaJiuge
 
 ## 相关链接
 

@@ -8,7 +8,7 @@
 // Mock vscode 模块（translator.js 顶部 require('vscode')）
 const Module = require('module');
 const originalResolveFilename = Module._resolveFilename;
-Module._resolveFilename = function (request, parent) {
+Module._resolveFilename = function (request, _parent) {
     if (request === 'vscode') {
         return request; // 返回自身，用 mock 填充
     }

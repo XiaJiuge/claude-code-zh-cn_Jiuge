@@ -1,7 +1,14 @@
+.tmp-analysis/**
 .vscode/**
 .vscode-test/**
 test/**
 .gitignore
+.prettierrc.json
+.prettierignore
+eslint.config.js
+pnpm-lock.yaml
+package-lock.json
+CLAUDE.md
 .yarnrc
 vsc-extension-quickstart.md
 **/jsconfig.json

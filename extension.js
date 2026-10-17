@@ -1,10 +1,12 @@
 const vscode = require('vscode');
 const fs = require('fs');
-const path = require('path');
 const Locator = require('./lib/locator');
 const Translator = require('./lib/translator');
 const BackupManager = require('./lib/backup');
 const ConfigManager = require('./lib/config');
+
+// 本次更新范围仅限 Webview 界面；设置面板翻译暂时关闭
+const ENABLE_SETTINGS_TRANSLATION = false;
 
 /**
  * 原子写入：先写临时文件再 rename，防止中途失败导致文件损坏
@@ -41,7 +43,7 @@ async function activate(context) {
     let applyCommand = vscode.commands.registerCommand(
         'claudeCodeZhCn.applyTranslation',
         async () => {
-            await applyTranslation(locator, translator, backup, config);
+            await applyTranslation(locator, translator, backup, config, context);
         }
     );
     context.subscriptions.push(applyCommand);
@@ -72,7 +74,7 @@ async function activate(context) {
         'claudeCodeZhCn.reloadExtension',
         async () => {
             // 强制重新汉化：有备份时先还原再汉化
-            await applyTranslation(locator, translator, backup, config, false, true);
+            await applyTranslation(locator, translator, backup, config, context, false, true);
         }
     );
     context.subscriptions.push(reloadCommand);
@@ -85,7 +87,7 @@ async function activate(context) {
             );
             if (claudeExt) {
                 setTimeout(async () => {
-                    await applyTranslation(locator, translator, backup, config, true);
+                    await applyTranslation(locator, translator, backup, config, context, true);
                 }, 1000);
             }
         }
@@ -95,17 +97,18 @@ async function activate(context) {
     if (config.get('autoApplyOnStartup')) {
         // 延迟执行，确保所有扩展都已加载
         setTimeout(async () => {
-            await applyTranslation(locator, translator, backup, config, true);
+            await applyTranslation(locator, translator, backup, config, context, true);
         }, 2000);
     }
 }
 
 /**
  * 应用汉化
+ * @param {object} context - 扩展上下文（用于记录已应用的版本）
  * @param {boolean} silent - 静默模式（启动时自动调用）
  * @param {boolean} forceReapply - 强制重新汉化（重新加载命令使用）
  */
-async function applyTranslation(locator, translator, backup, config, silent = false, forceReapply = false) {
+async function applyTranslation(locator, translator, backup, config, context, silent = false, forceReapply = false) {
     try {
         // 定位 Claude Code 扩展
         const claudePath = await locator.findClaudeCodeExtension();
@@ -125,20 +128,63 @@ async function applyTranslation(locator, translator, backup, config, silent = fa
             return;
         }
 
-        // 检查是否已汉化（备份文件存在则说明已汉化）
+        // 记录 Claude Code 与汉化规则版本，用于判断是否需要重新汉化
+        const claudeExt = vscode.extensions.getExtension(
+            config.get('claudeCodeExtensionId')
+        );
+        const claudeVersion = claudeExt?.packageJSON?.version || 'unknown';
+        const rulesVersion = translator.loadBuiltInRules()?.version || 'unknown';
+        const appliedClaudeVersion = context.globalState.get('appliedClaudeVersion');
+        const appliedRulesVersion = context.globalState.get('appliedRulesVersion');
+
+        // Claude Code 版本变化：安装目录中已是新版原文件，不能还原旧备份
+        const claudeVersionChanged =
+            !!appliedClaudeVersion && appliedClaudeVersion !== claudeVersion;
+        // 汉化规则版本变化（或从未记录过）：需要用新规则重新翻译原文件
+        const rulesVersionChanged = appliedRulesVersion !== rulesVersion;
+
+        // 检查是否已汉化（备份文件存在则说明曾创建过备份）
         const hasExistingBackup = backup.hasBackup(mainFilePath);
 
         if (hasExistingBackup) {
-            if (silent && !forceReapply) {
-                // 静默模式下，已汉化则跳过
-                console.log('检测到备份文件，已汉化，跳过重复汉化');
-                return;
-            }
-
-            if (forceReapply) {
+            if (claudeVersionChanged) {
+                // 新版原文件已覆盖旧版，重新记录备份，避免还原成旧版
+                console.log(
+                    '检测到 Claude Code 版本变化:',
+                    appliedClaudeVersion,
+                    '->',
+                    claudeVersion,
+                    '，重建备份'
+                );
+                if (config.get('createBackup')) {
+                    await backup.overwriteBackup(mainFilePath);
+                }
+            } else if (forceReapply) {
                 // 强制重新汉化：先还原备份，再重新汉化
                 console.log('强制重新汉化：先还原备份');
                 await backup.restoreBackup(mainFilePath);
+            } else if (rulesVersionChanged) {
+                console.log(
+                    '检测到汉化规则版本变化:',
+                    appliedRulesVersion,
+                    '->',
+                    rulesVersion,
+                    '，重新汉化'
+                );
+                await backup.restoreBackup(mainFilePath);
+            } else if (silent) {
+                // 静默模式下，若文件仍是原版则继续汉化，否则跳过
+                const currentContent = fs.readFileSync(mainFilePath, 'utf8');
+                const originalContent = fs.readFileSync(
+                    backup.getBackupPath(mainFilePath),
+                    'utf8'
+                );
+                if (currentContent === originalContent) {
+                    console.log('检测到文件仍为原版，继续汉化');
+                } else {
+                    console.log('检测到备份文件，已汉化，跳过重复汉化');
+                    return;
+                }
             }
         }
 
@@ -163,21 +209,46 @@ async function applyTranslation(locator, translator, backup, config, silent = fa
         // 写入文件（原子写入：临时文件 + rename，防止中途失败导致文件损坏）
         atomicWriteSync(mainFilePath, content);
 
-        // 翻译 package.json 中的设置面板文本
         const packageJsonPath = locator.findPackageJson(claudePath);
+
         if (packageJsonPath) {
-            const hasPkgBackup = backup.hasBackup(packageJsonPath);
-            if (forceReapply && hasPkgBackup) {
+            // Claude Code 升级后，旧版 package.json 备份已失效，重建或删除以免还原成旧版
+            if (claudeVersionChanged) {
+                if (config.get('createBackup')) {
+                    await backup.overwriteBackup(packageJsonPath);
+                } else if (backup.hasBackup(packageJsonPath)) {
+                    await backup.deleteBackup(packageJsonPath);
+                }
+            } else if ((forceReapply || rulesVersionChanged) && backup.hasBackup(packageJsonPath)) {
                 await backup.restoreBackup(packageJsonPath);
             }
-            if (config.get('createBackup') && !hasPkgBackup) {
+
+            if (config.get('createBackup') && !backup.hasBackup(packageJsonPath)) {
                 await backup.createBackup(packageJsonPath);
             }
-            let pkgContent = fs.readFileSync(packageJsonPath, 'utf8');
-            pkgContent = await translator.translatePackageJson(pkgContent);
-            atomicWriteSync(packageJsonPath, pkgContent);
-            console.log('package.json 汉化完成');
+
+            // 翻译 VS Code 命令面板中的命令标题
+            const pkgContent = fs.readFileSync(packageJsonPath, 'utf8');
+            const translatedPkg = await translator.translateCommandTitles(pkgContent);
+            if (translatedPkg !== pkgContent) {
+                atomicWriteSync(packageJsonPath, translatedPkg);
+                console.log('package.json 命令标题汉化完成');
+            }
+
+            // 翻译设置面板文本（当前版本暂不启用）
+            if (ENABLE_SETTINGS_TRANSLATION) {
+                const settingsContent = fs.readFileSync(packageJsonPath, 'utf8');
+                const translatedSettings =
+                    await translator.translatePackageJson(settingsContent);
+                atomicWriteSync(packageJsonPath, translatedSettings);
+                console.log('package.json 设置面板汉化完成');
+            }
         }
+
+        // 记录已应用的版本，供下次启动判断
+        // 规则版本未记录过（例如从旧版扩展升级）时也视为需要重新汉化
+        await context.globalState.update('appliedClaudeVersion', claudeVersion);
+        await context.globalState.update('appliedRulesVersion', rulesVersion);
 
         // 通知用户
         if (config.get('showNotifications') && !silent) {

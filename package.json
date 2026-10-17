@@ -2,8 +2,17 @@
   "name": "claude-code-zhcn",
   "displayName": "[非官方] Claude Code for VS Code 简体中文汉化包",
   "description": "非官方的 Claude Code for VS Code 插件的简体中文汉化插件",
-  "version": "1.4.5",
+  "version": "1.5.2",
   "publisher": "zstings",
+  "author": {
+    "name": "zstings"
+  },
+  "contributors": [
+    {
+      "name": "XiaJiuge"
+    }
+  ],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zstings/claude-code-zh-cn/issues"
   },
@@ -158,19 +167,13 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "pretest": "pnpm run lint",
-    "test": "vscode-test",
-    "build": "pnpm vsce package --no-dependencies"
+    "pretest": "npm run lint",
+    "test": "node test/ipc-protection.test.js",
+    "build": "vsce package --no-dependencies"
   },
   "devDependencies": {
     "@types/vscode": "1.94.0",
     "@vscode/vsce": "^3.7.1",
     "eslint": "^9.18.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@vscode/vsce-sign",
-      "keytar"
-    ]
   }
 }

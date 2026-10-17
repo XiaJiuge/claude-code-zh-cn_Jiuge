@@ -1,7 +1,4719 @@
 {
-  "version": "1.0.0",
-  "description": "Claude Code 内置汉化规则",
+  "version": "1.1.0",
+  "description": "Claude Code 内置汉化规则（Webview 全量）",
   "translations": [
+    {
+      "original": "JA5={low:\"Low\",medium:\"Medium\",high:\"High\",xhigh:\"Extra high\",max:\"Max\"}",
+      "chinese": "JA5={low:\"低\",medium:\"中等\",high:\"高\",xhigh:\"极高\",max:\"最大\"}"
+    },
+    {
+      "original": "description:N0(G.description),argumentHint:N0(G.argumentHint||void 0)",
+      "chinese": "description:N0(({\"add-dir\":\"添加新的工作目录\",\"advisor\":\"让 Claude 在关键时刻咨询更强的模型\",\"agents\":\"（已移除）让 Claude 创建或管理子代理，或编辑 .claude/agents/\",\"alias\":\"创建或列出命令别名\",\"artifacts\":\"浏览你发布和共享的制品\",\"auto-mode-setup\":\"让自动模式了解你的环境，并可选择调整规则\",\"autocompact\":\"设置上下文达到多满时自动总结\",\"autofix-pr\":\"监控并自动修复当前 PR 的问题\",\"background\":\"将会话转到后台并释放终端\",\"branch\":\"在此处为当前对话创建分支\",\"brief\":\"切换仅简报模式\",\"btw\":\"快速提出一个侧边问题，不打断主对话\",\"bug\":\"报告 bug 或分享你的对话\",\"cd\":\"将会话切换到新的工作目录\",\"chrome\":\"打开 Claude in Chrome 设置\",\"clear\":\"开始空上下文的新会话；原会话保留在磁盘上（可用 /resume 恢复）\",\"cloud-plugins\":\"选择云会话是否使用本机启用的插件\",\"color\":\"设置此会话的提示栏颜色\",\"compact\":\"通过总结已有对话释放上下文\",\"config\":\"打开设置\",\"context\":\"以彩色网格可视化当前上下文用量\",\"copy\":\"复制 Claude 的最后一条回复（或使用 /copy N 复制倒数第 N 条）\",\"daemon\":\"管理后台服务和例行任务\",\"desktop\":\"在 Claude Desktop 中继续当前会话\",\"design-consent\":\"授予 Claude 代理访问你的 Design 项目的权限\",\"design-login\":\"使用你的 claude.ai 账户授权 /design-sync 访问设计系统\",\"design-revoke\":\"撤销 Claude 代理访问你的 Design 项目的权限\",\"effort\":\"设置模型的思考强度\",\"export\":\"将当前对话导出到文件或剪贴板\",\"feedback\":\"向 Anthropic 发送反馈或报告 bug\",\"focus\":\"切换专注视图：仅显示提示词、摘要和回复\",\"fork\":\"将当前对话复制到新的后台会话，并继续在此工作\",\"goal\":\"设置 Claude 在停止前检查的目标\",\"heapdump\":\"将 JS 堆转储到桌面（Linux 无桌面文件夹时转储到主目录）\",\"help\":\"显示帮助和可用命令\",\"hooks\":\"查看工具事件的钩子配置\",\"ide\":\"管理 IDE 集成并显示状态\",\"import\":\"从其他 AI 编程代理导入配置\",\"insights\":\"生成分析 Claude Code 会话的报告\",\"install\":\"安装 Claude Code 原生版本\",\"install-github-app\":\"为仓库设置 Claude GitHub Actions\",\"install-slack-app\":\"安装 Claude Slack 应用\",\"keybindings\":\"打开键盘快捷键文件\",\"list-agents\":\"列出可发消息的子代理、队友和其他 Claude 会话\",\"login\":\"登录 Anthropic 账户\",\"logout\":\"退出 Anthropic 账户\",\"loops\":\"列出、创建和删除循环任务\",\"mcp\":\"管理 MCP 服务器\",\"memory\":\"编辑 CLAUDE.md 文件和记忆设置\",\"mobile\":\"显示下载 Claude 移动应用的二维码\",\"model\":\"设置此窗口新会话的模型（不会保存）\",\"permissions\":\"管理工具的允许与拒绝权限规则\",\"plan\":\"启用计划模式或查看当前会话计划\",\"plugin\":\"管理 Claude Code 插件\",\"powerup\":\"通过快速交互课程了解 Claude Code 功能\",\"privacy-settings\":\"查看并更新隐私设置\",\"pro-trial-expired\":\"Pro 套餐 Claude Code 试用结束后的选项\",\"radio\":\"收听 Claude FM Lo-fi 电台\",\"rate-limit-options\":\"管理用量限额和升级选项\",\"recap\":\"立即生成一行会话摘要\",\"reload-plugins\":\"在当前会话激活待处理的插件更改\",\"reload-skills\":\"加载本次会话期间新增或修改的技能\",\"remote-control\":\"从手机或 claude.ai/code 控制此会话\",\"remote-env\":\"选择云代理的默认环境\",\"rename\":\"重命名当前对话\",\"resume\":\"恢复之前的对话\",\"schedule\":\"创建和管理定时远程 Claude Code 代理\",\"scroll-speed\":\"调整鼠标滚轮滚动速度\",\"security-review\":\"对当前分支的待提交更改进行安全审查\",\"session\":\"显示云会话 URL 和二维码\",\"setup-bedrock\":\"重新配置 Amazon Bedrock 认证、区域或模型\",\"setup-vertex\":\"重新配置 Google Vertex AI 认证、项目、区域或模型\",\"skill-doctor\":\"显示未使用且占用上下文的技能\",\"skills\":\"列出可用技能\",\"status\":\"显示 Claude Code 状态，包括版本、模型、账户、API 连接和工具状态\",\"stickers\":\"订购 Claude Code 贴纸\",\"stop\":\"停止此后台会话；记录和工作树会保留\",\"subtask\":\"将子代理连同完整上下文派出，结果会返回此处\",\"tasks\":\"查看和管理所有后台运行的任务\",\"team-onboarding\":\"根据你的使用情况生成指南，帮助队友上手 Claude Code\",\"teleport\":\"将会话发送到云端，或从 claude.ai 恢复\",\"theme\":\"更改主题\",\"tui\":\"设置终端 UI 渲染器（default | fullscreen）\",\"ultraplan\":\"由云会话起草计划，你可编辑并批准\",\"ultrareview\":\"使用云会话查找并验证分支中的 bug\",\"upgrade\":\"升级到 Max 以获得更高限额和更多 Opus 用量\",\"usage\":\"显示会话费用、套餐用量和活动统计\",\"usage-credits\":\"配置用量额度，或在达到限额时向管理员申请\",\"version\":\"显示此会话的版本\"}[G.name])??G.description),argumentHint:N0(G.argumentHint||void 0)"
+    },
+    {
+      "original": "id:\"status\",label:\"Status\",description:\"Version, session, account, model and server details\"",
+      "chinese": "id:\"status\",label:\"状态\",description:\"版本、会话、账户、模型和服务器详情\""
+    },
+    {
+      "original": "id:$M0,label:\"Sandbox\",description:\"View and change how commands are sandboxed\"",
+      "chinese": "id:$M0,label:\"沙盒\",description:\"查看并更改命令的沙盒方式\""
+    },
+    {
+      "original": "id:\"instructions\",label:\"Instructions\",description:\"Edit CLAUDE.md files\"",
+      "chinese": "id:\"instructions\",label:\"指令\",description:\"编辑 CLAUDE.md 文件\""
+    },
+    {
+      "original": "id:\"bookmarks\",label:\"Bookmarks\",description:\"Show your bookmarked responses beside the conversation\"",
+      "chinese": "id:\"bookmarks\",label:\"书签\",description:\"在对话旁显示你收藏的回复\""
+    },
+    {
+      "original": "id:\"issue\",label:\"/issue: flag model behavior (internal)\",description:\"Report model issues to the research team\"",
+      "chinese": "id:\"issue\",label:\"/issue：标记模型行为（内部）\",description:\"向研究团队报告模型问题\""
+    },
+    {
+      "original": "vI1=\"When safeguards flag a message, automatically switch to a different model to keep chatting. When off, your session will pause instead.\"",
+      "chinese": "vI1=\"当安全机制标记某条消息时，自动切换到其他模型以继续聊天。关闭后，会话将暂停。\""
+    },
+    {
+      "original": "BS1=\"Connect all sessions to claude.ai/code automatically so you can view and control them from the web.\"",
+      "chinese": "BS1=\"自动将所有会话连接到 claude.ai/code，以便你从网页查看和控制它们。\""
+    },
+    {
+      "original": "{title:\"Status\",onClose:J,maxWidth:560,scrollInside:!0",
+      "chinese": "{title:\"状态\",onClose:J,maxWidth:560,scrollInside:!0"
+    },
+    {
+      "original": "{className:j1.formLabel,children:\"Status\"}",
+      "chinese": "{className:j1.formLabel,children:\"状态\"}"
+    },
+    {
+      "original": "title:\"Bookmarks\",resizeLabel:\"Resize bookmarks panel\"",
+      "chinese": "title:\"书签\",resizeLabel:\"调整书签面板大小\""
+    },
+    {
+      "original": "instructions:{label:\"Instructions\",placeholder:",
+      "chinese": "instructions:{label:\"指令\",placeholder:"
+    },
+    {
+      "original": "title:\"Delete session\"",
+      "chinese": "title:\"删除会话\""
+    },
+    {
+      "original": "`Unsupported file type${Y1.length>1?\"s\":\"\"}: ${$0}. Supported types: images (PNG, JPG, GIF, WebP), text files, and PDFs. To reference unsupported files, please include its absolute file path in your prompt (using @ for paths inside your working directory, and entering the path for files outside).`",
+      "chinese": "`不支持的文件类型：${$0}。支持的类型：图片（PNG、JPG、GIF、WebP）、文本文件和 PDF。要引用不支持的文件，请在提示词中包含其绝对路径（工作目录内的路径使用 @，工作目录外的文件直接输入路径）。`"
+    },
+    {
+      "original": "children:[H===1?\"A settings file\":`${H} settings files`,\" \",\"could not be parsed, so hooks defined there are not shown and will not run.\"]",
+      "chinese": "children:[H===1?\"设置文件\":`${H} 个设置文件`,\" \",\"无法解析，其中定义的钩子不会显示，也不会运行。\"]"
+    },
+    {
+      "original": "children:[\"Extension:\",\" \",F(\"span\",{className:G.installed?E9.good:E9.warn,children:G.installed?\"Installed\":\"Not detected\"})]",
+      "chinese": "children:[\"扩展：\",\" \",F(\"span\",{className:G.installed?E9.good:E9.warn,children:G.installed?\"已安装\":\"未检测到\"})]"
+    },
+    {
+      "original": "children:[\"Status:\",\" \",F(\"span\",{className:G.signed_in?lJ.good:lJ.dim,children:G.signed_in?\"Authorized\":\"Not authorized\"})]",
+      "chinese": "children:[\"状态：\",\" \",F(\"span\",{className:G.signed_in?lJ.good:lJ.dim,children:G.signed_in?\"已授权\":\"未授权\"})]"
+    },
+    {
+      "original": "children:[\"Waiting for your permission\",z?` to run ${X}`:\"\",\". Answer it in the session's permission card.\"]",
+      "chinese": "children:[\"等待你的授权\",z?` 以运行 ${X}`:\"\",\"。请在会话的权限卡片中回答。\"]"
+    },
+    {
+      "original": "`Its ${M8($.component)} folder is ignored because its plugin.json lists ${M8($.component)} files itself.`",
+      "chinese": "`其组件 ${M8($.component)} 文件夹被忽略，因为其 plugin.json 自己列出了 ${M8($.component)} 文件。`"
+    },
+    {
+      "original": "`${UH(q.map(Z.plugin))} ${V?\"needs\":\"need\"} this plugin. Turn ${V?UH(q.map(Z.plugin)):\"them\"} off too?`",
+      "chinese": "`${UH(q.map(Z.plugin))} 需要此插件。是否也关闭 ${V?UH(q.map(Z.plugin)):\"它们\"}？`"
+    },
+    {
+      "original": "`Its MCP server ${M8($.serverName)} is already provided by ${M8($.related)}, so this copy is skipped.`",
+      "chinese": "`其 MCP 服务器 ${M8($.serverName)} 已由 ${M8($.related)} 提供，因此跳过此副本。`"
+    },
+    {
+      "original": "`${UH(U.map(Z.plugin))} ${U.length===1?\"uses\":\"use\"} it. Turn ${U.length===1?\"it\":\"them\"} off first.`",
+      "chinese": "`${UH(U.map(Z.plugin))} 正在使用它。请先关闭 ${U.length===1?\"它\":\"它们\"}。`"
+    },
+    {
+      "original": "children:[\"Source:\",\" \",F(\"a\",{href:m4,target:\"_blank\",rel:\"noopener noreferrer\",children:m4})]",
+      "chinese": "children:[\"来源：\",\" \",F(\"a\",{href:m4,target:\"_blank\",rel:\"noopener noreferrer\",children:m4})]"
+    },
+    {
+      "original": "`It needs ${z}. ${UH(Q.map(X.plugin))} ${q(Q)}, so add a marketplace that has ${G(Q)} first.`",
+      "chinese": "`它需要 ${z}。${UH(Q.map(X.plugin))} ${q(Q)}，因此请先添加一个包含 ${G(Q)} 的应用市场。`"
+    },
+    {
+      "original": "`Its MCP server ${M8($.serverName)} is already set up elsewhere, so this copy is skipped.`",
+      "chinese": "`其 MCP 服务器 ${M8($.serverName)} 已在别处设置，因此跳过此副本。`"
+    },
+    {
+      "original": "`This marketplace can't be ${$.kind===\"remove-marketplace\"?\"removed\":\"refreshed\"} here.`",
+      "chinese": "`无法在此${$.kind===\"remove-marketplace\"?\"移除\":\"刷新\"}此应用市场。`"
+    },
+    {
+      "original": "`Invalid name ${$}. Names can only contain letters, numbers, hyphens, and underscores.`",
+      "chinese": "`名称无效：${$}。名称只能包含字母、数字、连字符和下划线。`"
+    },
+    {
+      "original": "children:[\"Browser:\",\" \",F(\"span\",{className:E9.good,children:rZ(G.paired_browser)})]",
+      "chinese": "children:[\"浏览器：\",\" \",F(\"span\",{className:E9.good,children:rZ(G.paired_browser)})]"
+    },
+    {
+      "original": "\"The plugin's options changed while this form was open. Go back and open them again.\"",
+      "chinese": "\"此表单打开期间插件的选项已更改。请返回并重新打开。\""
+    },
+    {
+      "original": "`The whole conversation as plain text, ${Y.text.length.toLocaleString()} characters.`",
+      "chinese": "`整个对话将以纯文本形式保存，共 ${Y.text.length.toLocaleString()} 个字符。`"
+    },
+    {
+      "original": "B=`Message from ${Z??($.kind===\"channel\"?`channel @${q}`:`@${q}`)}${H===\"\"?\"\":\":\"}`",
+      "chinese": "B=`来自 ${Z??($.kind===\"channel\"?`频道 @${q}`:`@${q}`)} 的消息${H===\"\"?\"\":\":\"}`"
+    },
+    {
+      "original": "`Only ${X.length} assistant ${X.length===1?\"message\":\"messages\"} available to copy`",
+      "chinese": "`仅有 ${X.length} 条助手消息可供复制`"
+    },
+    {
+      "original": "children:[\"Matcher:\",\" \",F(\"span\",{className:F4.matcherValue,children:G||\"(all)\"})]",
+      "chinese": "children:[\"匹配器：\",\" \",F(\"span\",{className:F4.matcherValue,children:G||\"（全部）\"})]"
+    },
+    {
+      "original": "`Code rewind completed, but ${$} ${$===1?\"file was\":\"files were\"} skipped: ${Xh1}`",
+      "chinese": "`代码回滚已完成，但跳过了 ${$} 个文件：${Xh1}`"
+    },
+    {
+      "original": "`The ${J.event} entry in ${Z} is not a list, so the hook could not be saved.`",
+      "chinese": "`${Z} 中的 ${J.event} 条目不是列表，因此无法保存钩子。`"
+    },
+    {
+      "original": "`It needs ${Q}, which ${Y?\"is\":\"are\"} turned off. Turn ${Y?Q:\"them\"} on too?`",
+      "chinese": "`它需要 ${Q}，但${Y?\"它\":\"它们\"}已关闭。是否也开启 ${Y?Q:\"它们\"}？`"
+    },
+    {
+      "original": "`Removed ${H0} from ${K1} config. Running sessions keep it until restarted.`",
+      "chinese": "`已从 ${K1} 配置中移除 ${H0}。运行中的会话会保留它，直到重启。`"
+    },
+    {
+      "original": "`Copied to clipboard (${z.length} characters, ${G} ${G===1?\"line\":\"lines\"})`",
+      "chinese": "`已复制到剪贴板（${z.length} 个字符，${G} 行）`"
+    },
+    {
+      "original": "`It is now called ${M8($.related)} in the ${M8($.marketplace)} marketplace.`",
+      "chinese": "`它现在名为 ${M8($.related)}，位于 ${M8($.marketplace)} 应用市场中。`"
+    },
+    {
+      "original": "`It needs ${z}, which ${q(J)}. Add a marketplace that has ${G(J)} first.`",
+      "chinese": "`它需要 ${z}，但${q(J)}。请先添加一个包含 ${G(J)} 的应用市场。`"
+    },
+    {
+      "original": "`${UH(J.map(Z.plugin))} ${X?\"wasn't\":\"weren't\"} changed. ${$.message}`",
+      "chinese": "`${UH(J.map(Z.plugin))} 未更改。${$.message}`"
+    },
+    {
+      "original": "`Added ${H0} to ${K1} config. It will be available in new sessions.`",
+      "chinese": "`已将 ${H0} 添加到 ${K1} 配置。它将在新会话中可用。`"
+    },
+    {
+      "original": "`Added ${Y} line${Y!==1?\"s\":\"\"}, removed ${Q} line${Q!==1?\"s\":\"\"}`",
+      "chinese": "`已添加 ${Y} 行，移除了 ${Q} 行`"
+    },
+    {
+      "original": "`It needs ${z}. Install ${G(J)} first, then turn this plugin on.`",
+      "chinese": "`它需要 ${z}。请先安装 ${G(J)}，然后开启此插件。`"
+    },
+    {
+      "original": "children:[\"Found \",$.length,\" new problem\",$.length!==1?\"s\":\"\"]",
+      "chinese": "children:[\"发现 \",$.length,\" 个新问题\"]"
+    },
+    {
+      "original": "children:[\"Run \",F(\"code\",{children:\"claude\"}),\" in terminal\"]",
+      "chinese": "children:[\"在终端中运行 \",F(\"code\",{children:\"claude\"})]"
+    },
+    {
+      "original": "`${U.length===1?\"isn't\":\"aren't\"} in any of your marketplaces`",
+      "chinese": "`不在你的任何应用市场中`"
+    },
+    {
+      "original": "`the ${b41[J.source]?.toLowerCase()??J.source} settings file`",
+      "chinese": "`${b41[J.source]?.toLowerCase()??J.source} 设置文件`"
+    },
+    {
+      "original": "description:\"Local settings (.claude/settings.local.json)\"",
+      "chinese": "description:\"本地设置（.claude/settings.local.json）\""
+    },
+    {
+      "original": "`${mq($.usageData.value.totalTokens)} tokens in context`",
+      "chinese": "`上下文 ${mq($.usageData.value.totalTokens)} token`"
+    },
+    {
+      "original": ", ${UH(J)}, and deletes what ${X===1?\"it\":\"they\"} saved.",
+      "chinese": "，${UH(J)}，并删除 ${X===1?\"它\":\"它们\"} 保存的数据。"
+    },
+    {
+      "original": "description:\"Project settings (.claude/settings.json)\"",
+      "chinese": "description:\"项目设置（.claude/settings.json）\""
+    },
+    {
+      "original": "description:\"User settings (~/.claude/settings.json)\"",
+      "chinese": "description:\"用户设置（~/.claude/settings.json）\""
+    },
+    {
+      "original": "`${Y1.slice(0,3).join(\", \")} and ${Y1.length-3} more`",
+      "chinese": "`${Y1.slice(0,3).join(\"、\")} 以及另外 ${Y1.length-3} 个`"
+    },
+    {
+      "original": "\"Turn them off first. Copy the error to see which.\"",
+      "chinese": "\"请先关闭它们。复制错误可查看是哪些。\""
+    },
+    {
+      "original": "title:`Open ${J.worktree.value.name} in new window`",
+      "chinese": "title:`在新窗口中打开 ${J.worktree.value.name}`"
+    },
+    {
+      "original": "\"This plugin needs plugins that aren't installed.\"",
+      "chinese": "\"此插件需要的插件尚未安装。\""
+    },
+    {
+      "original": "description:\"Startup settings (--settings option)\"",
+      "chinese": "description:\"启动设置（--settings 选项）\""
+    },
+    {
+      "original": "`Could not prepare the conversation: ${Y.message}`",
+      "chinese": "`无法准备对话：${Y.message}`"
+    },
+    {
+      "original": "\"Granted by a command; change it in the command.\"",
+      "chinese": "\"由命令授予；请在命令中更改。\""
+    },
+    {
+      "original": "`Drawing cut at this panel's limit of ${J.limit}`",
+      "chinese": "`绘制已在此面板的上限 ${J.limit} 处截断`"
+    },
+    {
+      "original": "\"Its plugin.json has settings that aren't valid.\"",
+      "chinese": "\"其 plugin.json 的设置无效。\""
+    },
+    {
+      "original": "\"This plugin needs plugins that are turned off.\"",
+      "chinese": "\"此插件需要的插件当前已关闭。\""
+    },
+    {
+      "original": "confirmText:`Remove ${N0($)} from ${J} config?`",
+      "chinese": "confirmText:`从 ${J} 配置中移除 ${N0($)}？`"
+    },
+    {
+      "original": "ariaLabel:`Why ${uB} can't be uninstalled here`",
+      "chinese": "ariaLabel:`为何 ${uB} 无法在此卸载`"
+    },
+    {
+      "original": "\"A file it lists is outside the plugin folder.\"",
+      "chinese": "\"它列出的某个文件位于插件文件夹之外。\""
+    },
+    {
+      "original": "`Unarchive all ${w4.archived.length} sessions`",
+      "chinese": "`全部取消归档 ${w4.archived.length} 个会话`"
+    },
+    {
+      "original": "`Delete ${SZ($.name)}? This cannot be undone.`",
+      "chinese": "`删除 ${SZ($.name)}？此操作无法撤销。`"
+    },
+    {
+      "original": "`Install ${z2} from ${N0(v1.marketplaceName)}`",
+      "chinese": "`从 ${N0(v1.marketplaceName)} 安装 ${z2}`"
+    },
+    {
+      "original": "`Unsupported file type: ${U.file.name} (${K})`",
+      "chinese": "`不支持的文件类型：${U.file.name}（${K}）`"
+    },
+    {
+      "original": "`turning this plugin ${$.enabled?\"on\":\"off\"}`",
+      "chinese": "`正在${$.enabled?\"开启\":\"关闭\"}此插件`"
+    },
+    {
+      "original": "`${J.slice(0,-1).join(\", \")} and ${J.at(-1)}`",
+      "chinese": "`${J.slice(0,-1).join(\"、\")} 和 ${J.at(-1)}`"
+    },
+    {
+      "original": "` (lines ${J.offset+1}-${J.offset+J.limit})`",
+      "chinese": "`（第 ${J.offset+1}-${J.offset+J.limit} 行）`"
+    },
+    {
+      "original": "`Its ${M8($.component)} couldn't be loaded.`",
+      "chinese": "`其组件 ${M8($.component)} 无法加载。`"
+    },
+    {
+      "original": "\"From options set when the session started\"",
+      "chinese": "\"来自会话启动时设置的选项\""
+    },
+    {
+      "original": "` (+${mQ-1} more ${mQ===2?\"file\":\"files\"})`",
+      "chinese": "`（另有 ${mQ-1} 个文件）`"
+    },
+    {
+      "original": " [Line ${Q.line}:${Q.column}] ${Q.message}",
+      "chinese": " [第 ${Q.line} 行，第 ${Q.column} 列] ${Q.message}"
+    },
+    {
+      "original": "children:[\" \",\"· \",J,\" \",h9(J,\"question\")]",
+      "chinese": "children:[\" \",\"· \",J,\" 个问题\"]"
+    },
+    {
+      "original": "children:G.connected?\"Enabled\":\"Disabled\"",
+      "chinese": "children:G.connected?\"已启用\":\"已禁用\""
+    },
+    {
+      "original": "\"This plugin can't be uninstalled here.\"",
+      "chinese": "\"此插件无法在此卸载。\""
+    },
+    {
+      "original": "\"From a settings file given at startup.\"",
+      "chinese": "\"来自启动时指定的设置文件。\""
+    },
+    {
+      "original": "`This plugin can't be turned ${Y} here.`",
+      "chinese": "`无法在此${Y===\"on\"?\"开启\":\"关闭\"}此插件。`"
+    },
+    {
+      "original": "` ${Q} ${z?\"wasn't\":\"weren't\"} changed.`",
+      "chinese": "` ${Q} 未更改。`"
+    },
+    {
+      "original": "`${J.toLocaleString(\"en-US\")} elements`",
+      "chinese": "`${J.toLocaleString(\"en-US\")} 个元素`"
+    },
+    {
+      "original": "`${$.source} · ${Rh1($.tokens)} tokens`",
+      "chinese": "`${$.source} · ${Rh1($.tokens)} token`"
+    },
+    {
+      "original": "[\"View tools (\",T1.tools.length,\") ▾\"]",
+      "chinese": "[\"查看工具（\",T1.tools.length,\"） ▾\"]"
+    },
+    {
+      "original": "\"Other plugins still use this plugin.\"",
+      "chinese": "\"其他插件仍在使用此插件。\""
+    },
+    {
+      "original": "\"This plugin's options weren't saved.\"",
+      "chinese": "\"此插件的选项未能保存。\""
+    },
+    {
+      "original": "`New group from ${$.length} sessions`",
+      "chinese": "`从 ${$.length} 个会话新建分组`"
+    },
+    {
+      "original": "\"Update plugin to the latest version\"",
+      "chinese": "\"将插件更新到最新版本\""
+    },
+    {
+      "original": "`Switched to ${l1.slice(v21.length)}`",
+      "chinese": "`已切换到 ${l1.slice(v21.length)}`"
+    },
+    {
+      "original": "children:[\"From \",HG(Sp(J.source))]",
+      "chinese": "children:[\"来自 \",HG(Sp(J.source))]"
+    },
+    {
+      "original": "children:[\"From \",HG(Sp($.source))]",
+      "chinese": "children:[\"来自 \",HG(Sp($.source))]"
+    },
+    {
+      "original": "`Running ${Vb($.pendingToolName)}…`",
+      "chinese": "`正在运行 ${Vb($.pendingToolName)}…`"
+    },
+    {
+      "original": "\"Its plugin.json isn't valid JSON.\"",
+      "chinese": "\"其 plugin.json 不是有效的 JSON。\""
+    },
+    {
+      "original": "`Removed ${Q} line${Q!==1?\"s\":\"\"}`",
+      "chinese": "`已移除 ${Q} 行`"
+    },
+    {
+      "original": "\"Its source needs you to sign in.\"",
+      "chinese": "\"其来源需要你登录。\""
+    },
+    {
+      "original": "\"Managed by enterprise settings.\"",
+      "chinese": "\"由企业设置管理。\""
+    },
+    {
+      "original": "\"Its source couldn't be reached.\"",
+      "chinese": "\"无法访问其来源。\""
+    },
+    {
+      "original": "`Added ${Y} line${Y!==1?\"s\":\"\"}`",
+      "chinese": "`已添加 ${Y} 行`"
+    },
+    {
+      "original": "`Unarchive ${$.length} sessions`",
+      "chinese": "`取消归档 ${$.length} 个会话`"
+    },
+    {
+      "original": "`${_.plugin} plugin: ${_.text}`",
+      "chinese": "`${_.plugin} 插件：${_.text}`"
+    },
+    {
+      "original": "G=(U)=>U.length===1?\"it\":\"them\"",
+      "chinese": "G=(U)=>U.length===1?\"它\":\"它们\""
+    },
+    {
+      "original": "`Archive ${$.length} sessions`",
+      "chinese": "`归档 ${$.length} 个会话`"
+    },
+    {
+      "original": "`Install \"${X.plugin(U.id)}\"…`",
+      "chinese": "`安装 \"${X.plugin(U.id)}\"…`"
+    },
+    {
+      "original": "\"No assistant message to copy\"",
+      "chinese": "\"没有可复制的助手消息\""
+    },
+    {
+      "original": "`This plugin is already ${Y}.`",
+      "chinese": "`此插件已${Y===\"on\"?\"开启\":\"关闭\"}。`"
+    },
+    {
+      "original": "`Prompt from ${nS([$.name])}`",
+      "chinese": "`来自 ${nS([$.name])} 的提示`"
+    },
+    {
+      "original": "`Turn it ${Y} there instead.`",
+      "chinese": "`请在那里${Y===\"on\"?\"开启\":\"关闭\"}它。`"
+    },
+    {
+      "original": "confirmLabel:\"Confirm delete\"",
+      "chinese": "confirmLabel:\"确认删除\""
+    },
+    {
+      "original": "`+${$} more ${h9($,\"agent\")}`",
+      "chinese": "`另有 ${$} 个 Agent`"
+    },
+    {
+      "original": "\"Failed to submit OAuth code\"",
+      "chinese": "\"提交 OAuth 代码失败\""
+    },
+    {
+      "original": "\"Re-open authentication page\"",
+      "chinese": "\"重新打开认证页面\""
+    },
+    {
+      "original": "\"Preparing the conversation…\"",
+      "chinese": "\"正在准备对话…\""
+    },
+    {
+      "original": "`${X.toLowerCase()} settings`",
+      "chinese": "`${X.toLowerCase()} 设置`"
+    },
+    {
+      "original": "['pattern: \"',J.pattern,'\"']",
+      "chinese": "['模式：\"',J.pattern,'\"']"
+    },
+    {
+      "original": "`Turn all ${q.length+1} off`",
+      "chinese": "`全部关闭 ${q.length+1} 个`"
+    },
+    {
+      "original": "`its ${X} installed plugins`",
+      "chinese": "`其 ${X} 个已安装插件`"
+    },
+    {
+      "original": "`Configure ${R6.pluginName}`",
+      "chinese": "`配置 ${R6.pluginName}`"
+    },
+    {
+      "original": "` (from line ${J.offset+1})`",
+      "chinese": "`（从第 ${J.offset+1} 行起）`"
+    },
+    {
+      "original": "\"Can't be uninstalled here\"",
+      "chinese": "\"无法在此卸载\""
+    },
+    {
+      "original": "\"removing this marketplace\"",
+      "chinese": "\"正在移除此应用市场\""
+    },
+    {
+      "original": "`Turn all ${J.length+1} on`",
+      "chinese": "`全部开启 ${J.length+1} 个`"
+    },
+    {
+      "original": "`Browser error: ${$.error}`",
+      "chinese": "`浏览器错误：${$.error}`"
+    },
+    {
+      "original": "`${U1} (a tool call's row)`",
+      "chinese": "`${U1}（工具调用行）`"
+    },
+    {
+      "original": "children:[\"Switched to \",q]",
+      "chinese": "children:[\"已切换到 \",q]"
+    },
+    {
+      "original": "\"Install Chrome extension\"",
+      "chinese": "\"安装 Chrome 扩展\""
+    },
+    {
+      "original": "\"Remove this marketplace?\"",
+      "chinese": "\"移除此应用市场？\""
+    },
+    {
+      "original": "`From ${HG(Sp($.source))}`",
+      "chinese": "`来自 ${HG(Sp($.source))}`"
+    },
+    {
+      "original": "\"Server name is required.\"",
+      "chinese": "\"服务器名称为必填项。\""
+    },
+    {
+      "original": "`${Z} line${Z!==1?\"s\":\"\"}`",
+      "chinese": "`${Z} 行`"
+    },
+    {
+      "original": "\"adding this marketplace\"",
+      "chinese": "\"正在添加此应用市场\""
+    },
+    {
+      "original": "`${this.name} tool input`",
+      "chinese": "`${this.name} 工具输入`"
+    },
+    {
+      "original": "`${$.label} is required.`",
+      "chinese": "`${$.label} 为必填项。`"
+    },
+    {
+      "original": "\"Failed to remove server\"",
+      "chinese": "\"移除服务器失败\""
+    },
+    {
+      "original": "\"installing this plugin\"",
+      "chinese": "\"正在安装此插件\""
+    },
+    {
+      "original": "\"New group from session\"",
+      "chinese": "\"从会话新建分组\""
+    },
+    {
+      "original": "\"Connecting to browser…\"",
+      "chinese": "\"正在连接浏览器…\""
+    },
+    {
+      "original": "\"Learn more about hooks\"",
+      "chinese": "\"了解更多关于钩子的信息\""
+    },
+    {
+      "original": "children:\"Update Todos\"",
+      "chinese": "children:\"更新待办\""
+    },
+    {
+      "original": "\"updating this plugin\"",
+      "chinese": "\"正在更新此插件\""
+    },
+    {
+      "original": "`Directory: ${$.path}`",
+      "chinese": "`目录：${$.path}`"
+    },
+    {
+      "original": "`Turn it ${Y} ${U[1]}`",
+      "chinese": "`在那里${Y===\"on\"?\"开启\":\"关闭\"}（${U[1]}）`"
+    },
+    {
+      "original": "\"its installed plugin\"",
+      "chinese": "\"其已安装插件\""
+    },
+    {
+      "original": "\"Command is required.\"",
+      "chinese": "\"命令为必填项。\""
+    },
+    {
+      "original": "`${Z} ${h9(Z,\"tool\")}`",
+      "chinese": "`${Z} 个工具`"
+    },
+    {
+      "original": "`${X} ${h9(X,\"tool\")}`",
+      "chinese": "`${X} 个工具`"
+    },
+    {
+      "original": "children:\"Loading...\"",
+      "chinese": "children:\"正在加载...\""
+    },
+    {
+      "original": "busyLabel:\"Deleting…\"",
+      "chinese": "busyLabel:\"正在删除…\""
+    },
+    {
+      "original": "`${AK5(Y)} combined`",
+      "chinese": "`${AK5(Y)} 累计`"
+    },
+    {
+      "original": "children:\"read-only\"",
+      "chinese": "children:\"只读\""
+    },
+    {
+      "original": "children:[\"From \",V]",
+      "chinese": "children:[\"来自 \",V]"
+    },
+    {
+      "original": "`Collapse ${q_1($)}`",
+      "chinese": "`折叠 ${q_1($)}`"
+    },
+    {
+      "original": "`${SZ($.name)} text`",
+      "chinese": "`${SZ($.name)} 文本`"
+    },
+    {
+      "original": "\"Compacted chat · \"",
+      "chinese": "\"已压缩对话 · \""
+    },
+    {
+      "original": "`${W} plugin: ${B}`",
+      "chinese": "`${W} 插件：${B}`"
+    },
+    {
+      "original": "`Step ${$} of ${J}`",
+      "chinese": "`第 ${$} 步，共 ${J} 步`"
+    },
+    {
+      "original": "`GitHub: ${$.repo}`",
+      "chinese": "`GitHub：${$.repo}`"
+    },
+    {
+      "original": "`npm: ${$.package}`",
+      "chinese": "`npm：${$.package}`"
+    },
+    {
+      "original": "\"Unarchive session\"",
+      "chinese": "\"取消归档会话\""
+    },
+    {
+      "original": "\"Configure options\"",
+      "chinese": "\"配置选项\""
+    },
+    {
+      "original": "children:\"Collapse\"",
+      "chinese": "children:\"折叠\""
+    },
+    {
+      "original": "`Found ${z} files`",
+      "chinese": "`找到 ${z} 个文件`"
+    },
+    {
+      "original": "`Found ${Y} tools`",
+      "chinese": "`找到 ${Y} 个工具`"
+    },
+    {
+      "original": "\"Nothing changed.\"",
+      "chinese": "\"没有更改。\""
+    },
+    {
+      "original": "\"URL is required.\"",
+      "chinese": "\"URL 为必填项。\""
+    },
+    {
+      "original": "`glob: ${J.glob}`",
+      "chinese": "`glob：${J.glob}`"
+    },
+    {
+      "original": "`type: ${J.type}`",
+      "chinese": "`类型：${J.type}`"
+    },
+    {
+      "original": "\"VSCode Problems\"",
+      "chinese": "\"VS Code 问题\""
+    },
+    {
+      "original": "`Rate ${$} stars`",
+      "chinese": "`评分 ${$} 星`"
+    },
+    {
+      "original": "`File: ${$.path}`",
+      "chinese": "`文件：${$.path}`"
+    },
+    {
+      "original": "\"Archive session\"",
+      "chinese": "\"归档会话\""
+    },
+    {
+      "original": "`Uninstall ${uB}`",
+      "chinese": "`卸载 ${uB}`"
+    },
+    {
+      "original": "`${mq(J)} tokens`",
+      "chinese": "`${mq(J)} token`"
+    },
+    {
+      "original": "`${mq(Z)} tokens`",
+      "chinese": "`${mq(Z)} token`"
+    },
+    {
+      "original": "`${mq(X)} tokens`",
+      "chinese": "`${mq(X)} token`"
+    },
+    {
+      "original": "children:\"Read \"",
+      "chinese": "children:\"读取 \""
+    },
+    {
+      "original": "\"No tools found\"",
+      "chinese": "\"未找到工具\""
+    },
+    {
+      "original": "\"k tokens freed\"",
+      "chinese": "\"k token 已释放\""
+    },
+    {
+      "original": "`Updating ${uB}`",
+      "chinese": "`正在更新 ${uB}`"
+    },
+    {
+      "original": "`Disabled ${H0}`",
+      "chinese": "`已禁用 ${H0}`"
+    },
+    {
+      "original": "children:\"Read\"",
+      "chinese": "children:\"读取\""
+    },
+    {
+      "original": "\"Turn both off\"",
+      "chinese": "\"全部关闭\""
+    },
+    {
+      "original": "`Git: ${$.url}`",
+      "chinese": "`Git：${$.url}`"
+    },
+    {
+      "original": "`URL: ${$.url}`",
+      "chinese": "`URL：${$.url}`"
+    },
+    {
+      "original": "`Collapse ${$}`",
+      "chinese": "`折叠 ${$}`"
+    },
+    {
+      "original": "\"Enable plugin\"",
+      "chinese": "\"启用插件\""
+    },
+    {
+      "original": "`in ${J.path}`",
+      "chinese": "`于 ${J.path}`"
+    },
+    {
+      "original": "\"Search tools\"",
+      "chinese": "\"搜索工具\""
+    },
+    {
+      "original": "\"Hide tools ▴\"",
+      "chinese": "\"隐藏工具 ▴\""
+    },
+    {
+      "original": "\"Found 1 file\"",
+      "chinese": "\"找到 1 个文件\""
+    },
+    {
+      "original": "\"Found 1 tool\"",
+      "chinese": "\"找到 1 个工具\""
+    },
+    {
+      "original": "\"Turn both on\"",
+      "chinese": "\"全部开启\""
+    },
+    {
+      "original": "`Update ${uB}`",
+      "chinese": "`更新 ${uB}`"
+    },
+    {
+      "original": "label:\"Delete\"",
+      "chinese": "label:\"删除\""
+    },
+    {
+      "original": "`Expand ${$}`",
+      "chinese": "`展开 ${$}`"
+    },
+    {
+      "original": "`Error: ${Y}`",
+      "chinese": "`错误：${Y}`"
+    },
+    {
+      "original": "`Enable ${$}`",
+      "chinese": "`启用 ${$}`"
+    },
+    {
+      "original": "\"Read-only.\"",
+      "chinese": "\"只读。\""
+    },
+    {
+      "original": "`Write ${z}`",
+      "chinese": "`写入 ${z}`"
+    },
+    {
+      "original": "`Open ${V}`",
+      "chinese": "`打开 ${V}`"
+    },
+    {
+      "original": "\"Updating…\"",
+      "chinese": "\"正在更新…\""
+    },
+    {
+      "original": "\" tokens (\"",
+      "chinese": "\" token（\""
+    },
+    {
+      "original": "\"Modified\"",
+      "chinese": "\"已修改\""
+    },
+    {
+      "original": "`in ${Y}m`",
+      "chinese": "`${Y} 分钟后`"
+    },
+    {
+      "original": "`in ${Q}h`",
+      "chinese": "`${Q} 小时后`"
+    },
+    {
+      "original": "`in ${z}d`",
+      "chinese": "`${z} 天后`"
+    },
+    {
+      "original": "[L(\"span\",{className:VJ.deletions,children:[D.deletions||0,\" line\",D.deletions!==1?\"s\":\"\"]}),\" \",\"will be removed and\",\" \",L(\"span\",{className:VJ.additions,children:[D.insertions||0,\" line\",D.insertions!==1?\"s\":\"\"]}),\" \",\"will be added across \",D.filesChanged.length,\" file\",D.filesChanged.length!==1?\"s\":\"\",\":\"]",
+      "chinese": "[\"删除 \",L(\"span\",{className:VJ.deletions,children:[D.deletions||0,\" 行\"]}),\"，新增 \",L(\"span\",{className:VJ.additions,children:[D.insertions||0,\" 行\"]}),\"，涉及 \",D.filesChanged.length,\" 个文件：\"]"
+    },
+    {
+      "original": "\"Nothing is sent. Your feedback, environment info, and the current session transcript are saved on this computer as one file, with known API keys and tokens removed. Send that file to your Anthropic account representative or attach it to your support request.\"",
+      "chinese": "\"不会发送任何内容。你的反馈、环境信息和当前会话记录会作为一个文件保存在此电脑上，并移除已知的 API 密钥和 token。请将该文件发送给 Anthropic 账户代表，或附加到你的支持请求中。\""
+    },
+    {
+      "original": "\"Nothing changed and the plugin wasn't installed. Files for a marketplace with this name are most likely already in the folder shown below. Remove that marketplace on the Marketplaces tab, or delete the folder if it isn't listed, then open the link again.\"",
+      "chinese": "\"没有任何更改，插件也未安装。此名称的应用市场文件很可能已在下方显示的文件夹中。请在“应用市场”标签页移除此应用市场，或如果未列出则删除该文件夹，然后再次打开链接。\""
+    },
+    {
+      "original": ". Supported types: images (PNG, JPG, GIF, WebP), text files, and PDFs. To reference unsupported files, please include its absolute file path in your prompt (using @ for paths inside your working directory, and entering the path for files outside).",
+      "chinese": "。支持的类型：图片（PNG、JPG、GIF、WebP）、文本文件和 PDF。要引用不支持的文件，请在提示词中包含其绝对路径（工作目录内的路径使用 @，工作目录外的文件直接输入路径）。"
+    },
+    {
+      "original": "\"Your Claude Process Wrapper setting starts a version of Claude Code that is too old to add a marketplace from a link, so nothing changed and the plugin wasn't installed. Update the Claude Code it starts, then open the link again.\"",
+      "chinese": "\"你的 Claude Process Wrapper 设置启动的 Claude Code 版本过旧，无法从链接添加应用市场，因此没有任何更改，插件也未安装。请更新它启动的 Claude Code，然后再次打开链接。\""
+    },
+    {
+      "original": "\"The link's marketplace comes from a different source, so it wasn't added and the plugin wasn't installed. If you trust the link's source below more than yours, remove yours on the Marketplaces tab, then open the link again.\"",
+      "chinese": "\"链接的应用市场来自不同来源，因此未添加，也未安装插件。如果你更信任下方链接的来源而不是你自己的，请在“应用市场”标签页移除你的来源，然后再次打开链接。\""
+    },
+    {
+      "original": "\"Claude in Chrome works with the Chrome extension to let you control your browser directly from Claude Code. Navigate websites, fill forms, capture screenshots, record GIFs, and debug with console logs and network requests.\"",
+      "chinese": "\"Claude in Chrome 与 Chrome 扩展配合，让你可以直接从 Claude Code 控制浏览器。可导航网站、填写表单、截取屏幕截图、录制 GIF，并利用控制台日志和网络请求进行调试。\""
+    },
+    {
+      "original": "\"Create a CLAUDE.md file and add permanent instructions for Claude. Every time you prompt Claude, it'll receive these instructions. Include rules for how to interact, coding norms, and details about your project.\"",
+      "chinese": "\"创建 CLAUDE.md 文件，为 Claude 添加永久指令。每次向 Claude 发送提示时，它都会收到这些指令。可以包含交互规则、编码规范以及项目细节。\""
+    },
+    {
+      "original": "\"Authorize design-system access with your claude.ai account. This is separate from this session's sign-in and changes nothing else. The authorization is stored on this machine and used by every session on it.\"",
+      "chinese": "\"使用你的 claude.ai 账户授权设计系统访问。这与本次会话的登录相互独立，不会更改其他任何内容。授权会存储在此机器上，并由其上的每个会话使用。\""
+    },
+    {
+      "original": "\"Saved to .mcp.json and shared with everyone who opens this project. In IDE sessions, project servers connect without a separate approval step. If no folder is open, this writes to your home directory.\"",
+      "chinese": "\"保存到 .mcp.json，并与所有打开此项目的人共享。在 IDE 会话中，项目服务器无需单独批准即可连接。如果没有打开文件夹，则会写入你的主目录。\""
+    },
+    {
+      "original": "\"Characters other than plain English letters, digits, punctuation and spaces are shown as \\\\u{…} codes, because some could be invisible or look like other characters, and each backslash is shown twice.\"",
+      "chinese": "\"除普通英文字母、数字、标点和空格外的字符会显示为 \\\\u{…} 代码，因为有些字符可能不可见或看起来像其他字符；每个反斜杠会显示两次。\""
+    },
+    {
+      "original": "\"The command wasn't run. Claude Code couldn't tell which version of this plugin's marketplace the command comes from, so it can't check that the command you accept is the one that would run.\"",
+      "chinese": "\"命令未运行。Claude Code 无法判断此命令来自此插件应用市场的哪个版本，因此无法确认你接受的命令就是实际会运行的命令。\""
+    },
+    {
+      "original": "\"Yours was added from the same address with a sign-in or other settings the link doesn't include, so the link's marketplace wasn't added. Install the plugin from the Plugins tab instead.\"",
+      "chinese": "\"你的应用市场是从同一地址添加的，但带有链接未包含的登录或其他设置，因此未添加链接的应用市场。请改为从“插件”标签页安装该插件。\""
+    },
+    {
+      "original": "\"When on, Claude in Chrome connects in the sessions open in this window and in every new session, here and outside this editor. When off, it connects here only when you use @browser.\"",
+      "chinese": "\"开启时，Claude in Chrome 会在此窗口中打开的会话以及每个新会话中连接，包括此编辑器内外。关闭时，仅在你使用 @browser 时在此连接。\""
+    },
+    {
+      "original": "\"Site-level permissions are inherited from the Chrome extension. Manage permissions in the Chrome extension settings to control which sites Claude can browse, click, and type on.\"",
+      "chinese": "\"站点级权限继承自 Chrome 扩展。请在 Chrome 扩展设置中管理权限，以控制 Claude 可以浏览、点击和在哪些网站上输入。\""
+    },
+    {
+      "original": "\"Saved to your user settings, but this session still shows the previous value. A project or managed setting may be overriding it, or the session hasn't picked the change up yet.\"",
+      "chinese": "\"已保存到你的用户设置，但本次会话仍显示之前的值。项目或托管设置可能覆盖了它，或者会话尚未应用该更改。\""
+    },
+    {
+      "original": "\"That entry gives it a different source, so the link's marketplace wasn't added and the plugin wasn't installed. If you can edit that entry, change it, then open the link again.\"",
+      "chinese": "\"该条目为其指定了不同的来源，因此未添加链接的应用市场，也未安装插件。如果你可以编辑该条目，请更改它，然后再次打开链接。\""
+    },
+    {
+      "original": "\"A large result is paid for again on every later request until it's compacted or cleared. Ask for narrower reads, searches and command output, or hand noisy work to a subagent.\"",
+      "chinese": "\"大型结果在后续每个请求中都会再次计费，直到被压缩或清除。请要求更精确的读取、搜索和命令输出，或将噪声较多的工作交给子代理。\""
+    },
+    {
+      "original": "\"Bare mode: hooks from settings files, plugins, and managed policies are disabled and will not run this session; session hooks created by /goal, agents, and skills still run. \"",
+      "chinese": "\"裸模式：来自设置文件、插件和托管策略的钩子已禁用，本次会话不会运行；由 /goal、Agent 和技能创建的会话钩子仍会运行。\""
+    },
+    {
+      "original": "\"The command wasn't run. Claude Code treated this request as coming from another Claude Code session, so it didn't count your acceptance. Copy the error to see what happened.\"",
+      "chinese": "\"命令未运行。Claude Code 认为此请求来自另一个 Claude Code 会话，因此未计入你的接受操作。请复制错误以查看发生了什么。\""
+    },
+    {
+      "original": "\"A workflow fans a task out to many agents, and each one runs its own requests. Save them for big tasks. Ultracode starts one on every task; the model picker turns it off.\"",
+      "chinese": "\"工作流会把任务分发给多个 Agent，每个 Agent 都会运行自己的请求。请将它们用于大型任务。Ultracode 会在每个任务上启动一个工作流；可在模型选择器中关闭。\""
+    },
+    {
+      "original": "\"The link's marketplace was added. On the Plugins tab, install this plugin only from the marketplace with the source below; the Marketplaces tab shows each one's source.\"",
+      "chinese": "\"链接的应用市场已添加。在“插件”标签页中，只能从下方来源的应用市场安装此插件；“应用市场”标签页会显示每个应用市场的来源。\""
+    },
+    {
+      "original": "\"Your organization restricts hooks to managed and plugin sources. Hooks from user, project, local, and flag settings will not run, and managed hooks are not shown here.\"",
+      "chinese": "\"你的组织将钩子限制为托管和插件来源。来自用户、项目、本地和启动设置的钩子不会运行，且此处不显示托管钩子。\""
+    },
+    {
+      "original": "\"Complete the sign-in in the browser window that opened; it ends on a page that shows a code to paste below. You have five minutes; closing this dialog cancels it.\"",
+      "chinese": "\"请在打开的浏览器窗口中完成登录；结束时页面会显示一个验证码，请粘贴到下方。你有五分钟时间；关闭此对话框将取消操作。\""
+    },
+    {
+      "original": "\"Uncached input is expensive, and often happens when sending a message to a session that has gone idle. /compact before stepping away keeps the cold-start small.\"",
+      "chinese": "\"未缓存的输入开销很大，通常发生在向已空闲的会话发送消息时。离开前运行 /compact 可减小冷启动开销。\""
+    },
+    {
+      "original": "\"CLAUDE.md files, MCP tools, skills and memory are sent with every request. Run /context to see what takes up space, then trim or turn off what you don't need.\"",
+      "chinese": "\"CLAUDE.md 文件、MCP 工具、技能和记忆会随每个请求发送。运行 /context 查看占用空间的内容，然后精简或关闭不需要的部分。\""
+    },
+    {
+      "original": "\"This report includes your feedback, environment info, and the current session transcript. We may use these to debug related issues and improve Claude Code.\"",
+      "chinese": "\"此报告包含你的反馈、环境信息和当前会话记录。我们可能会用这些信息来排查相关问题并改进 Claude Code。\""
+    },
+    {
+      "original": "\"Saved, but this session still shows the previous value. A higher-priority setting may be overriding it, or the session hasn't picked the change up yet.\"",
+      "chinese": "\"已保存，但本次会话仍显示之前的值。更高优先级的设置可能覆盖了它，或者会话尚未应用该更改。\""
+    },
+    {
+      "original": "\"It may be turned off in another settings file, or your organization's settings may not allow the command that updates it. Copy the error to see which.\"",
+      "chinese": "\"它可能在另一个设置文件中被关闭，或者你的组织设置不允许更新它所需的命令。请复制错误以查看是哪一个。\""
+    },
+    {
+      "original": "\"Rules and workspace directories come from the running session, including approvals made for this session only and rules set when the session started.\"",
+      "chinese": "\"规则和工作区目录来自正在运行的会话，包括仅本次会话做出的批准，以及会话启动时设置的规则。\""
+    },
+    {
+      "original": "It's now off for your team in .claude/settings.json, but other settings still turn it on for you, most likely your own .claude/settings.local.json.",
+      "chinese": "它现在已在团队的 .claude/settings.json 中关闭，但其他设置仍为你开启它，很可能是你自己的 .claude/settings.local.json。"
+    },
+    {
+      "original": "\"Only hooks from managed settings can run. Hooks from user, project, local, and flag settings are blocked, and managed hooks are not shown here.\"",
+      "chinese": "\"只有来自托管设置的钩子可以运行。来自用户、项目、本地和启动设置（flag）的钩子会被阻止，且此处不显示托管钩子。\""
+    },
+    {
+      "original": "\"It's turned on in .claude/settings.json, which your team shares, so uninstalling it removes it for everyone on your team who uses this project.\"",
+      "chinese": "\"它已在团队共享的 .claude/settings.json 中开启，因此卸载它会对团队中所有使用此项目的人生效。\""
+    },
+    {
+      "original": "\"Check that it's a GitHub owner/repo, a git URL, a URL or path to a marketplace.json file, or a folder that exists. Copy the error to see why.\"",
+      "chinese": "\"请确认它是 GitHub owner/repo、git URL、指向 marketplace.json 文件的 URL 或路径，或一个存在的文件夹。请复制错误以查看原因。\""
+    },
+    {
+      "original": "\"Claude knows which file you're viewing in VS Code, and can see what's selected. Highlight code in the editor, then prompt Claude to edit it.\"",
+      "chinese": "\"Claude 知道你在 VS Code 中查看哪个文件，也能看到选中的内容。在编辑器中选中代码，然后让 Claude 修改它。\""
+    },
+    {
+      "original": "\"If this notice is still here after a minute, close this tab and reopen the conversation from the session list in the Claude Code sidebar.\"",
+      "chinese": "\"如果一分钟后此提示仍然存在，请关闭此标签页，并从 Claude Code 侧边栏的会话列表重新打开对话。\""
+    },
+    {
+      "original": "\"Each subagent runs its own requests. Be deliberate about spawning them — and consider configuring a cheaper model for simpler subagents.\"",
+      "chinese": "\"每个子代理都会运行自己的请求。请谨慎创建子代理——并考虑为较简单的子代理配置更便宜的模型。\""
+    },
+    {
+      "original": ", and this session still shows the previous value. The switch shows what this session has now; try again, or reopen this dialog to check.",
+      "chinese": "，且本次会话仍显示之前的值。开关显示的是本次会话当前的值；请重试，或重新打开此对话框检查。"
+    },
+    {
+      "original": "\"Enterprise managed settings allow only managed permission rules. Rules from other settings files are shown below but are not in effect.\"",
+      "chinese": "\"企业托管设置仅允许托管权限规则。来自其他设置文件的规则显示在下方，但不会生效。\""
+    },
+    {
+      "original": "It's turned on in .claude/settings.json, which your team shares, so turning it off there turns it off for everyone who uses this project.",
+      "chinese": "它已在你的团队共享的 .claude/settings.json 中开启，因此在那里关闭它会对所有使用此项目的人生效。"
+    },
+    {
+      "original": "`${$.total_lines_added} ${h9($.total_lines_added,\"line\")} added, ${$.total_lines_removed} ${h9($.total_lines_removed,\"line\")} removed`",
+      "chinese": "`${$.total_lines_added} 行添加，${$.total_lines_removed} 行删除`"
+    },
+    {
+      "original": "\"When a command fails because of a sandbox restriction, Claude may retry it outside the sandbox, with the usual permission prompts.\"",
+      "chinese": "\"当命令因沙盒限制失败时，Claude 可以在沙盒外重试，并使用常规权限提示。\""
+    },
+    {
+      "original": "\"Max effort thinks much longer on every step. Save it for the hardest tasks and use a lower level for everyday work (model picker).\"",
+      "chinese": "\"最大努力级别会在每一步思考更久。请将其留给最难的任务，日常工作使用较低级别（模型选择器）。\""
+    },
+    {
+      "original": "\"This plugin, or a plugin it needs, would use the same folder as another plugin. Copy the error to see which one and what to do.\"",
+      "chinese": "\"此插件或它需要的插件会与另一个插件使用同一文件夹。请复制错误以查看是哪一个以及如何处理。\""
+    },
+    {
+      "original": "\"No browsers are connected. Open Chrome with the Claude extension and make sure you're signed in to the same claude.ai account.\"",
+      "chinese": "\"没有已连接的浏览器。请打开安装了 Claude 扩展的 Chrome，并确认你已登录同一个 claude.ai 账户。\""
+    },
+    {
+      "original": "\"Saved, but this session still shows the previous value. It may not have picked the change up yet; reopen this dialog to check.\"",
+      "chinese": "\"已保存，但本次会话仍显示之前的值。它可能尚未应用该更改；请重新打开此对话框检查。\""
+    },
+    {
+      "original": "\"Saved, but this session still shows the previous state. It may not have picked the change up yet; reopen this dialog to check.\"",
+      "chinese": "\"已保存，但本次会话仍显示之前的状态。它可能尚未应用该更改；请重新打开此对话框检查。\""
+    },
+    {
+      "original": "\"This response can't be shown because your plugins check each response in the conversation, and this one is no longer there.\"",
+      "chinese": "\"无法显示此回复，因为你的插件会检查对话中的每条回复，而此回复已不在对话中。\""
+    },
+    {
+      "original": "\"; session hooks created by /goal, agents, and skills still run. Settings edits save but don't load until safe mode is off.\"",
+      "chinese": "\"；由 /goal、Agent 和技能创建的会话钩子仍会运行。设置修改会保存，但在关闭安全模式前不会加载。\""
+    },
+    {
+      "original": "\"Turn it on to update it. Your organization's settings can also block the command it needs, and then it still won't update.\"",
+      "chinese": "\"开启它才能更新。你的组织设置也可能阻止它需要的命令，那样仍然无法更新。\""
+    },
+    {
+      "original": "\"Hooks run your commands, prompts, or HTTP calls in response to Claude Code events like tool calls and prompt submission.\"",
+      "chinese": "\"钩子会在工具调用、提交提示词等 Claude Code 事件发生时运行你的命令、提示词或 HTTP 调用。\""
+    },
+    {
+      "original": "\"The rule is deleted from its settings file and stops applying to this session once Claude Code has re-read its settings.\"",
+      "chinese": "\"该规则会从其设置文件中删除，并在 Claude Code 重新读取设置后不再应用于本次会话。\""
+    },
+    {
+      "original": "\"MCP tool results stay in context for the rest of the session. /compact to flush them, or disable servers you don't need.\"",
+      "chinese": "\"MCP 工具结果会在会话剩余时间内保留在上下文中。使用 /compact 清除它们，或禁用不需要的服务器。\""
+    },
+    {
+      "original": "\"The packages it lists weren't installed. If it needs them, parts of it may not work. Updating the plugin tries again.\"",
+      "chinese": "\"它列出的包未安装。如果它需要这些包，部分功能可能无法使用。更新插件会再次尝试。\""
+    },
+    {
+      "original": "\"A record says it was accepted before, but that record is kept where it can't be relied on, so you're asked again.\"",
+      "chinese": "\"记录显示此前已接受过，但该记录保存在不可靠的位置，因此会再次询问你。\""
+    },
+    {
+      "original": "\"Keeps the default coding instructions alongside your style. Turn off for styles that are not about writing code.\"",
+      "chinese": "\"在保留你的样式的同时保留默认编码指令。对于与编写代码无关的样式，请关闭此项。\""
+    },
+    {
+      "original": "\"May use excessive tokens resulting in long response times or overthinking. Use sparingly for the hardest tasks.\"",
+      "chinese": "\"可能会消耗过多 token，导致响应时间过长或过度思考。仅在处理最难的任务时少量使用。\""
+    },
+    {
+      "original": "\"Complete the sign-in in the browser window that opened. You have five minutes; closing this dialog cancels it.\"",
+      "chinese": "\"请在打开的浏览器窗口中完成登录。你有五分钟时间；关闭此对话框将取消操作。\""
+    },
+    {
+      "original": "\"These are often background/loop sessions. Continuous usage can add up quickly so make sure it is intentional.\"",
+      "chinese": "\"这些通常是后台/循环会话。持续使用会快速累积，请确保是有意为之。\""
+    },
+    {
+      "original": "\"If this runs frequently, consider configuring its subagents with a cheaper model or tightening their prompts.\"",
+      "chinese": "\"如果此功能经常运行，请考虑为其子代理配置更便宜的模型，或收紧它们的提示词。\""
+    },
+    {
+      "original": "\"It's turned on in .claude/settings.json, which your team shares, so uninstalling your copy would leave it on.\"",
+      "chinese": "\"它已在团队共享的 .claude/settings.json 中开启，因此卸载你的副本后它仍会保持开启。\""
+    },
+    {
+      "original": "\"Longer sessions are more expensive even when cached. /compact mid-task, /clear when switching to new tasks.\"",
+      "chinese": "\"即使有缓存，更长的会话也更昂贵。任务中途使用 /compact，切换到新任务时使用 /clear。\""
+    },
+    {
+      "original": "\"Could not move this to the background. It may have just finished or already be running in the background.\"",
+      "chinese": "\"无法将其移到后台。它可能刚刚完成，或已经在后台运行。\""
+    },
+    {
+      "original": "\"This hook contains hidden characters. They are invisible in these fields; the list shows them as codes.\"",
+      "chinese": "\"此钩子包含隐藏字符。它们在这些字段中不可见；列表会将它们显示为代码。\""
+    },
+    {
+      "original": "\"This conversation is still open somewhere else. Using it in two places at once can mix up its messages.\"",
+      "chinese": "\"此对话仍在其他地方打开。同时在两处使用可能会混淆它的消息。\""
+    },
+    {
+      "original": ". If the rule is still shown, Claude Code is still re-reading its settings; reopen this dialog to check.",
+      "chinese": "。如果规则仍然显示，说明 Claude Code 仍在重新读取设置；请重新打开此对话框检查。"
+    },
+    {
+      "original": "\"The sandbox is on in the settings but did not start in this session; start a new session to try again.\"",
+      "chinese": "\"设置中已开启沙盒，但本次会话未能启动；请新建会话重试。\""
+    },
+    {
+      "original": ", is added, but its location is on a network drive, has \".\" or \"..\" in its path, or couldn't be checked.",
+      "chinese": "，已添加，但其位置位于网络驱动器、路径中包含“.”或“..”，或无法检查。"
+    },
+    {
+      "original": "\"The packages it lists couldn't be installed automatically. If it needs them, parts of it may not work.\"",
+      "chinese": "\"它列出的包无法自动安装。如果它需要这些包，部分功能可能无法使用。\""
+    },
+    {
+      "original": "\"If this notice is still here after a minute, close this tab and sign in from the Claude Code sidebar.\"",
+      "chinese": "\"如果一分钟后此提示仍然存在，请关闭此标签页，并从 Claude Code 侧边栏登录。\""
+    },
+    {
+      "original": "\"Click a hook to view, edit, or remove it. Managed, plugin, session, and built-in hooks are read-only.\"",
+      "chinese": "\"点击钩子可查看、编辑或移除它。托管、插件、会话和内置钩子为只读。\""
+    },
+    {
+      "original": "\"Another installation or your team's settings turn it on, and turning it off just for you didn't work.\"",
+      "chinese": "\"另一个安装或你的团队设置将它开启，而仅为你关闭它并未成功。\""
+    },
+    {
+      "original": "\", or it ignores this rule (in auto permission mode, allow rules for risky commands are not applied).\"",
+      "chinese": "\"，或者它忽略了此规则（在自动权限模式下，针对高风险命令的允许规则不会生效）。\""
+    },
+    {
+      "original": "\"Review what this plugin contributes — its agents, skills, and MCP tools all count toward your limit.\"",
+      "chinese": "\"检查此插件贡献的内容——它的 Agent、技能和 MCP 工具都会计入你的限额。\""
+    },
+    {
+      "original": "\"Approximate, based on local sessions on this machine — does not include other devices or claude.ai\"",
+      "chinese": "\"近似值，基于此机器上的本地会话——不包含其他设备或 claude.ai\""
+    },
+    {
+      "original": "\"Its copy from claude.ai isn't loaded; a plugin on this machine with the same name takes its place.\"",
+      "chinese": "\"来自 claude.ai 的副本未加载；此机器上同名的插件会取代它。\""
+    },
+    {
+      "original": "\"The names differ only in letter case or in characters folder names ignore, so both can't be added.\"",
+      "chinese": "\"这些名称仅在字母大小写或文件夹名称忽略的字符上不同，因此无法同时添加两者。\""
+    },
+    {
+      "original": "\"This session runs on another machine, so its permission rules can be viewed here but not changed.\"",
+      "chinese": "\"本次会话在另一台机器上运行，因此可以在此查看其权限规则，但无法更改。\""
+    },
+    {
+      "original": "\"Claude Code stopped responding in this tab, usually because the editor restarted its extensions.\"",
+      "chinese": "\"Claude Code 在此标签页中停止响应，通常是因为编辑器重启了扩展。\""
+    },
+    {
+      "original": "\"It is turned off in your user settings, but another settings file turns it on, so it still runs.\"",
+      "chinese": "\"它已在你的用户设置中关闭，但另一个设置文件将其开启，因此它仍在运行。\""
+    },
+    {
+      "original": "\"All sessions share one limit. If you don't need them all at once, queueing uses it more evenly.\"",
+      "chinese": "\"所有会话共享一个限额。如果你不需要同时使用全部会话，排队会更均匀地消耗限额。\""
+    },
+    {
+      "original": "\"Settings can't store an entry with this name; rename the skill's folder or file to configure it\"",
+      "chinese": "\"设置无法存储此名称的条目；请重命名技能的文件夹或文件以进行配置\""
+    },
+    {
+      "original": "\"When explaining code, architecture, or data flow, start with a diagram, then explain in prose.\"",
+      "chinese": "\"在解释代码、架构或数据流时，先画图表，再用文字说明。\""
+    },
+    {
+      "original": "\"Its hooks aren't running, because your organization only allows hooks from plugins it manages.\"",
+      "chinese": "\"其钩子未运行，因为你的组织仅允许其管理的插件提供的钩子。\""
+    },
+    {
+      "original": "\"A plugin it needs is missing, or the versions don't fit together. Copy the error to see which.\"",
+      "chinese": "\"缺少它需要的插件，或版本不兼容。请复制错误以查看是哪一个。\""
+    },
+    {
+      "original": "\"Show Claude Code status including version, model, account, API connectivity, and tool statuses\"",
+      "chinese": "\"显示 Claude Code 状态，包括版本、模型、账户、API 连接和工具状态\""
+    },
+    {
+      "original": "\"If the redirect page shows a connection error, paste the URL from your browser's address bar:\"",
+      "chinese": "\"如果重定向页面显示连接错误，请粘贴浏览器地址栏中的 URL：\""
+    },
+    {
+      "original": "It's off in your .claude/settings.local.json, but settings this dialog can't change keep it on.",
+      "chinese": "它已在你的 .claude/settings.local.json 中关闭，但此对话框无法更改的设置仍保持开启。"
+    },
+    {
+      "original": "` Cancel leaves ${UH(J.map((Q)=>Z.plugin(Q.pluginId)))} as ${J.length===1?\"it is\":\"they are\"}.`",
+      "chinese": "` 取消会让 ${UH(J.map((Q)=>Z.plugin(Q.pluginId)))} 保持原样。`"
+    },
+    {
+      "original": "\"Claude Code stopped it because of a command or download it needs. Copy the error to see why.\"",
+      "chinese": "\"Claude Code 因它需要的命令或下载而停止了操作。请复制错误以查看原因。\""
+    },
+    {
+      "original": "\"It makes the access details, such as a token, sent with the download from the address below.\"",
+      "chinese": "\"它会让访问凭据（例如 token）随下载一起发送到下面的地址。\""
+    },
+    {
+      "original": ", and this session still shows the previous value. Try again, or reopen this dialog to check.",
+      "chinese": "，且本次会话仍显示之前的值。请重试，或重新打开此对话框检查。"
+    },
+    {
+      "original": ". Not listed yet: this session is still re-reading its settings (reopen this dialog to check)",
+      "chinese": "。尚未列出：本次会话仍在重新读取其设置（重新打开此对话框检查）"
+    },
+    {
+      "original": ", and this session still shows the previous state. Try again, or reopen this dialog to check.",
+      "chinese": "，且本次会话仍显示之前的状态。请重试，或重新打开此对话框检查。"
+    },
+    {
+      "original": "\"This was shown before your plugins checked it. Text they would hide may have been visible.\"",
+      "chinese": "\"此内容在你的插件检查之前就已显示。插件本应隐藏的文本可能曾经可见。\""
+    },
+    {
+      "original": "\"A permission rule is a tool name, optionally followed by a specifier in parentheses, e.g. \"",
+      "chinese": "\"权限规则是工具名称，后面可选括号中的说明符，例如 \""
+    },
+    {
+      "original": "\"Headers (Header-Name: value, one per line; stored values are kept unless you retype them)\"",
+      "chinese": "\"请求头（Header-Name: value，每行一个；已存储的值会保留，除非你重新输入）\""
+    },
+    {
+      "original": "\"The sandbox settings can't be shown or changed here while this session runs in the cloud.\"",
+      "chinese": "\"本次会话在云端运行时，无法在此显示或更改沙盒设置。\""
+    },
+    {
+      "original": "\"Remote Control is active · Click to open claude.ai/code · Run /remote-control to turn off\"",
+      "chinese": "\"远程控制已启用 · 点击打开 claude.ai/code · 运行 /remote-control 关闭\""
+    },
+    {
+      "original": "\" marketplace is unchanged since you saw the command. The command it declares now is below.",
+      "chinese": "\"\\\" 应用市场自你看到该命令以来未发生变化。它现在声明的命令如下。\""
+    },
+    {
+      "original": "\"The command gives Claude Code a folder, which is copied into Claude Code's plugin folder.\"",
+      "chinese": "\"该命令会给 Claude Code 一个文件夹，该文件夹会被复制到 Claude Code 的插件文件夹中。\""
+    },
+    {
+      "original": "\"Can't copy this response yet. Your plugins are still checking it. Try again in a moment.\"",
+      "chinese": "\"暂时无法复制此回复。你的插件仍在检查它。请稍后再试。\""
+    },
+    {
+      "original": "\"The agent's earlier messages could not be read; showing what has arrived in this window.\"",
+      "chinese": "\"无法读取此 Agent 的早期消息；仅显示此窗口中已到达的内容。\""
+    },
+    {
+      "original": "\"This memory contains hidden characters. They are spelled out above and kept in the file.\"",
+      "chinese": "\"此记忆包含隐藏字符。它们已在上方标出，并保留在文件中。\""
+    },
+    {
+      "original": "\"Every command Claude runs must run in the sandbox, unless its pattern is excluded below.\"",
+      "chinese": "\"Claude 运行的每条命令都必须在沙盒中运行，除非其模式在下方被排除。\""
+    },
+    {
+      "original": "\"Your organization's managed settings could not be read, so hooks cannot be edited here.\"",
+      "chinese": "\"无法读取你组织的托管设置，因此无法在此编辑钩子。\""
+    },
+    {
+      "original": "\"This hook lives in this folder's own settings.local.json, which the dialog cannot edit.\"",
+      "chinese": "\"此钩子位于此文件夹自己的 settings.local.json 中，对话框无法编辑它。\""
+    },
+    {
+      "original": "\"Sandboxed commands run without a permission prompt; your ask and deny rules still apply\"",
+      "chinese": "\"沙盒中的命令无需权限提示即可运行；你的询问和拒绝规则仍然生效\""
+    },
+    {
+      "original": "\"Some of this agent's newer messages could not be read again, so a few may be missing.\"",
+      "chinese": "\"此 Agent 的部分较新消息再次无法读取，因此可能缺少少数内容。\""
+    },
+    {
+      "original": "\"These settings are set by a higher-priority configuration and cannot be changed here.\"",
+      "chinese": "\"这些设置由更高优先级的配置设定，无法在此更改。\""
+    },
+    {
+      "original": "\"This plugin's command, or how its folder is used, changed since it was last accepted.\"",
+      "chinese": "\"此插件的命令或其文件夹的使用方式自上次接受以来已更改。\""
+    },
+    {
+      "original": "\"This response can't be shown because its conversation history can't be found or read.\"",
+      "chinese": "\"无法显示此回复，因为找不到或无法读取其对话历史。\""
+    },
+    {
+      "original": "\"Heavy skills can be scoped down or run with a cheaper model via skill frontmatter.\"",
+      "chinese": "\"繁重的技能可以缩小范围，或通过技能 frontmatter 使用更便宜的模型运行。\""
+    },
+    {
+      "original": "\"The command gives Claude Code a folder, which is used where it is, without a copy.\"",
+      "chinese": "\"该命令会给 Claude Code 一个文件夹，直接就地使用，不进行复制。\""
+    },
+    {
+      "original": "\"Refreshing the marketplace downloads its latest list, then the install runs again.\"",
+      "chinese": "\"刷新应用市场会下载其最新列表，然后重新运行安装。\""
+    },
+    {
+      "original": "\"More than one marketplace has a plugin of this name. Copy the error to see which.\"",
+      "chinese": "\"多个应用市场都有此名称的插件。请复制错误以查看是哪一个。\""
+    },
+    {
+      "original": "\"Refreshing the marketplace downloads its latest list, then the install continues.\"",
+      "chinese": "\"刷新应用市场会下载其最新列表，然后继续安装。\""
+    },
+    {
+      "original": "\"This bookmark can't be saved because this conversation's history can't be found.\"",
+      "chinese": "\"无法保存此书签，因为找不到此对话的历史记录。\""
+    },
+    {
+      "original": "\"an agent's activity line, summary, result, failure or transcript (the Agent map)\"",
+      "chinese": "\"Agent 的活动行、摘要、结果、失败信息或对话记录（Agent 地图）\""
+    },
+    {
+      "original": "\"Safe mode: hooks from settings files are suspended and will not run this session\"",
+      "chinese": "\"安全模式：来自设置文件的钩子已暂停，本次会话不会运行\""
+    },
+    {
+      "original": "\"Claude in Chrome can't be set up from here while this session runs in the cloud.\"",
+      "chinese": "\"本次会话在云端运行时，无法从此处设置 Claude in Chrome。\""
+    },
+    {
+      "original": "\"Hooks are locked by a managed settings file, so this one cannot be edited here.\"",
+      "chinese": "\"钩子已被某个托管设置文件锁定，因此无法在此编辑此钩子。\""
+    },
+    {
+      "original": "\"You have uncommitted changes. Commit or stash your changes before switching to \"",
+      "chinese": "\"你有未提交的更改。在切换到以下分支前，请先提交或暂存更改：\""
+    },
+    {
+      "original": "\"In Ask before editing mode, Claude will never change files without approval.\"",
+      "chinese": "\"在“修改前询问”模式下，Claude 绝不会未经批准修改文件。\""
+    },
+    {
+      "original": "\"Claude Code is responding again in this tab, and the sign-in screen is back.\"",
+      "chinese": "\"Claude Code 在此标签页中已恢复响应，登录界面已恢复。\""
+    },
+    {
+      "original": "\"Login is managed by your organization and must be completed in the terminal.\"",
+      "chinese": "\"登录由你的组织管理，必须在终端中完成。\""
+    },
+    {
+      "original": "\"what a running agent is doing now, or its summary (Focus view's agent rows)\"",
+      "chinese": "\"运行中的 Agent 当前在做什么，或其摘要（专注视图的 Agent 行）\""
+    },
+    {
+      "original": "\"could not be parsed, so hooks defined there are not shown and will not run.\"",
+      "chinese": "\"无法解析，因此其中定义的钩子不会显示，也不会运行。\""
+    },
+    {
+      "original": "\"Sandboxing is turned off for this platform by your organization's settings.\"",
+      "chinese": "\"此平台的沙盒已被你组织的设置关闭。\""
+    },
+    {
+      "original": "\"You can remove it from this tab if it has moved. Copy the error to see why.\"",
+      "chinese": "\"如果它已移动，你可以从此标签页移除它。请复制错误以查看原因。\""
+    },
+    {
+      "original": "[\"Rate Claude Code\",$.marketplaceType===\"vscode\"?\" for VS Code\":\" extension\"]",
+      "chinese": "[\"为 \",$.marketplaceType===\"vscode\"?\"VS Code\":\"OpenVSX\",\" 版 Claude Code 评分\"]"
+    },
+    {
+      "original": "\"Saving a file is not available here; Export conversation copies it instead\"",
+      "chinese": "\"此处无法保存文件；请改用“导出对话”复制内容\""
+    },
+    {
+      "original": "\"Couldn't load this conversation's saved history, so it can't be continued.\"",
+      "chinese": "\"无法加载此对话保存的历史记录，因此无法继续。\""
+    },
+    {
+      "original": "\"Rules you add or remove here are written to the settings file you choose. \"",
+      "chinese": "\"在此添加或移除的规则会写入你选择的设置文件。\""
+    },
+    {
+      "original": "\"The sandbox cannot run until the missing dependencies below are installed.\"",
+      "chinese": "\"在安装下方缺失的依赖之前，沙盒无法运行。\""
+    },
+    {
+      "original": "\"This bookmark couldn't be saved because a file it needs couldn't be read.\"",
+      "chinese": "\"无法保存此书签，因为无法读取它需要的文件。\""
+    },
+    {
+      "original": "\"Claude Code is responding again in this tab, and the message box is back.\"",
+      "chinese": "\"Claude Code 在此标签页中已恢复响应，消息框已恢复。\""
+    },
+    {
+      "original": "\"Check the source, then try again, or copy the error to see what happened.\"",
+      "chinese": "\"请检查来源，然后重试，或复制错误以查看发生了什么。\""
+    },
+    {
+      "original": "\"Your organization doesn't allow the command this plugin's download needs.\"",
+      "chinese": "\"你的组织不允许使用此插件下载所需的命令。\""
+    },
+    {
+      "original": "\"This marketplace's location is on a network drive or couldn't be checked.\"",
+      "chinese": "\"此应用市场的位置位于网络驱动器上，或无法检查。\""
+    },
+    {
+      "original": "\"The marketplace doesn't list a plugin by that name, even after a refresh.\"",
+      "chinese": "\"即使刷新后，应用市场也没有列出该名称的插件。\""
+    },
+    {
+      "original": "\"Select a message to restore the code and/or conversation from that point.\"",
+      "chinese": "\"选择一条消息，以从该时间点恢复代码和/或对话。\""
+    },
+    {
+      "original": "`${X.toLocaleString(\"en-US\")} earlier ${h9(X,\"line\")} from the ${Z} plugin`",
+      "chinese": "`${X.toLocaleString(\"en-US\")} 行来自 ${Z} 插件`"
+    },
+    {
+      "original": "\"Copy Claude's last response to clipboard (or /copy N for the Nth-latest)\"",
+      "chinese": "\"将 Claude 的最后一条回复复制到剪贴板（或使用 /copy N 复制倒数第 N 条）\""
+    },
+    {
+      "original": "\"It's installed, but Claude Code couldn't be started to load its options.\"",
+      "chinese": "\"已安装，但无法启动 Claude Code 来加载其选项。\""
+    },
+    {
+      "original": "\"It's built in or loaded from a folder, so there is nothing to uninstall.\"",
+      "chinese": "\"它是内置的或从文件夹加载的，因此没有可卸载的内容。\""
+    },
+    {
+      "original": "\"Saved. The style will appear in the Output styles menu in new sessions.\"",
+      "chinese": "\"已保存。该样式将在新会话的输出样式菜单中出现。\""
+    },
+    {
+      "original": "\" · these are independent characteristics of your usage, not a breakdown\"",
+      "chinese": "\" · 这些是用量的独立特征，并非明细拆分\""
+    },
+    {
+      "original": "\"Your organization doesn't allow plugins from this plugin's marketplace.\"",
+      "chinese": "\"你的组织不允许使用此插件所在应用市场中的插件。\""
+    },
+    {
+      "original": "\" to the excluded commands; this session has not picked the change up yet",
+      "chinese": "\"\\\" 添加到排除命令中；本次会话尚未应用该更改\""
+    },
+    {
+      "original": "\"Couldn’t check this folder for uncommitted changes before switching to \"",
+      "chinese": "\"无法在切换到以下分支前检查此文件夹是否有未提交的更改：\""
+    },
+    {
+      "original": "\"Ask a quick side question below without interrupting the conversation.\"",
+      "chinese": "\"在下方快速提出一个侧边问题，不会打断当前对话。\""
+    },
+    {
+      "original": ". Try again, or go back to the list to see whether the hook was removed.",
+      "chinese": "。请重试，或返回列表查看钩子是否已被移除。"
+    },
+    {
+      "original": "\"It's installed for another project. Open that project to uninstall it.\"",
+      "chinese": "\"它已为另一个项目安装。请打开该项目进行卸载。\""
+    },
+    {
+      "original": "\"Bookmark a response with the bookmark button under it to keep it here.\"",
+      "chinese": "\"使用回复下方的书签按钮收藏回复，以便保留在此处。\""
+    },
+    {
+      "original": "\"All hooks are currently disabled by a managed settings file. You have\"",
+      "chinese": "\"所有钩子当前已被某个托管设置文件禁用。你有\""
+    },
+    {
+      "original": "\"An agent is waiting for your permission · Click to open the agent map\"",
+      "chinese": "\"有 Agent 正在等待你的许可 · 点击打开 Agent 地图\""
+    },
+    {
+      "original": ". Try again, or go back to the list to see whether the hook was saved.",
+      "chinese": "。请重试，或返回列表查看钩子是否已保存。"
+    },
+    {
+      "original": "\"This file is not plain text, so it can only be edited in the editor.\"",
+      "chinese": "\"此文件不是纯文本，因此只能在编辑器中编辑。\""
+    },
+    {
+      "original": "\"Choosing an “Always” option on a permission prompt saves a rule here\"",
+      "chinese": "\"在权限提示中选择“始终”选项会在此保存一条规则\""
+    },
+    {
+      "original": "\"Your Claude Code settings already list a marketplace with this name.\"",
+      "chinese": "\"你的 Claude Code 设置中已列出同名的应用市场。\""
+    },
+    {
+      "original": "\"Ask a quick side question without interrupting the main conversation\"",
+      "chinese": "\"快速提出一个侧边问题，不会打断主对话\""
+    },
+    {
+      "original": ". If the rule is still shown after you reopen this dialog, try again.",
+      "chinese": "。如果重新打开此对话框后规则仍然显示，请重试。"
+    },
+    {
+      "original": "\"Commands run inside the sandbox; the usual permission prompts apply\"",
+      "chinese": "\"命令在沙盒中运行；常规权限提示仍然生效\""
+    },
+    {
+      "original": "\"Settings elsewhere decide this plugin. Copy the error to see which.\"",
+      "chinese": "\"其他位置的设置决定此插件。请复制错误以查看是哪一个。\""
+    },
+    {
+      "original": ". Names can only contain letters, numbers, hyphens, and underscores.",
+      "chinese": "。名称只能包含字母、数字、连字符和下划线。"
+    },
+    {
+      "original": "\"It was stopped. Try again, or copy the error to see what happened.\"",
+      "chinese": "\"操作已停止。请重试，或复制错误以查看发生了什么。\""
+    },
+    {
+      "original": ". If the rule is not shown after you reopen this dialog, try again.",
+      "chinese": "。如果重新打开此对话框后规则没有显示，请重试。"
+    },
+    {
+      "original": "\"Its command wasn't run. Try again to see the command it uses now.\"",
+      "chinese": "\"其命令未运行。请重试以查看它现在使用的命令。\""
+    },
+    {
+      "original": "\"Login method pre-selected: API usage billing (Anthropic Console)\"",
+      "chinese": "\"已预选登录方式：API 用量计费（Anthropic Console）\""
+    },
+    {
+      "original": "\"Your organization already provides a marketplace with this name.\"",
+      "chinese": "\"你的组织已提供同名的应用市场。\""
+    },
+    {
+      "original": "\". Open that folder first, or continue in the current workspace.\"",
+      "chinese": "\"。请先打开该文件夹，或在当前工作区中继续。\""
+    },
+    {
+      "original": "\"The allowed domains are set by a higher-priority configuration.\"",
+      "chinese": "\"允许的域名由更高优先级的配置设定。\""
+    },
+    {
+      "original": "\"This session was started with settings that decide this plugin.\"",
+      "chinese": "\"本次会话启动时的设置决定了此插件。\""
+    },
+    {
+      "original": "\"Keep going when this prompt blocks, instead of ending the turn\"",
+      "chinese": "\"此提示词阻塞时继续执行，而不是结束回合\""
+    },
+    {
+      "original": "\". Its settings, including permission rules, are not in effect.\"",
+      "chinese": "\"。其设置（包括权限规则）未生效。\""
+    },
+    {
+      "original": "\"Login method pre-selected: Subscription plan (Claude Pro/Max)\"",
+      "chinese": "\"已预选登录方式：订阅计划（Claude Pro/Max）\""
+    },
+    {
+      "original": "\"The agent could not be stopped. It may have finished already.\"",
+      "chinese": "\"无法停止该 Agent。它可能已经完成。\""
+    },
+    {
+      "original": "\"Added to Claude's system prompt whenever this style is active\"",
+      "chinese": "\"此样式启用时会添加到 Claude 的系统提示词中\""
+    },
+    {
+      "original": "\"Approved for this session only; not saved in a settings file.\"",
+      "chinese": "\"仅本次会话批准；未保存到设置文件。\""
+    },
+    {
+      "original": "\"Claude will deny actions that need approval instead of asking\"",
+      "chinese": "\"Claude 将拒绝需要批准的操作，而不是询问\""
+    },
+    {
+      "original": "`Claude Code stopped unexpectedly before it could confirm ${J}`",
+      "chinese": "`Claude Code 意外停止，未能确认${J}`"
+    },
+    {
+      "original": "`Thought for ${Math.max(1,Math.round($.thinkingMillis/1000))}s`",
+      "chinese": "`思考了 ${Math.max(1,Math.round($.thinkingMillis/1000))} 秒`"
+    },
+    {
+      "original": "\"Claude may use instructions, code, or files from this skill.\"",
+      "chinese": "\"Claude 可能会使用此技能中的说明、代码或文件。\""
+    },
+    {
+      "original": "\"The task could not be stopped. It may have finished already.\"",
+      "chinese": "\"无法停止该任务。它可能已经完成。\""
+    },
+    {
+      "original": "\"Private to you in this project (.claude/settings.local.json)\"",
+      "chinese": "\"仅你在此项目中可见（.claude/settings.local.json）\""
+    },
+    {
+      "original": "\"bash where available, PowerShell on Windows without Git Bash\"",
+      "chinese": "\"可用时使用 bash，Windows 上无 Git Bash 时使用 PowerShell\""
+    },
+    {
+      "original": "\"Registered for this session by a skill, an agent, or a goal.\"",
+      "chinese": "\"由技能、Agent 或目标为本次会话注册。\""
+    },
+    {
+      "original": "\"The conversation will be forked. The code will be unchanged.\"",
+      "chinese": "\"对话将被复刻。代码将保持不变。\""
+    },
+    {
+      "original": "\"This plugin needs a plugin your organization doesn't allow.\"",
+      "chinese": "\"此插件需要你的组织不允许的另一个插件。\""
+    },
+    {
+      "original": "\"This marketplace's source no longer has a marketplace file.\"",
+      "chinese": "\"此应用市场的来源已不再包含应用市场文件。\""
+    },
+    {
+      "original": "\"Claude has finished a plan and is waiting for your review.\"",
+      "chinese": "\"Claude 已完成计划，正在等待你审阅。\""
+    },
+    {
+      "original": "\"Conversation opened in the editor; choose where to save it\"",
+      "chinese": "\"对话已在编辑器中打开；请选择保存位置\""
+    },
+    {
+      "original": "\"Voice dictation is unavailable without a claude.ai sign-in\"",
+      "chinese": "\"未登录 claude.ai 时无法使用语音听写\""
+    },
+    {
+      "original": "\"This plugin is already installed from another marketplace.\"",
+      "chinese": "\"此插件已从另一个应用市场安装。\""
+    },
+    {
+      "original": "\"Claude Code refused the update. Copy the error to see why.\"",
+      "chinese": "\"Claude Code 拒绝了更新。请复制错误以查看原因。\""
+    },
+    {
+      "original": "\"Uninstalling it deletes any saved data unless you keep it.\"",
+      "chinese": "\"卸载它会删除所有已保存的数据，除非你选择保留。\""
+    },
+    {
+      "original": "\"Your organization manages it. Ask your admin to remove it.\"",
+      "chinese": "\"它由你的组织管理。请联系管理员移除。\""
+    },
+    {
+      "original": "\"Authorize design-system access with your claude.ai account\"",
+      "chinese": "\"使用你的 claude.ai 账户授权设计系统访问\""
+    },
+    {
+      "original": "\"Shows in the Output styles menu and becomes the file name\"",
+      "chinese": "\"显示在输出样式菜单中，并作为文件名\""
+    },
+    {
+      "original": "\"Commands matching these patterns run outside the sandbox.\"",
+      "chinese": "\"匹配这些模式的命令会在沙盒外运行。\""
+    },
+    {
+      "original": "\"You already have a marketplace with nearly the same name.\"",
+      "chinese": "\"你已有一个名称几乎相同的应用市场。\""
+    },
+    {
+      "original": "\"This plugin's download needs a command that wasn't shown.\"",
+      "chinese": "\"此插件的下载需要一条未显示的命令。\""
+    },
+    {
+      "original": "\"This plugin needs plugins that are missing or turned off.\"",
+      "chinese": "\"此插件需要的插件缺失或已关闭。\""
+    },
+    {
+      "original": "\"Show sessions that need input, are working, or are unread\"",
+      "chinese": "\"显示需要输入、正在运行或未读的会话\""
+    },
+    {
+      "original": "\"Moving to the background is turned off for this session.\"",
+      "chinese": "\"本次会话已关闭移到后台功能。\""
+    },
+    {
+      "original": "\"Available in all your projects (~/.claude/settings.json)\"",
+      "chinese": "\"在你所有项目中可用（~/.claude/settings.json）\""
+    },
+    {
+      "original": "\"Claude Code is not running, so the hook cannot be saved.\"",
+      "chinese": "\"Claude Code 未运行，因此无法保存钩子。\""
+    },
+    {
+      "original": "'Once installed, choose \"Reconnect extension\" to connect.'",
+      "chinese": "'安装后，选择“重新连接扩展”进行连接。'"
+    },
+    {
+      "original": "\"It is turned off by your settings, so it is not running.\"",
+      "chinese": "\"它已被你的设置关闭，因此未运行。\""
+    },
+    {
+      "original": "\"Downloading this plugin runs a command on your computer.\"",
+      "chinese": "\"下载此插件会在你的电脑上运行一条命令。\""
+    },
+    {
+      "original": "\"View and manage what Claude remembers about this project\"",
+      "chinese": "\"查看和管理 Claude 对此项目的记忆\""
+    },
+    {
+      "original": "\"Copy the conversation as plain text or save it to a file\"",
+      "chinese": "\"将对话复制为纯文本或保存到文件\""
+    },
+    {
+      "original": "\"Hold Shift while dragging to drop files into Claude Code\"",
+      "chinese": "\"拖拽时按住 Shift 可将文件放入 Claude Code\""
+    },
+    {
+      "original": "\"Run dynamic workflows on every task (this session only)\"",
+      "chinese": "\"在每个任务上运行动态工作流（仅本次会话）\""
+    },
+    {
+      "original": "\"Auto mode is now Claude Code's default permission mode.\"",
+      "chinese": "\"自动模式现在是 Claude Code 的默认权限模式。\""
+    },
+    {
+      "original": "\"Environment variables allowed in headers (one per line)\"",
+      "chinese": "\"请求头中允许的环境变量（每行一个）\""
+    },
+    {
+      "original": "% of your usage went to always-on context over 40k tokens",
+      "chinese": "% 的用量用于超过 40k token 的常驻上下文"
+    },
+    {
+      "original": "\"No attribution data yet · accumulates as you use Claude\"",
+      "chinese": "\"尚无归因数据 · 会随着你使用 Claude 而累积\""
+    },
+    {
+      "original": "\"One of its links points to a skill that does not exist.\"",
+      "chinese": "\"它的某个链接指向不存在的技能。\""
+    },
+    {
+      "original": "\"The list of plugins you can install couldn't be loaded.\"",
+      "chinese": "\"无法加载可安装插件列表。\""
+    },
+    {
+      "original": "\"This plugin was uninstalled, but it's still on for you.\"",
+      "chinese": "\"此插件已卸载，但对你仍处于开启状态。\""
+    },
+    {
+      "original": "\"Listed for Claude by name only, without its description\"",
+      "chinese": "\"仅向 Claude 列出名称，不包含描述\""
+    },
+    {
+      "original": "\"Claude didn't return an answer for this side question.\"",
+      "chinese": "\"Claude 未返回这个侧边问题的答案。\""
+    },
+    {
+      "original": "\"Export the current conversation to a file or clipboard\"",
+      "chinese": "\"将当前对话导出到文件或剪贴板\""
+    },
+    {
+      "original": "\"Set for this session by the --settings startup option.\"",
+      "chinese": "\"由 --settings 启动选项为本次会话设置。\""
+    },
+    {
+      "original": "\"Claude in Chrome is not supported in WSL at this time.\"",
+      "chinese": "\"Claude in Chrome 目前不支持 WSL。\""
+    },
+    {
+      "original": "\"The sandbox dialog reply was not in the expected shape\"",
+      "chinese": "\"沙盒对话框的回复格式不符合预期\""
+    },
+    {
+      "original": "\"It's installed, but loading its options took too long.\"",
+      "chinese": "\"已安装，但加载其选项耗时过长。\""
+    },
+    {
+      "original": "\"Show your bookmarked responses beside the conversation\"",
+      "chinese": "\"在对话旁显示你收藏的回复\""
+    },
+    {
+      "original": "\"The memory dialog reply was not in the expected shape\"",
+      "chinese": "\"记忆对话框的回复格式不符合预期\""
+    },
+    {
+      "original": "\"If I've been helpful to you, I'd love a review on the\"",
+      "chinese": "\"如果你觉得我有帮助，希望你能在以下应用市场留下评价：\""
+    },
+    {
+      "original": ", is added, but it doesn't match its entry in settings.",
+      "chinese": "，已添加，但与设置中的条目不匹配。"
+    },
+    {
+      "original": "\"It is turned on for this project but isn't installed.\"",
+      "chinese": "\"它已为此项目启用，但尚未安装。\""
+    },
+    {
+      "original": "\"A plugin couldn't be installed alongside another one.\"",
+      "chinese": "\"无法将某个插件与另一个插件一起安装。\""
+    },
+    {
+      "original": "\"Only letters, numbers, dots, hyphens, and underscores\"",
+      "chinese": "\"只能包含字母、数字、点、连字符和下划线\""
+    },
+    {
+      "original": "\"View and manage everything running in the background\"",
+      "chinese": "\"查看和管理所有后台运行的任务\""
+    },
+    {
+      "original": "\"Claude in Chrome is turned off by your organization.\"",
+      "chinese": "\"Claude in Chrome 已被你的组织关闭。\""
+    },
+    {
+      "original": "\"Claude Design sync is not available in this session.\"",
+      "chinese": "\"此会话中无法使用 Claude Design 同步。\""
+    },
+    {
+      "original": "\"Workspace directories are listed here for reference.\"",
+      "chinese": "\"此处列出的工作区目录仅供参考。\""
+    },
+    {
+      "original": "% of your usage came from sessions active for 8+ hours",
+      "chinese": "% 的用量来自活跃 8 小时以上的会话"
+    },
+    {
+      "original": "\"This plugin's download doesn't match what was shown.\"",
+      "chinese": "\"此插件的下载内容与显示的内容不匹配。\""
+    },
+    {
+      "original": "\". The branch may have been deleted or has conflicts.\"",
+      "chinese": "\"。该分支可能已被删除或有冲突。\""
+    },
+    {
+      "original": "\"claude-vscode is reserved for the extension itself.\"",
+      "chinese": "\"claude-vscode 保留给扩展本身使用。\""
+    },
+    {
+      "original": "\"Arguments (JSON array, optional; no shell when set)\"",
+      "chinese": "\"参数（JSON 数组，可选；设置后不再经过 shell）\""
+    },
+    {
+      "original": "\"Claude in Chrome requires a claude.ai subscription.\"",
+      "chinese": "\"Claude in Chrome 需要 claude.ai 订阅。\""
+    },
+    {
+      "original": "\"Signing in again replaces the stored authorization.\"",
+      "chinese": "\"重新登录会替换已存储的授权。\""
+    },
+    {
+      "original": "\"Sandboxing needs WSL2; it is not available on WSL1.\"",
+      "chinese": "\"沙盒需要 WSL2；WSL1 上不可用。\""
+    },
+    {
+      "original": "% of your usage was while 4+ sessions ran in parallel",
+      "chinese": "% 的用量发生在 4 个以上会话并行运行时"
+    },
+    {
+      "original": "\"Plan limits aren't available for this login method.\"",
+      "chinese": "\"此登录方式不支持套餐限额。\""
+    },
+    {
+      "original": "\"Settings already list a marketplace with this name.\"",
+      "chinese": "\"设置中已列出同名的应用市场。\""
+    },
+    {
+      "original": "\"Version, session, account, model and server details\"",
+      "chinese": "\"版本、会话、账户、模型和服务器详情\""
+    },
+    {
+      "original": "\"Open a new conversation in a new tab or the sidebar\"",
+      "chinese": "\"在新标签页或侧边栏中打开新对话\""
+    },
+    {
+      "original": "\"User reverted all proposed changes in the diff view\"",
+      "chinese": "\"用户在差异视图中还原了所有建议的更改\""
+    },
+    {
+      "original": "\"Explore this codebase and document it in CLAUDE.md\"",
+      "chinese": "\"探索此代码库并记录到 CLAUDE.md 中\""
+    },
+    {
+      "original": "% of your usage went to tool results over 10k tokens",
+      "chinese": "% 的用量用于超过 10k token 的工具结果"
+    },
+    {
+      "original": "\"Try again, or copy the error to see what happened.\"",
+      "chinese": "\"请重试，或复制错误以查看发生了什么。\""
+    },
+    {
+      "original": "\"Enable plan mode or view the current session plan\"",
+      "chinese": "\"启用计划模式或查看当前会话的计划\""
+    },
+    {
+      "original": "\"Could not move this to the background. Try again.\"",
+      "chinese": "\"无法将其移到后台。请重试。\""
+    },
+    {
+      "original": "\"Couldn’t load permission rules from this session:\"",
+      "chinese": "\"无法从此会话加载权限规则：\""
+    },
+    {
+      "original": "\"System Settings → Privacy & Security → Microphone\"",
+      "chinese": "\"系统设置 → 隐私与安全性 → 麦克风\""
+    },
+    {
+      "original": "\"Your organization doesn't allow this marketplace.\"",
+      "chinese": "\"你的组织不允许使用此应用市场。\""
+    },
+    {
+      "original": "\"Your plugins and marketplaces couldn't be loaded.\"",
+      "chinese": "\"无法加载你的插件和应用市场。\""
+    },
+    {
+      "original": "\"It's installed, but its options couldn't be read.\"",
+      "chinese": "\"已安装，但无法读取其选项。\""
+    },
+    {
+      "original": "\"View and control this session from claude.ai/code\"",
+      "chinese": "\"从 claude.ai/code 查看和控制此会话\""
+    },
+    {
+      "original": "`Claude Code's reply was too large to confirm ${J}`",
+      "chinese": "`Claude Code 的回复过大，无法确认${J}`"
+    },
+    {
+      "original": "\"Shared via .claude/settings.json in this project\"",
+      "chinese": "\"通过此项目中的 .claude/settings.json 共享\""
+    },
+    {
+      "original": "\"Agents are working · Click to open the agent map\"",
+      "chinese": "\"Agent 正在工作 · 点击打开 Agent 地图\""
+    },
+    {
+      "original": "\"Uninstall the copy in your Installed list first.\"",
+      "chinese": "\"请先卸载“已安装”列表中的副本。\""
+    },
+    {
+      "original": "\"This plugin's command couldn't be run from here.\"",
+      "chinese": "\"无法从此处运行此插件的命令。\""
+    },
+    {
+      "original": "\"This plugin needs a plugin that isn't installed.\"",
+      "chinese": "\"此插件需要一个尚未安装的插件。\""
+    },
+    {
+      "original": "\".claude/settings.local.json, which is just yours\"",
+      "chinese": "\".claude/settings.local.json（仅你所有）\""
+    },
+    {
+      "original": "\"Your organization's settings decide this plugin.\"",
+      "chinese": "\"你的组织设置决定此插件。\""
+    },
+    {
+      "original": "\"Failed to rewind: no checkpoint for this message\"",
+      "chinese": "\"回滚失败：此消息没有检查点\""
+    },
+    {
+      "original": "\"Reload the window to start using session delete.\"",
+      "chinese": "\"重新加载窗口以开始使用会话删除。\""
+    },
+    {
+      "original": "\"Environment variables (KEY=value, one per line)\"",
+      "chinese": "\"环境变量（KEY=value，每行一个）\""
+    },
+    {
+      "original": "\"Left or Right arrow changes where this is saved\"",
+      "chinese": "\"左右方向键可更改保存位置\""
+    },
+    {
+      "original": "% of your usage came from subagent-heavy sessions",
+      "chinese": "% 的用量来自大量使用子代理的会话"
+    },
+    {
+      "original": ", is added, but its source or name can't be used.",
+      "chinese": "，已添加，但其来源或名称无法使用。"
+    },
+    {
+      "original": "\"This plugin couldn't be selected automatically.\"",
+      "chinese": "\"无法自动选择此插件。\""
+    },
+    {
+      "original": ", so Claude reloaded with the file as last saved.",
+      "chinese": "，因此 Claude 以最后一次保存的文件重新加载。"
+    },
+    {
+      "original": "` Cancel leaves ${Q} as ${z?\"it is\":\"they are\"}.`",
+      "chinese": "` 取消会让 ${Q} 保持原样。`"
+    },
+    {
+      "original": "\"In CLAUDE.md, remember that I always prefer...\"",
+      "chinese": "\"在 CLAUDE.md 中记住我总是偏好……\""
+    },
+    {
+      "original": "\"Conversation was compacted to free up context.\"",
+      "chinese": "\"对话已被压缩以释放上下文。\""
+    },
+    {
+      "original": "\"Disabled: this hook will not run this session.\"",
+      "chinese": "\"已禁用：此钩子本次会话不会运行。\""
+    },
+    {
+      "original": ", so the dialog cannot tell which one to change.",
+      "chinese": "，因此对话框无法判断要更改哪一个。"
+    },
+    {
+      "original": "\"The sign-in cannot complete from this session.\"",
+      "chinese": "\"无法从本次会话完成登录。\""
+    },
+    {
+      "original": "\"This plugin's dependencies can't be installed.\"",
+      "chinese": "\"无法安装此插件的依赖项。\""
+    },
+    {
+      "original": "\"This plugin needs a plugin that is turned off.\"",
+      "chinese": "\"此插件需要一个已关闭的插件。\""
+    },
+    {
+      "original": "\"You already have a marketplace with this name.\"",
+      "chinese": "\"你已有同名的应用市场。\""
+    },
+    {
+      "original": "`A name can't contain / \\\\ : * ? \" < > | or ---`",
+      "chinese": "`名称不能包含 / \\\\ : * ? \" < > | 或 ---`"
+    },
+    {
+      "original": "\"this session's bookmarks could not be written\"",
+      "chinese": "\"无法写入此会话的书签\""
+    },
+    {
+      "original": "\". Answer it in the session's permission card.\"",
+      "chinese": "\"。请在会话的权限卡片中回答。\""
+    },
+    {
+      "original": "\"Set by your organization in managed settings.\"",
+      "chinese": "\"由你的组织在托管设置中设置。\""
+    },
+    {
+      "original": "\"Defined by a plugin; change it in the plugin.\"",
+      "chinese": "\"由插件定义；请在插件中更改。\""
+    },
+    {
+      "original": "\"Opened in the editor; choose where to save it\"",
+      "chinese": "\"已在编辑器中打开；请选择保存位置\""
+    },
+    {
+      "original": "\"Sandboxing is not available on this platform.\"",
+      "chinese": "\"此平台不支持沙盒。\""
+    },
+    {
+      "original": "\"An agent failed · Click to open the agent map\"",
+      "chinese": "\"有 Agent 失败 · 点击打开 Agent 地图\""
+    },
+    {
+      "original": "\"This plugin's command can't be accepted here.\"",
+      "chinese": "\"无法在此接受此插件的命令。\""
+    },
+    {
+      "original": "\"Only accept it if you trust that marketplace.\"",
+      "chinese": "\"只有在你信任该应用市场时才接受。\""
+    },
+    {
+      "original": "\".claude/settings.json, which your team shares\"",
+      "chinese": "\".claude/settings.json（你的团队共享）\""
+    },
+    {
+      "original": "\"This plugin is turned on for your whole team.\"",
+      "chinese": "\"此插件已为你的整个团队开启。\""
+    },
+    {
+      "original": "\"To fix this, reinstall the extension, or set\"",
+      "chinese": "\"要解决此问题，请重新安装扩展，或设置\""
+    },
+    {
+      "original": "\"Drawing cut: too many pictures in this panel\"",
+      "chinese": "\"绘制中止：此面板中的图片过多\""
+    },
+    {
+      "original": "\"Make auto mode your default permission mode?\"",
+      "chinese": "\"将自动模式设为你的默认权限模式？\""
+    },
+    {
+      "original": "\"Local settings (.claude/settings.local.json)\"",
+      "chinese": "\"本地设置（.claude/settings.local.json）\""
+    },
+    {
+      "original": "\"Optional. One line about what the style does\"",
+      "chinese": "\"可选。用一行说明此样式的用途\""
+    },
+    {
+      "original": "\"Your organization doesn't allow this plugin.\"",
+      "chinese": "\"你的组织不允许使用此插件。\""
+    },
+    {
+      "original": "\"Its command wasn't run. Try again to see it.\"",
+      "chinese": "\"其命令未运行。请重试以查看它。\""
+    },
+    {
+      "original": "\"A plugin your organization requires uses it.\"",
+      "chinese": "\"你的组织要求的某个插件正在使用它。\""
+    },
+    {
+      "original": "\"Copying didn't work. Click Copy error again.\"",
+      "chinese": "\"复制失败。请再次点击“复制错误”。\""
+    },
+    {
+      "original": "\"Hidden from Claude and from the command list\"",
+      "chinese": "\"对 Claude 和命令列表隐藏\""
+    },
+    {
+      "original": "\"If the browser didn't open, visit this URL:\"",
+      "chinese": "\"如果浏览器没有打开，请访问此 URL：\""
+    },
+    {
+      "original": "\"Or, paste your authorization code manually:\"",
+      "chinese": "\"或者，手动粘贴你的授权码：\""
+    },
+    {
+      "original": "\"Managed settings (set by your organization)\"",
+      "chinese": "\"托管设置（由你的组织设置）\""
+    },
+    {
+      "original": "\"Command pattern, for example npm run test:*\"",
+      "chinese": "\"命令模式，例如 npm run test:*\""
+    },
+    {
+      "original": "\"Sign in to claude.ai to use voice dictation\"",
+      "chinese": "\"登录 claude.ai 以使用语音听写\""
+    },
+    {
+      "original": "\"This plugin's marketplace couldn't be read.\"",
+      "chinese": "\"无法读取此插件的应用市场。\""
+    },
+    {
+      "original": "\"This source's marketplace file isn't valid.\"",
+      "chinese": "\"此来源的应用市场文件无效。\""
+    },
+    {
+      "original": "\"Can you refactor this into smaller pieces?\"",
+      "chinese": "\"你能把它重构为更小的模块吗？\""
+    },
+    {
+      "original": "\"This bookmark couldn't be written to disk.\"",
+      "chinese": "\"无法将此书签写入磁盘。\""
+    },
+    {
+      "original": "\"Already in plan mode. No plan written yet.\"",
+      "chinese": "\"已处于计划模式。尚未编写计划。\""
+    },
+    {
+      "original": "\"a background task's output (the Agent map)\"",
+      "chinese": "\"后台任务的输出（Agent 地图）\""
+    },
+    {
+      "original": "\"Failed to refresh MCP server command rows:\"",
+      "chinese": "\"刷新 MCP 服务器命令行失败：\""
+    },
+    {
+      "original": "\"Only when the tool call matches (optional)\"",
+      "chinese": "\"仅当工具调用匹配时（可选）\""
+    },
+    {
+      "original": "\"Headers (Header-Name: value, one per line)\"",
+      "chinese": "\"请求头（Header-Name: value，每行一个）\""
+    },
+    {
+      "original": "\"Sandbox commands, with regular permissions\"",
+      "chinese": "\"沙盒命令，常规权限\""
+    },
+    {
+      "original": "% of your usage hit a >100k-token cache miss",
+      "chinese": "% 的用量遇到了超过 100k token 的缓存未命中"
+    },
+    {
+      "original": "\"Settings → Privacy & security → Microphone\"",
+      "chinese": "\"设置 → 隐私与安全性 → 麦克风\""
+    },
+    {
+      "original": "\"View and change how commands are sandboxed\"",
+      "chinese": "\"查看并更改命令的沙盒方式\""
+    },
+    {
+      "original": "\"Send feedback to Anthropic or report a bug\"",
+      "chinese": "\"向 Anthropic 发送反馈或报告 bug\""
+    },
+    {
+      "original": "'Name cannot be \".\" or \"..\" or contain \"..\"'",
+      "chinese": "'名称不能是“.”或“..”，也不能包含“..”'"
+    },
+    {
+      "original": "\"Explore the codebase and suggest a change\"",
+      "chinese": "\"探索代码库并提出修改建议\""
+    },
+    {
+      "original": "\"Matcher (leave empty to match everything)\"",
+      "chinese": "\"匹配器（留空以匹配所有内容）\""
+    },
+    {
+      "original": "% of your usage came from subagents under \"",
+      "chinese": "% 的用量来自以下 Agent 下的子代理：\""
+    },
+    {
+      "original": "\"This plugin's source couldn't be reached.\"",
+      "chinese": "\"无法访问此插件的来源。\""
+    },
+    {
+      "original": "\"This plugin's options couldn't be loaded.\"",
+      "chinese": "\"无法加载此插件的选项。\""
+    },
+    {
+      "original": "\"requires adding a new marketplace source:\"",
+      "chinese": "\"需要添加新的应用市场来源：\""
+    },
+    {
+      "original": "\"This session couldn't reload its plugins.\"",
+      "chinese": "\"此会话无法重新加载其插件。\""
+    },
+    {
+      "original": "`Claude Code took too long to confirm ${J}`",
+      "chinese": "`Claude Code 确认${J}耗时过长`"
+    },
+    {
+      "original": "\"The reply is ready; run /copy to copy it\"",
+      "chinese": "\"回复已就绪；运行 /copy 即可复制\""
+    },
+    {
+      "original": "\"Project settings (.claude/settings.json)\"",
+      "chinese": "\"项目设置（.claude/settings.json）\""
+    },
+    {
+      "original": "\"All hooks are currently disabled by the \"",
+      "chinese": "\"所有钩子当前被以下设置禁用：\""
+    },
+    {
+      "original": "\"Waiting for the sign-in in your browser…\"",
+      "chinese": "\"正在等待你在浏览器中登录…\""
+    },
+    {
+      "original": "\" Set by a higher-priority configuration.\"",
+      "chinese": "\" 由更高优先级的配置设定。\""
+    },
+    {
+      "original": "% of your usage came from the MCP server \"",
+      "chinese": "% 的用量来自 MCP 服务器 \""
+    },
+    {
+      "original": "\"% in this period — try the other window.\"",
+      "chinese": "\"% 在此时间段——请尝试另一个时间窗口。\""
+    },
+    {
+      "original": "% of context remaining until auto-compact.",
+      "chinese": "% 的上下文剩余，直到自动压缩。"
+    },
+    {
+      "original": "\"Try again, or copy the error to see why.\"",
+      "chinese": "\"请重试，或复制错误以查看原因。\""
+    },
+    {
+      "original": "\"This plugin is no longer installed here.\"",
+      "chinese": "\"此插件已不在此处安装。\""
+    },
+    {
+      "original": "\"Calls a tool on a configured MCP server\"",
+      "chinese": "\"调用已配置的 MCP 服务器上的工具\""
+    },
+    {
+      "original": "\"Status message while running (optional)\"",
+      "chinese": "\"运行时的状态消息（可选）\""
+    },
+    {
+      "original": "\"User settings (~/.claude/settings.json)\"",
+      "chinese": "\"用户设置（~/.claude/settings.json）\""
+    },
+    {
+      "original": "\"Hooks from managed settings still run —\"",
+      "chinese": "\"来自托管设置的钩子仍会运行——\""
+    },
+    {
+      "original": "\"No memories saved for this project yet.\"",
+      "chinese": "\"此项目尚未保存任何记忆。\""
+    },
+    {
+      "original": "\"Your organization requires this plugin.\"",
+      "chinese": "\"你的组织要求使用此插件。\""
+    },
+    {
+      "original": "\"Yours to invoke; Claude does not see it\"",
+      "chinese": "\"仅你可调用；Claude 看不到它\""
+    },
+    {
+      "original": "\"No conversation found with session ID:\"",
+      "chinese": "\"未找到具有该会话 ID 的对话：\""
+    },
+    {
+      "original": "\"a block of its result that is not text\"",
+      "chinese": "\"其结果的非文本内容块\""
+    },
+    {
+      "original": "\"the answers given to it after a resume\"",
+      "chinese": "\"恢复后提供给它的回答\""
+    },
+    {
+      "original": "\"Waiting for settings from Claude Code…\"",
+      "chinese": "\"正在等待来自 Claude Code 的设置…\""
+    },
+    {
+      "original": "\"Check your connection, then try again.\"",
+      "chinese": "\"请检查网络连接，然后重试。\""
+    },
+    {
+      "original": "\"Listed for Claude, and yours to invoke\"",
+      "chinese": "\"向 Claude 列出，且你可调用\""
+    },
+    {
+      "original": "\"Set by a higher-priority configuration\"",
+      "chinese": "\"由更高优先级的配置设定\""
+    },
+    {
+      "original": "\"This hook type cannot be edited here.\"",
+      "chinese": "\"此钩子类型无法在此编辑。\""
+    },
+    {
+      "original": "\"Completing authentication in browser…\"",
+      "chinese": "\"正在浏览器中完成身份验证…\""
+    },
+    {
+      "original": "\"Lead every explanation with a diagram\"",
+      "chinese": "\"每个解释都以图表开头\""
+    },
+    {
+      "original": ", and a different version is installed.",
+      "chinese": "，但已安装的是不同版本。"
+    },
+    {
+      "original": "\"loading your plugins and marketplaces\"",
+      "chinese": "\"加载你的插件和应用市场\""
+    },
+    {
+      "original": "Claude Code couldn't confirm that the \"",
+      "chinese": "Claude Code 无法确认 \""
+    },
+    {
+      "original": "\"This link's marketplace wasn't added.\"",
+      "chinese": "\"此链接的应用市场未被添加。\""
+    },
+    {
+      "original": "$.size,\" background \",h9($.size,\"task\")",
+      "chinese": "$.size,\" 个后台任务\""
+    },
+    {
+      "original": "\"Claude is waiting for your decision.\"",
+      "chinese": "\"Claude 正在等待你的决定。\""
+    },
+    {
+      "original": "\"highlighted code and prompted Claude\"",
+      "chinese": "\"选中了代码并向 Claude 提问\""
+    },
+    {
+      "original": "\"this session has no saved transcript\"",
+      "chinese": "\"此会话没有保存的对话记录\""
+    },
+    {
+      "original": "\" to a program that runs Claude Code.\"",
+      "chinese": "\" 为运行 Claude Code 的程序。\""
+    },
+    {
+      "original": "\"Startup settings (--settings option)\"",
+      "chinese": "\"启动设置（--settings 选项）\""
+    },
+    {
+      "original": "\"Shared via .mcp.json in this project\"",
+      "chinese": "\"通过此项目中的 .mcp.json 共享\""
+    },
+    {
+      "original": "\" Turn the sandbox on to change this.\"",
+      "chinese": "\" 开启沙盒才能更改此项。\""
+    },
+    {
+      "original": "% of your usage came from the plugin \"",
+      "chinese": "% 的用量来自插件 \""
+    },
+    {
+      "original": "\"This source has no marketplace file.\"",
+      "chinese": "\"此来源没有应用市场文件。\""
+    },
+    {
+      "original": "\"This marketplace's file isn't valid.\"",
+      "chinese": "\"此应用市场的文件无效。\""
+    },
+    {
+      "original": "\"This marketplace is no longer added.\"",
+      "chinese": "\"此应用市场已不再添加。\""
+    },
+    {
+      "original": "\"Sign out of Claude on this computer\"",
+      "chinese": "\"在此电脑上退出 Claude 登录\""
+    },
+    {
+      "original": "\" (managed policy hooks still apply)\"",
+      "chinese": "\"（托管策略钩子仍然生效）\""
+    },
+    {
+      "original": "\"Claude Code did not answer in time.\"",
+      "chinese": "\"Claude Code 未及时应答。\""
+    },
+    {
+      "original": "\"The conversation will be unchanged.\"",
+      "chinese": "\"对话将保持不变。\""
+    },
+    {
+      "original": "\"Sign in with your claude.ai account\"",
+      "chinese": "\"使用你的 claude.ai 账户登录\""
+    },
+    {
+      "original": "\"sign in on a page that shows a code\"",
+      "chinese": "\"在显示验证码的页面上登录\""
+    },
+    {
+      "original": ", isn't allowed by your organization.",
+      "chinese": "，你的组织不允许使用。"
+    },
+    {
+      "original": "\"Something went wrong while loading.\"",
+      "chinese": "\"加载时出错。\""
+    },
+    {
+      "original": "\"No longer shown in the conversation\"",
+      "chinese": "\"已不再显示在对话中\""
+    },
+    {
+      "original": "\"Name must be 64 characters or fewer\"",
+      "chinese": "\"名称不能超过 64 个字符\""
+    },
+    {
+      "original": "'Name cannot end with \".\" or \".lock\"'",
+      "chinese": "'名称不能以“.”或“.lock”结尾'"
+    },
+    {
+      "original": "\"Older remote protocol; prefer HTTP\"",
+      "chinese": "\"较旧的远程协议；建议使用 HTTP\""
+    },
+    {
+      "original": "% of your usage was at >150k context",
+      "chinese": "% 的用量处于超过 150k 的上下文"
+    },
+    {
+      "original": "\"Something went wrong while saving.\"",
+      "chinese": "\"保存时出错。\""
+    },
+    {
+      "original": "\"Its bundle couldn't be downloaded.\"",
+      "chinese": "\"无法下载其捆绑包。\""
+    },
+    {
+      "original": "\"Its bundle's manifest isn't valid.\"",
+      "chinese": "\"其捆绑包的清单无效。\""
+    },
+    {
+      "original": "\"This plugin can't be updated here.\"",
+      "chinese": "\"无法在此更新此插件。\""
+    },
+    {
+      "original": "\"None of its plugins are installed.\"",
+      "chinese": "\"它的插件均未安装。\""
+    },
+    {
+      "original": "\"Loading the options took too long.\"",
+      "chinese": "\"加载选项耗时过长。\""
+    },
+    {
+      "original": "\"You already have this marketplace.\"",
+      "chinese": "\"你已有此应用市场。\""
+    },
+    {
+      "original": "\" was added to the excluded commands",
+      "chinese": "\"\\\" 添加到了排除命令中\""
+    },
+    {
+      "original": "`Thought for ${Math.round(Q/1000)}s`",
+      "chinese": "`思考了 ${Math.round(Q/1000)} 秒`"
+    },
+    {
+      "original": "\"Update or create a helpful README\"",
+      "chinese": "\"更新或创建一份有用的 README\""
+    },
+    {
+      "original": "\"Use Plan mode for complex changes\"",
+      "chinese": "\"对复杂改动使用计划模式\""
+    },
+    {
+      "original": "\"Asks a model to evaluate a prompt\"",
+      "chinese": "\"让模型评估提示词\""
+    },
+    {
+      "original": "\"Runs an agent to verify something\"",
+      "chinese": "\"运行 Agent 来验证某些内容\""
+    },
+    {
+      "original": "\"Claude in Chrome in this session:\"",
+      "chinese": "\"本次会话中的 Claude in Chrome：\""
+    },
+    {
+      "original": "\"Learn more about Claude in Chrome\"",
+      "chinese": "\"进一步了解 Claude in Chrome\""
+    },
+    {
+      "original": "\"Fork conversation and rewind code\"",
+      "chinese": "\"复刻对话并回滚代码\""
+    },
+    {
+      "original": "\"Sandbox commands, with auto-allow\"",
+      "chinese": "\"沙盒命令，自动允许\""
+    },
+    {
+      "original": "% of your usage came from workflows",
+      "chinese": "% 的用量来自工作流"
+    },
+    {
+      "original": "\"Saving the options took too long.\"",
+      "chinese": "\"保存选项耗时过长。\""
+    },
+    {
+      "original": "This plugin isn't in your copy of \"",
+      "chinese": "此插件不在你的以下副本中：\""
+    },
+    {
+      "original": "\"Refresh the marketplace and retry\"",
+      "chinese": "\"刷新应用市场并重试\""
+    },
+    {
+      "original": "\"This plugin is already installed.\"",
+      "chinese": "\"此插件已安装。\""
+    },
+    {
+      "original": "\"Click a bookmark to show it here.\"",
+      "chinese": "\"点击书签即可在此显示。\""
+    },
+    {
+      "original": "\"Claude is asking you a question.\"",
+      "chinese": "\"Claude 正在向你提问。\""
+    },
+    {
+      "original": "\"Write a test for a recent change\"",
+      "chinese": "\"为最近的改动编写测试\""
+    },
+    {
+      "original": "\"Highlight code and ask for edits\"",
+      "chinese": "\"选中代码并请求修改\""
+    },
+    {
+      "original": "\"Let Claude edit without stopping\"",
+      "chinese": "\"让 Claude 不停下来直接编辑\""
+    },
+    {
+      "original": "\"Picture not shown in this editor\"",
+      "chinese": "\"此编辑器中不显示图片\""
+    },
+    {
+      "original": "\"Yes, set auto mode as my default\"",
+      "chinese": "\"是，将自动模式设为我的默认\""
+    },
+    {
+      "original": "\"The conversation will be forked.\"",
+      "chinese": "\"对话将被复刻。\""
+    },
+    {
+      "original": "\"replies to comments on artifacts\"",
+      "chinese": "\"回复制品上的评论\""
+    },
+    {
+      "original": "\"Design-system access authorized.\"",
+      "chinese": "\"设计系统访问已授权。\""
+    },
+    {
+      "original": "\"Commands run outside the sandbox\"",
+      "chinese": "\"命令在沙盒外运行\""
+    },
+    {
+      "original": "\"Claude Code couldn't be started.\"",
+      "chinese": "\"无法启动 Claude Code。\""
+    },
+    {
+      "original": "\"Its bundle couldn't be unpacked.\"",
+      "chinese": "\"无法解压其捆绑包。\""
+    },
+    {
+      "original": "\"This plugin couldn't be updated.\"",
+      "chinese": "\"无法更新此插件。\""
+    },
+    {
+      "original": "\"This plugin is still on for you.\"",
+      "chinese": "\"此插件对你仍处于开启状态。\""
+    },
+    {
+      "original": "\"This plugin may have saved data.\"",
+      "chinese": "\"此插件可能保存了数据。\""
+    },
+    {
+      "original": "\"Continue a previous conversation\"",
+      "chinese": "\"继续之前的对话\""
+    },
+    {
+      "original": "\"Copying once the reply finishes\"",
+      "chinese": "\"回复结束后将自动复制\""
+    },
+    {
+      "original": "\"Looking for connected browsers…\"",
+      "chinese": "\"正在查找已连接的浏览器…\""
+    },
+    {
+      "original": "\"A description can't contain ---\"",
+      "chinese": "\"描述中不能包含 ---\""
+    },
+    {
+      "original": "\"Include the coding instructions\"",
+      "chinese": "\"包含编码指令\""
+    },
+    {
+      "original": "% of your usage was at max effort",
+      "chinese": "% 的用量处于最大努力级别"
+    },
+    {
+      "original": "% context used — click to compact",
+      "chinese": "% 上下文已使用——点击压缩"
+    },
+    {
+      "original": "\"Copying didn't work. Try again.\"",
+      "chinese": "\"复制失败。请重试。\""
+    },
+    {
+      "original": "\"This plugin wasn't uninstalled.\"",
+      "chinese": "\"此插件未被卸载。\""
+    },
+    {
+      "original": "\"Start new session in this group\"",
+      "chinese": "\"在此分组中新建会话\""
+    },
+    {
+      "original": "\"Failed to load context usage: \"",
+      "chinese": "\"加载上下文用量失败：\""
+    },
+    {
+      "original": "\"no server list in the response\"",
+      "chinese": "\"响应中没有服务器列表\""
+    },
+    {
+      "original": "\" configured that will not run.\"",
+      "chinese": "\" 个已配置的钩子不会运行。\""
+    },
+    {
+      "original": "\"Runs a command on your machine\"",
+      "chinese": "\"在你的机器上运行命令\""
+    },
+    {
+      "original": "\"Private to you in this project\"",
+      "chinese": "\"仅你在此项目中可见\""
+    },
+    {
+      "original": "\", so no code will be restored.\"",
+      "chinese": "\"，因此不会恢复任何代码。\""
+    },
+    {
+      "original": "\"Learn how we use your feedback\"",
+      "chinese": "\"了解我们如何使用你的反馈\""
+    },
+    {
+      "original": "\"cloud-session credential guard\"",
+      "chinese": "\"云会话凭据防护\""
+    },
+    {
+      "original": "\"No permission rules are saved.\"",
+      "chinese": "\"未保存任何权限规则。\""
+    },
+    {
+      "original": "\"Part of it may not be running.\"",
+      "chinese": "\"它的部分功能可能未运行。\""
+    },
+    {
+      "original": "\"This marketplace wasn't added.\"",
+      "chinese": "\"此应用市场未被添加。\""
+    },
+    {
+      "original": "\"Your organization provides it.\"",
+      "chinese": "\"它由你的组织提供。\""
+    },
+    {
+      "original": "\"Open Claude in Chrome settings\"",
+      "chinese": "\"打开 Claude in Chrome 设置\""
+    },
+    {
+      "original": "\"View and edit permission rules\"",
+      "chinese": "\"查看和编辑权限规则\""
+    },
+    {
+      "original": "\"Open in another VS Code window\"",
+      "chinese": "\"在另一个 VS Code 窗口中打开\""
+    },
+    {
+      "original": "\"Open in another Claude process\"",
+      "chinese": "\"在另一个 Claude 进程中打开\""
+    },
+    {
+      "original": "\"Could not delete the session: \"",
+      "chinese": "\"无法删除会话：\""
+    },
+    {
+      "original": "\"Give Claude rules to remember\"",
+      "chinese": "\"给 Claude 一些需要记住的规则\""
+    },
+    {
+      "original": "'\"[nested too deeply to show]\"'",
+      "chinese": "'“[嵌套过深，无法显示]”'"
+    },
+    {
+      "original": "\" · click an agent for details\"",
+      "chinese": "\" · 点击 Agent 查看详情\""
+    },
+    {
+      "original": "\"Posts the hook input to a URL\"",
+      "chinese": "\"将钩子输入 POST 到 URL\""
+    },
+    {
+      "original": "\"Input (JSON object, optional)\"",
+      "chinese": "\"输入（JSON 对象，可选）\""
+    },
+    {
+      "original": "\"Timeout in seconds (optional)\"",
+      "chinese": "\"超时时间（秒，可选）\""
+    },
+    {
+      "original": "\"To add or modify hooks, edit \"",
+      "chinese": "\"要添加或修改钩子，请编辑 \""
+    },
+    {
+      "original": "\"Restore code and conversation\"",
+      "chinese": "\"恢复代码和对话\""
+    },
+    {
+      "original": "\"The sign-in did not complete.\"",
+      "chinese": "\"登录未完成。\""
+    },
+    {
+      "original": "\"Not saved in a settings file.\"",
+      "chinese": "\"未保存到设置文件。\""
+    },
+    {
+      "original": "\"Settings file failed to load:\"",
+      "chinese": "\"设置文件加载失败：\""
+    },
+    {
+      "original": "\"Connecting to claude.ai/code…\"",
+      "chinese": "\"正在连接 claude.ai/code…\""
+    },
+    {
+      "original": "\"Its hooks couldn't be loaded.\"",
+      "chinese": "\"无法加载其钩子。\""
+    },
+    {
+      "original": "\"No messages to rewind to yet.\"",
+      "chinese": "\"暂无可回滚的消息。\""
+    },
+    {
+      "original": "`${Z} · ${$.errorCount} failed`",
+      "chinese": "`${Z} · ${$.errorCount} 次失败`"
+    },
+    {
+      "original": "\"Couldn't switch to plan mode\"",
+      "chinese": "\"无法切换到计划模式\""
+    },
+    {
+      "original": "\"Diagnostics: VSCode Problems\"",
+      "chinese": "\"诊断：VSCode 问题\""
+    },
+    {
+      "original": "\"Save to file offers the name\"",
+      "chinese": "\"保存到文件会提供名称\""
+    },
+    {
+      "original": "\"Denied within allowed writes\"",
+      "chinese": "\"允许写入中的拒绝项\""
+    },
+    {
+      "original": "\"Its files aren't downloaded.\"",
+      "chinese": "\"其文件尚未下载。\""
+    },
+    {
+      "original": "\"Ask an admin if you need it.\"",
+      "chinese": "\"如需使用，请询问管理员。\""
+    },
+    {
+      "original": "\", declares the command below.",
+      "chinese": "\"\\\" 声明了以下命令。\""
+    },
+    {
+      "original": "\"Copy the error to see which.\"",
+      "chinese": "\"复制错误以查看是哪一个。\""
+    },
+    {
+      "original": "\"It's in your Installed list.\"",
+      "chinese": "\"它位于你的“已安装”列表中。\""
+    },
+    {
+      "original": "\"No slash commands available.\"",
+      "chinese": "\"没有可用的斜杠命令。\""
+    },
+    {
+      "original": "\"Prompt Claude to write code\"",
+      "chinese": "\"让 Claude 编写代码\""
+    },
+    {
+      "original": "\"Please enter the OAuth code\"",
+      "chinese": "\"请输入 OAuth 验证码\""
+    },
+    {
+      "original": "\"This session was created in\"",
+      "chinese": "\"此会话创建于\""
+    },
+    {
+      "original": "\"Could not copy to clipboard\"",
+      "chinese": "\"无法复制到剪贴板\""
+    },
+    {
+      "original": "\" · click a task for details\"",
+      "chinese": "\" · 点击任务查看详情\""
+    },
+    {
+      "original": "\"Waiting for your permission\"",
+      "chinese": "\"等待你的许可\""
+    },
+    {
+      "original": "\"Connects to a server by URL\"",
+      "chinese": "\"通过 URL 连接服务器\""
+    },
+    {
+      "original": "Choose which browser to use (",
+      "chinese": "选择要使用的浏览器（"
+    },
+    {
+      "original": "\"Fork conversation from here\"",
+      "chinese": "\"从此处复刻对话\""
+    },
+    {
+      "original": "\"enterprise managed settings\"",
+      "chinese": "\"企业托管设置\""
+    },
+    {
+      "original": "\"Allowed within denied reads\"",
+      "chinese": "\"拒绝读取中的允许项\""
+    },
+    {
+      "original": "\"Click to open the agent map\"",
+      "chinese": "\"点击打开 Agent 地图\""
+    },
+    {
+      "original": "\"Continue without refreshing\"",
+      "chinese": "\"不刷新直接继续\""
+    },
+    {
+      "original": "\"View account info and usage\"",
+      "chinese": "\"查看账户信息与用量\""
+    },
+    {
+      "original": ", is added but can't be used.",
+      "chinese": "，已添加但无法使用。"
+    },
+    {
+      "original": "\"refreshing this marketplace\"",
+      "chinese": "\"刷新此应用市场\""
+    },
+    {
+      "original": "\"Turning it on and updating…\"",
+      "chinese": "\"正在开启并更新…\""
+    },
+    {
+      "original": "\"Refreshing the marketplace…\"",
+      "chinese": "\"正在刷新应用市场…\""
+    },
+    {
+      "original": "\"This plugin has saved data.\"",
+      "chinese": "\"此插件有已保存的数据。\""
+    },
+    {
+      "original": "\"Edit prompt and retry with \"",
+      "chinese": "\"编辑提示词并使用以下模型重试：\""
+    },
+    {
+      "original": "\"Set in the skill's own file\"",
+      "chinese": "\"在技能自己的文件中设置\""
+    },
+    {
+      "original": "\"Start one at claude.ai/code\"",
+      "chinese": "\"在 claude.ai/code 中新建\""
+    },
+    {
+      "original": "J.size,\" \",h9(J.size,\"agent\")",
+      "chinese": "J.size,\" 个 Agent\""
+    },
+    {
+      "original": "\"Unsupported content type: \"",
+      "chinese": "\"不支持的内容类型：\""
+    },
+    {
+      "original": "\"Resize side question panel\"",
+      "chinese": "\"调整侧边问题面板大小\""
+    },
+    {
+      "original": "\", and paste the code here:\"",
+      "chinese": "\"，并在此粘贴验证码：\""
+    },
+    {
+      "original": "\"Original working directory\"",
+      "chinese": "\"原始工作目录\""
+    },
+    {
+      "original": "\"Couldn’t remove the rule: \"",
+      "chinese": "\"无法移除规则：\""
+    },
+    {
+      "original": "\"Allow unsandboxed fallback\"",
+      "chinese": "\"允许非沙盒回退\""
+    },
+    {
+      "original": "\"Command pattern to exclude\"",
+      "chinese": "\"要排除的命令模式\""
+    },
+    {
+      "original": "\"No output styles available\"",
+      "chinese": "\"没有可用的输出样式\""
+    },
+    {
+      "original": "\"This plugin is turned off.\"",
+      "chinese": "\"此插件已关闭。\""
+    },
+    {
+      "original": "\"This source can't be used.\"",
+      "chinese": "\"无法使用此来源。\""
+    },
+    {
+      "original": "\"Copy the error to see why.\"",
+      "chinese": "\"复制错误以查看原因。\""
+    },
+    {
+      "original": "\"What you can do about this\"",
+      "chinese": "\"你可以如何处理\""
+    },
+    {
+      "original": "\"edited a file with Claude\"",
+      "chinese": "\"已用 Claude 编辑文件\""
+    },
+    {
+      "original": "\"Just create a sample file\"",
+      "chinese": "\"直接创建一个示例文件\""
+    },
+    {
+      "original": "\"Picture too heavy to draw\"",
+      "chinese": "\"图片过大，无法绘制\""
+    },
+    {
+      "original": "\"Waiting for your plugins…\"",
+      "chinese": "\"正在等待你的插件…\""
+    },
+    {
+      "original": "\"One browser is connected:\"",
+      "chinese": "\"已连接一个浏览器：\""
+    },
+    {
+      "original": "\"settings given at startup\"",
+      "chinese": "\"启动时提供的设置\""
+    },
+    {
+      "original": "\"a command's configuration\"",
+      "chinese": "\"命令的配置\""
+    },
+    {
+      "original": "\"Loading permission rules…\"",
+      "chinese": "\"正在加载权限规则…\""
+    },
+    {
+      "original": "\"Allowed domains (managed)\"",
+      "chinese": "\"允许的域名（托管）\""
+    },
+    {
+      "original": "\"Patterns ignored on Linux\"",
+      "chinese": "\"Linux 上忽略的模式\""
+    },
+    {
+      "original": "% of your usage came from /",
+      "chinese": "% 的用量来自 /"
+    },
+    {
+      "original": "\"The list was out of date.\"",
+      "chinese": "\"列表已过时。\""
+    },
+    {
+      "original": "\"Uninstalling didn't work.\"",
+      "chinese": "\"卸载失败。\""
+    },
+    {
+      "original": "\"Branch checkout skipped: \"",
+      "chinese": "\"已跳过分支检出：\""
+    },
+    {
+      "original": "\"Compacting conversation.\"",
+      "chinese": "\"正在压缩对话。\""
+    },
+    {
+      "original": "\"created a CLAUDE.md file\"",
+      "chinese": "\"创建了 CLAUDE.md 文件\""
+    },
+    {
+      "original": "\"Failed to resume session\"",
+      "chinese": "\"恢复会话失败\""
+    },
+    {
+      "original": "\"Output is not available.\"",
+      "chinese": "\"输出不可用。\""
+    },
+    {
+      "original": "\"Waiting for your answer…\"",
+      "chinese": "\"正在等待你的回答…\""
+    },
+    {
+      "original": "\" directly or ask Claude.\"",
+      "chinese": "\"，或直接让 Claude 处理。\""
+    },
+    {
+      "original": "\"Arguments (one per line)\"",
+      "chinese": "\"参数（每行一个）\""
+    },
+    {
+      "original": "\"Failed to load servers: \"",
+      "chinese": "\"加载服务器失败：\""
+    },
+    {
+      "original": "\"Reload and keep my edits\"",
+      "chinese": "\"重新加载并保留我的修改\""
+    },
+    {
+      "original": "\"Thanks for your feedback\"",
+      "chinese": "\"感谢你的反馈\""
+    },
+    {
+      "original": "\"Switch to this style now\"",
+      "chinese": "\"立即切换到此样式\""
+    },
+    {
+      "original": ", so this copy is skipped.",
+      "chinese": "，因此跳过此副本。"
+    },
+    {
+      "original": "\"This plugin is still on.\"",
+      "chinese": "\"此插件仍处于开启状态。\""
+    },
+    {
+      "original": "\"Branch checkout failed: \"",
+      "chinese": "\"分支检出失败：\""
+    },
+    {
+      "original": "; check the Sandbox dialog",
+      "chinese": "；请查看“沙盒”对话框"
+    },
+    {
+      "original": "\" to the excluded commands",
+      "chinese": "\"\\\" 添加到排除命令中\""
+    },
+    {
+      "original": "\"Claude Code conversation\"",
+      "chinese": "\"Claude Code 对话\""
+    },
+    {
+      "original": "\"Collapse session manager\"",
+      "chinese": "\"折叠会话管理器\""
+    },
+    {
+      "original": "\"Collapse account & usage\"",
+      "chinese": "\"折叠账户与用量\""
+    },
+    {
+      "original": "if(Z===1)return\"yesterday\"",
+      "chinese": "if(Z===1)return\"昨天\""
+    },
+    {
+      "original": "\"What does this code do?\"",
+      "chinese": "\"这段代码是做什么的？\""
+    },
+    {
+      "original": "\"Learn your next skill →\"",
+      "chinese": "\"学习下一项技能 →\""
+    },
+    {
+      "original": "\"Picture cannot be drawn\"",
+      "chinese": "\"无法绘制图片\""
+    },
+    {
+      "original": "\"Compacting conversation\"",
+      "chinese": "\"正在压缩对话\""
+    },
+    {
+      "original": "\"Tell us more (optional)\"",
+      "chinese": "\"请补充说明（可选）\""
+    },
+    {
+      "original": "\"Open MCP server details\"",
+      "chinese": "\"打开 MCP 服务器详情\""
+    },
+    {
+      "original": "\"Built into Claude Code.\"",
+      "chinese": "\"内置于 Claude Code 中。\""
+    },
+    {
+      "original": "\"shared project settings\"",
+      "chinese": "\"共享项目设置\""
+    },
+    {
+      "original": "\"Couldn’t add the rule: \"",
+      "chinese": "\"无法添加规则：\""
+    },
+    {
+      "original": "\"The command wasn't run.\"",
+      "chinese": "\"命令未运行。\""
+    },
+    {
+      "original": "\"Run command and install\"",
+      "chinese": "\"运行命令并安装\""
+    },
+    {
+      "original": "\"Response can't be shown\"",
+      "chinese": "\"无法显示回复\""
+    },
+    {
+      "original": "\"Managed with its plugin\"",
+      "chinese": "\"随其插件管理\""
+    },
+    {
+      "original": "\"Could not load status: \"",
+      "chinese": "\"无法加载状态：\""
+    },
+    {
+      "original": "\"Waiting for permission…\"",
+      "chinese": "\"正在等待许可…\""
+    },
+    {
+      "original": "\"Couldn't show the plan\"",
+      "chinese": "\"无法显示计划\""
+    },
+    {
+      "original": "\"Loading context usage…\"",
+      "chinese": "\"正在加载上下文用量…\""
+    },
+    {
+      "original": "\"Alternate project file\"",
+      "chinese": "\"备用项目文件\""
+    },
+    {
+      "original": "? This cannot be undone.",
+      "chinese": "？此操作无法撤销。"
+    },
+    {
+      "original": "\"Enter the instructions\"",
+      "chinese": "\"输入指令\""
+    },
+    {
+      "original": "\"Yes, and use auto mode\"",
+      "chinese": "\"是，并使用自动模式\""
+    },
+    {
+      "original": "\"project local settings\"",
+      "chinese": "\"项目本地设置\""
+    },
+    {
+      "original": "\"Enter permission rule…\"",
+      "chinese": "\"输入权限规则…\""
+    },
+    {
+      "original": "\"Select an output style\"",
+      "chinese": "\"选择输出样式\""
+    },
+    {
+      "original": "\"Loading output styles…\"",
+      "chinese": "\"正在加载输出样式…\""
+    },
+    {
+      "original": "\"Remote Control error: \"",
+      "chinese": "\"远程控制错误：\""
+    },
+    {
+      "original": ", which isn't installed.",
+      "chinese": "，但它尚未安装。"
+    },
+    {
+      "original": "\"It couldn't be loaded.\"",
+      "chinese": "\"无法加载它。\""
+    },
+    {
+      "original": "\"Run command and update\"",
+      "chinese": "\"运行命令并更新\""
+    },
+    {
+      "original": ", and that setting wins.",
+      "chinese": "，且该设置优先。"
+    },
+    {
+      "original": "\"The list was not read.\"",
+      "chinese": "\"列表未被读取。\""
+    },
+    {
+      "original": "\"Uninstall for everyone\"",
+      "chinese": "\"为所有人卸载\""
+    },
+    {
+      "original": "\"Resize bookmarks panel\"",
+      "chinese": "\"调整书签面板大小\""
+    },
+    {
+      "original": "\"Open in Claude Desktop\"",
+      "chinese": "\"在 Claude Desktop 中打开\""
+    },
+    {
+      "original": "\"Expand session manager\"",
+      "chinese": "\"展开会话管理器\""
+    },
+    {
+      "original": "\"Expand account & usage\"",
+      "chinese": "\"展开账户与用量\""
+    },
+    {
+      "original": "\"Ready for your input.\"",
+      "chinese": "\"等待你的输入。\""
+    },
+    {
+      "original": "\"Does this look right?\"",
+      "chinese": "\"这样写对吗？\""
+    },
+    {
+      "original": "\"used Auto-Accept mode\"",
+      "chinese": "\"使用了自动接受模式\""
+    },
+    {
+      "original": "\"List available skills\"",
+      "chinese": "\"列出可用技能\""
+    },
+    {
+      "original": "\"Picture not drawn yet\"",
+      "chinese": "\"图片尚未绘制\""
+    },
+    {
+      "original": "\"Failed to remove hook\"",
+      "chinese": "\"移除钩子失败\""
+    },
+    {
+      "original": "\"Local command (stdio)\"",
+      "chinese": "\"本地命令（stdio）\""
+    },
+    {
+      "original": "\"Local, not checked in\"",
+      "chinese": "\"本地文件，未提交\""
+    },
+    {
+      "original": "\"will be added across \"",
+      "chinese": "\"将新增到 \""
+    },
+    {
+      "original": "\"Failed to rewind code\"",
+      "chinese": "\"回滚代码失败\""
+    },
+    {
+      "original": "\"Yes, allow access to \"",
+      "chinese": "\"是，允许访问 \""
+    },
+    {
+      "original": "\"open the sign-in page\"",
+      "chinese": "\"打开登录页面\""
+    },
+    {
+      "original": "\"Total duration (wall)\"",
+      "chinese": "\"总时长（实际）\""
+    },
+    {
+      "original": "\"No browser tabs found\"",
+      "chinese": "\"未找到浏览器标签页\""
+    },
+    {
+      "original": "\"in your user settings\"",
+      "chinese": "\"在你的用户设置中\""
+    },
+    {
+      "original": "\"Add marketplace again\"",
+      "chinese": "\"再次添加应用市场\""
+    },
+    {
+      "original": "\"No matching commands.\"",
+      "chinese": "\"没有匹配的命令。\""
+    },
+    {
+      "original": "\"After editing, reload\"",
+      "chinese": "\"编辑后重新加载\""
+    },
+    {
+      "original": "\"Browse slash commands\"",
+      "chinese": "\"浏览斜杠命令\""
+    },
+    {
+      "original": "'Name cannot be \".git\"'",
+      "chinese": "'名称不能是“.git”'"
+    },
+    {
+      "original": "`${$} ${h9($,\"agent\")}`",
+      "chinese": "`${$} 个 Agent`"
+    },
+    {
+      "original": "\" (requires extension)\"",
+      "chinese": "\"（需要安装扩展）\""
+    },
+    {
+      "original": "\"Different repository\"",
+      "chinese": "\"其他仓库\""
+    },
+    {
+      "original": "\"Clear side questions\"",
+      "chinese": "\"清除侧边问题\""
+    },
+    {
+      "original": "\"Runs a shell command\"",
+      "chinese": "\"运行 shell 命令\""
+    },
+    {
+      "original": "\"SSE (remote, legacy)\"",
+      "chinese": "\"SSE（远程，旧版）\""
+    },
+    {
+      "original": "\"Failed to add server\"",
+      "chinese": "\"添加服务器失败\""
+    },
+    {
+      "original": "\"No matching servers.\"",
+      "chinese": "\"没有匹配的服务器。\""
+    },
+    {
+      "original": "\"Restore conversation\"",
+      "chinese": "\"恢复对话\""
+    },
+    {
+      "original": "\"Build a custom style\"",
+      "chinese": "\"创建自定义样式\""
+    },
+    {
+      "original": "\"Yes, allow access to\"",
+      "chinese": "\"是，允许访问\""
+    },
+    {
+      "original": "\"If no window opened,\"",
+      "chinese": "\"如果没有打开窗口，\""
+    },
+    {
+      "original": "\"Paste the code here:\"",
+      "chinese": "\"在此粘贴验证码：\""
+    },
+    {
+      "original": "\"Allowed Unix sockets\"",
+      "chinese": "\"允许的 Unix 套接字\""
+    },
+    {
+      "original": "\"Total duration (API)\"",
+      "chinese": "\"总时长（API）\""
+    },
+    {
+      "original": "\"Refresh and continue\"",
+      "chinese": "\"刷新并继续\""
+    },
+    {
+      "original": "\"your system settings\"",
+      "chinese": "\"你的系统设置\""
+    },
+    {
+      "original": ", which is turned off.",
+      "chinese": "，但它已被关闭。"
+    },
+    {
+      "original": "\"Disable for everyone\"",
+      "chinese": "\"为所有人禁用\""
+    },
+    {
+      "original": "This plugin isn't in \"",
+      "chinese": "此插件不在 \""
+    },
+    {
+      "original": "\"Show in conversation\"",
+      "chinese": "\"在对话中显示\""
+    },
+    {
+      "original": "\"Edit CLAUDE.md files\"",
+      "chinese": "\"编辑 CLAUDE.md 文件\""
+    },
+    {
+      "original": "\"Could not switch to \"",
+      "chinese": "\"无法切换到 \""
+    },
+    {
+      "original": "\"Teleporting session…\"",
+      "chinese": "\"正在传送会话…\""
+    },
+    {
+      "original": "\"Previous Match Block\"",
+      "chinese": "\"上一个匹配块\""
+    },
+    {
+      "original": "if(Z===0)return\"today\"",
+      "chinese": "if(Z===0)return\"今天\""
+    },
+    {
+      "original": "\"Edit Notebook Cell \"",
+      "chinese": "\"编辑 Notebook 单元格 \""
+    },
+    {
+      "original": "\"Continue in browser\"",
+      "chinese": "\"在浏览器中继续\""
+    },
+    {
+      "original": "\"Try something like:\"",
+      "chinese": "\"试试这样：\""
+    },
+    {
+      "original": "Copied to clipboard (",
+      "chinese": "已复制到剪贴板（"
+    },
+    {
+      "original": "\"Sender not recorded\"",
+      "chinese": "\"未记录发送者\""
+    },
+    {
+      "original": "\"Showing the end of \"",
+      "chinese": "\"正在显示末尾 \""
+    },
+    {
+      "original": "\"Ask a side question\"",
+      "chinese": "\"提出侧边问题\""
+    },
+    {
+      "original": "\"Failed to save hook\"",
+      "chinese": "\"保存钩子失败\""
+    },
+    {
+      "original": "\"No hooks configured\"",
+      "chinese": "\"未配置钩子\""
+    },
+    {
+      "original": "\" Configure them in \"",
+      "chinese": "\" 请在以下位置配置它们：\""
+    },
+    {
+      "original": "\"Copied to clipboard\"",
+      "chinese": "\"已复制到剪贴板\""
+    },
+    {
+      "original": "\"Export conversation\"",
+      "chinese": "\"导出对话\""
+    },
+    {
+      "original": "\" for Chrome actions.",
+      "chinese": "\"” 执行 Chrome 操作。\""
+    },
+    {
+      "original": "\"Reconnect extension\"",
+      "chinese": "\"重新连接扩展\""
+    },
+    {
+      "original": "\"will be removed and\"",
+      "chinese": "\"将被移除，并\""
+    },
+    {
+      "original": "\"Rewind code to here\"",
+      "chinese": "\"将代码回滚到此处\""
+    },
+    {
+      "original": "\"Learn how we use it\"",
+      "chinese": "\"了解我们如何使用\""
+    },
+    {
+      "original": "\"Remove from message\"",
+      "chinese": "\"从消息中移除\""
+    },
+    {
+      "original": ", couldn't be loaded.",
+      "chinese": "，无法加载。"
+    },
+    {
+      "original": "\"Teleported from web\"",
+      "chinese": "\"从网页传送而来\""
+    },
+    {
+      "original": "\"View and edit hooks\"",
+      "chinese": "\"查看和编辑钩子\""
+    },
+    {
+      "original": "Unsupported file type",
+      "chinese": "不支持的文件类型"
+    },
+    {
+      "original": "\"Edit Notebook Cell\"",
+      "chinese": "\"编辑 Notebook 单元格\""
+    },
+    {
+      "original": "\"Claude is working.\"",
+      "chinese": "\"Claude 正在工作。\""
+    },
+    {
+      "original": "\"Send side question\"",
+      "chinese": "\"发送侧边问题\""
+    },
+    {
+      "original": "\"Resize plugin pane\"",
+      "chinese": "\"调整插件窗格大小\""
+    },
+    {
+      "original": "\"bypass permissions\"",
+      "chinese": "\"绕过权限\""
+    },
+    {
+      "original": "\"runs in background\"",
+      "chinese": "\"在后台运行\""
+    },
+    {
+      "original": "\"setting. You have \"",
+      "chinese": "\" 设置。你有 \""
+    },
+    {
+      "original": "\"Open settings file\"",
+      "chinese": "\"打开设置文件\""
+    },
+    {
+      "original": "\"Manage permissions\"",
+      "chinese": "\"管理权限\""
+    },
+    {
+      "original": "\"Enabled by default\"",
+      "chinese": "\"默认启用\""
+    },
+    {
+      "original": "\"Authorization code\"",
+      "chinese": "\"授权码\""
+    },
+    {
+      "original": "\"a limited tool set\"",
+      "chinese": "\"受限的工具集\""
+    },
+    {
+      "original": "\", or add one below\"",
+      "chinese": "\"，或在下方添加一条\""
+    },
+    {
+      "original": "\"Total code changes\"",
+      "chinese": "\"代码更改总计\""
+    },
+    {
+      "original": "\"Debugger connected\"",
+      "chinese": "\"调试器已连接\""
+    },
+    {
+      "original": "\"Save configuration\"",
+      "chinese": "\"保存配置\""
+    },
+    {
+      "original": "\"Turn on and update\"",
+      "chinese": "\"开启并更新\""
+    },
+    {
+      "original": "\"your user settings\"",
+      "chinese": "\"你的用户设置\""
+    },
+    {
+      "original": "\"Hidden by a plugin\"",
+      "chinese": "\"被插件隐藏\""
+    },
+    {
+      "original": "\"Open in a terminal\"",
+      "chinese": "\"在终端中打开\""
+    },
+    {
+      "original": "\"Copy to clipboard\"",
+      "chinese": "\"复制到剪贴板\""
+    },
+    {
+      "original": "\"To fix this, set \"",
+      "chinese": "\"要解决此问题，请设置 \""
+    },
+    {
+      "original": "\"Learn Claude Code\"",
+      "chinese": "\"了解 Claude Code\""
+    },
+    {
+      "original": "\"Finish onboarding\"",
+      "chinese": "\"完成新手引导\""
+    },
+    {
+      "original": "\"Claude is working\"",
+      "chinese": "\"Claude 正在工作\""
+    },
+    {
+      "original": "\"Run in background\"",
+      "chinese": "\"在后台运行\""
+    },
+    {
+      "original": "Now using browser \"",
+      "chinese": "现在使用浏览器 “"
+    },
+    {
+      "original": "\"This project only\"",
+      "chinese": "\"仅此项目\""
+    },
+    {
+      "original": "\"All your projects\"",
+      "chinese": "\"你的所有项目\""
+    },
+    {
+      "original": "\"MCP server policy\"",
+      "chinese": "\"MCP 服务器策略\""
+    },
+    {
+      "original": "\"Excluded commands\"",
+      "chinese": "\"排除的命令\""
+    },
+    {
+      "original": "\"Installing plugin\"",
+      "chinese": "\"正在安装插件\""
+    },
+    {
+      "original": "\"Bookmark response\"",
+      "chinese": "\"收藏回复\""
+    },
+    {
+      "original": "\"Messaging address\"",
+      "chinese": "\"消息地址\""
+    },
+    {
+      "original": "\"instruction files\"",
+      "chinese": "\"指令文件\""
+    },
+    {
+      "original": "\"Switch to session\"",
+      "chinese": "\"切换到会话\""
+    },
+    {
+      "original": "\"Remove from group\"",
+      "chinese": "\"从分组移除\""
+    },
+    {
+      "original": "\"Archived sessions\"",
+      "chinese": "\"已归档会话\""
+    },
+    {
+      "original": "\"Switch branch to \"",
+      "chinese": "\"切换分支到 \""
+    },
+    {
+      "original": "U,\" \",h9(U,\"agent\")",
+      "chinese": "U,\" 个 Agent\""
+    },
+    {
+      "original": "\"No matches found\"",
+      "chinese": "\"未找到匹配项\""
+    },
+    {
+      "original": "\"1 line of output\"",
+      "chinese": "\"1 行输出\""
+    },
+    {
+      "original": "\"Claude, thinking\"",
+      "chinese": "\"Claude（思考中）\""
+    },
+    {
+      "original": "\"What went wrong?\"",
+      "chinese": "\"出了什么问题？\""
+    },
+    {
+      "original": "\"Model (optional)\"",
+      "chinese": "\"模型（可选）\""
+    },
+    {
+      "original": "\"Open here anyway\"",
+      "chinese": "\"仍要在此打开\""
+    },
+    {
+      "original": "\"Permission rules\"",
+      "chinese": "\"权限规则\""
+    },
+    {
+      "original": "\"Sandbox commands\"",
+      "chinese": "\"沙盒命令\""
+    },
+    {
+      "original": "Its marketplace, \"",
+      "chinese": "它的应用市场 \""
+    },
+    {
+      "original": "\"Filter commands…\"",
+      "chinese": "\"筛选命令…\""
+    },
+    {
+      "original": ". Click to change.",
+      "chinese": "。点击更改。"
+    },
+    {
+      "original": "Couldn't exclude \"",
+      "chinese": "无法排除 \""
+    },
+    {
+      "original": "\"its memory index\"",
+      "chinese": "\"其记忆索引\""
+    },
+    {
+      "original": "\"Filter by status\"",
+      "chinese": "\"按状态筛选\""
+    },
+    {
+      "original": "\"Scroll to Bottom\"",
+      "chinese": "\"滚动到底部\""
+    },
+    {
+      "original": "\"Previous Message\"",
+      "chinese": "\"上一条消息\""
+    },
+    {
+      "original": "\"Next Match Block\"",
+      "chinese": "\"下一个匹配块\""
+    },
+    {
+      "original": "\" no longer shown\"",
+      "chinese": "\" 不再显示\""
+    },
+    {
+      "original": "\"Click to expand\"",
+      "chinese": "\"点击展开\""
+    },
+    {
+      "original": "\"Write succeeded\"",
+      "chinese": "\"写入成功\""
+    },
+    {
+      "original": "\"Message queued.\"",
+      "chinese": "\"消息已排队。\""
+    },
+    {
+      "original": "\"Hide onboarding\"",
+      "chinese": "\"隐藏新手引导\""
+    },
+    {
+      "original": "\"Open transcript\"",
+      "chinese": "\"打开对话记录\""
+    },
+    {
+      "original": "\"A settings file\"",
+      "chinese": "\"一个设置文件\""
+    },
+    {
+      "original": "\"Filter servers…\"",
+      "chinese": "\"筛选服务器…\""
+    },
+    {
+      "original": "\" to navigate · \"",
+      "chinese": "\" 导航 · \""
+    },
+    {
+      "original": "\"to stop editing\"",
+      "chinese": "\"停止编辑\""
+    },
+    {
+      "original": "\"What to restore\"",
+      "chinese": "\"要恢复的内容\""
+    },
+    {
+      "original": "\"has not changed\"",
+      "chinese": "\"没有变化\""
+    },
+    {
+      "original": "\"startup options\"",
+      "chinese": "\"启动选项\""
+    },
+    {
+      "original": "\"current session\"",
+      "chinese": "\"当前会话\""
+    },
+    {
+      "original": "\"Allowed domains\"",
+      "chinese": "\"允许的域名\""
+    },
+    {
+      "original": "\"Dismiss warning\"",
+      "chinese": "\"关闭警告\""
+    },
+    {
+      "original": "\"Terminal opened\"",
+      "chinese": "\"终端已打开\""
+    },
+    {
+      "original": "\"Remove bookmark\"",
+      "chinese": "\"移除书签\""
+    },
+    {
+      "original": "\"Loading status…\"",
+      "chinese": "\"正在加载状态…\""
+    },
+    {
+      "original": "\"Search sessions\"",
+      "chinese": "\"搜索会话\""
+    },
+    {
+      "original": "\"Session manager\"",
+      "chinese": "\"会话管理器\""
+    },
+    {
+      "original": "\"Account & usage\"",
+      "chinese": "\"账户与用量\""
+    },
+    {
+      "original": "\"e.g. my-feature\"",
+      "chinese": "\"例如 my-feature\""
+    },
+    {
+      "original": "\"Network Access\"",
+      "chinese": "\"网络访问\""
+    },
+    {
+      "original": "\"used Plan mode\"",
+      "chinese": "\"使用了计划模式\""
+    },
+    {
+      "original": "\"the main agent\"",
+      "chinese": "\"主 Agent\""
+    },
+    {
+      "original": "\"auto-mode scan\"",
+      "chinese": "\"自动模式扫描\""
+    },
+    {
+      "original": "\"No output yet.\"",
+      "chinese": "\"尚无输出。\""
+    },
+    {
+      "original": "\"← Back to list\"",
+      "chinese": "\"← 返回列表\""
+    },
+    {
+      "original": "\"Confirm remove\"",
+      "chinese": "\"确认移除\""
+    },
+    {
+      "original": "\"Status message\"",
+      "chinese": "\"状态消息\""
+    },
+    {
+      "original": "\" to re-enable.\"",
+      "chinese": "\" 以重新启用。\""
+    },
+    {
+      "original": "\"Add MCP server\"",
+      "chinese": "\"添加 MCP 服务器\""
+    },
+    {
+      "original": "\"Open in editor\"",
+      "chinese": "\"在编辑器中打开\""
+    },
+    {
+      "original": "\"Confirm delete\"",
+      "chinese": "\"确认删除\""
+    },
+    {
+      "original": "\"Diagrams first\"",
+      "chinese": "\"图表优先\""
+    },
+    {
+      "original": "\"Not authorized\"",
+      "chinese": "\"未授权\""
+    },
+    {
+      "original": "\"Allowed writes\"",
+      "chinese": "\"允许写入\""
+    },
+    {
+      "original": "\"Denied domains\"",
+      "chinese": "\"拒绝的域名\""
+    },
+    {
+      "original": "\"Usage by model\"",
+      "chinese": "\"按模型统计的用量\""
+    },
+    {
+      "original": "\"Remote Control\"",
+      "chinese": "\"远程控制\""
+    },
+    {
+      "original": "\"Dismiss notice\"",
+      "chinese": "\"关闭通知\""
+    },
+    {
+      "original": "\"[redacted URL]\"",
+      "chinese": "\"[已隐去的 URL]\""
+    },
+    {
+      "original": "\"Disable for me\"",
+      "chinese": "\"仅为我禁用\""
+    },
+    {
+      "original": "\"Failed to load\"",
+      "chinese": "\"加载失败\""
+    },
+    {
+      "original": "\"Reload plugins\"",
+      "chinese": "\"重新加载插件\""
+    },
+    {
+      "original": "\"Slash commands\"",
+      "chinese": "\"斜杠命令\""
+    },
+    {
+      "original": "\"Working folder\"",
+      "chinese": "\"工作文件夹\""
+    },
+    {
+      "original": "\"Switched model\"",
+      "chinese": "\"已切换模型\""
+    },
+    {
+      "original": "\"Resume session\"",
+      "chinese": "\"恢复会话\""
+    },
+    {
+      "original": "\"Mark as unread\"",
+      "chinese": "\"标记为未读\""
+    },
+    {
+      "original": "\"Previous Match\"",
+      "chinese": "\"上一个匹配项\""
+    },
+    {
+      "original": " lines of output",
+      "chinese": " 行输出"
+    },
+    {
+      "original": "\"Fetched from \"",
+      "chinese": "\"抓取自 \""
+    },
+    {
+      "original": "\"Continue here\"",
+      "chinese": "\"在此继续\""
+    },
+    {
+      "original": "\"memory import\"",
+      "chinese": "\"记忆导入\""
+    },
+    {
+      "original": "\"cloud session\"",
+      "chinese": "\"云会话\""
+    },
+    {
+      "original": "\"Plugin choice\"",
+      "chinese": "\"插件选项\""
+    },
+    {
+      "original": "\"Custom agents\"",
+      "chinese": "\"自定义 Agent\""
+    },
+    {
+      "original": "\"Side question\"",
+      "chinese": "\"侧边问题\""
+    },
+    {
+      "original": "\"Send feedback\"",
+      "chinese": "\"发送反馈\""
+    },
+    {
+      "original": "\"Dismiss error\"",
+      "chinese": "\"关闭错误\""
+    },
+    {
+      "original": "\"HTTP (remote)\"",
+      "chinese": "\"HTTP（远程）\""
+    },
+    {
+      "original": "\"Reconnecting…\"",
+      "chinese": "\"正在重新连接…\""
+    },
+    {
+      "original": "\" to select · \"",
+      "chinese": "\" 选择 · \""
+    },
+    {
+      "original": "\" · switching…\"",
+      "chinese": "\" · 正在切换…\""
+    },
+    {
+      "original": "\"Good response\"",
+      "chinese": "\"回复不错\""
+    },
+    {
+      "original": "\"Sign in again\"",
+      "chinese": "\"重新登录\""
+    },
+    {
+      "original": "\"user settings\"",
+      "chinese": "\"用户设置\""
+    },
+    {
+      "original": "\"unknown error\"",
+      "chinese": "\"未知错误\""
+    },
+    {
+      "original": "\"Nothing over \"",
+      "chinese": "\"没有超过 \""
+    },
+    {
+      "original": "\"Cloud gateway\"",
+      "chinese": "\"云网关\""
+    },
+    {
+      "original": "\"Message input\"",
+      "chinese": "\"消息输入框\""
+    },
+    {
+      "original": "\"Trying again…\"",
+      "chinese": "\"正在重试…\""
+    },
+    {
+      "original": "\"Copy response\"",
+      "chinese": "\"复制回复\""
+    },
+    {
+      "original": "\"Open in a tab\"",
+      "chinese": "\"在标签页中打开\""
+    },
+    {
+      "original": "\"Switch branch\"",
+      "chinese": "\"切换分支\""
+    },
+    {
+      "original": "\"Switching to \"",
+      "chinese": "\"正在切换到 \""
+    },
+    {
+      "original": "\"Reload Claude\"",
+      "chinese": "\"重新加载 Claude\""
+    },
+    {
+      "original": "\"Write failed\"",
+      "chinese": "\"写入失败\""
+    },
+    {
+      "original": "\"[No content]\"",
+      "chinese": "\"[无内容]\""
+    },
+    {
+      "original": "\"Your message\"",
+      "chinese": "\"你的消息\""
+    },
+    {
+      "original": "\"Login failed\"",
+      "chinese": "\"登录失败\""
+    },
+    {
+      "original": "\"Open folder…\"",
+      "chinese": "\"打开文件夹…\""
+    },
+    {
+      "original": "\"Fast mode ON\"",
+      "chinese": "\"快速模式已开启\""
+    },
+    {
+      "original": "\"Plugin field\"",
+      "chinese": "\"插件字段\""
+    },
+    {
+      "original": "\"This session\"",
+      "chinese": "\"此会话\""
+    },
+    {
+      "original": "\"Tool calls (\"",
+      "chinese": "\"工具调用（\""
+    },
+    {
+      "original": "\" background \"",
+      "chinese": "\" 个后台任务 \""
+    },
+    {
+      "original": "\" new problem\"",
+      "chinese": "\" 个新问题\""
+    },
+    {
+      "original": "\"accept edits\"",
+      "chinese": "\"接受编辑\""
+    },
+    {
+      "original": "\"Close banner\"",
+      "chinese": "\"关闭横幅\""
+    },
+    {
+      "original": "\"View tools (\"",
+      "chinese": "\"查看工具（\""
+    },
+    {
+      "original": "\"Save to file\"",
+      "chinese": "\"保存到文件\""
+    },
+    {
+      "original": "\"Not detected\"",
+      "chinese": "\"未检测到\""
+    },
+    {
+      "original": "\"Restore code\"",
+      "chinese": "\"恢复代码\""
+    },
+    {
+      "original": "\"Bad response\"",
+      "chinese": "\"回复不佳\""
+    },
+    {
+      "original": "\"Enter a name\"",
+      "chinese": "\"输入名称\""
+    },
+    {
+      "original": "\" directories\"",
+      "chinese": "\" 个目录\""
+    },
+    {
+      "original": "\"Denied reads\"",
+      "chinese": "\"拒绝读取\""
+    },
+    {
+      "original": "Switch model (",
+      "chinese": "切换模型（"
+    },
+    {
+      "original": "\"Switch model\"",
+      "chinese": "\"切换模型\""
+    },
+    {
+      "original": "\"Send message\"",
+      "chinese": "\"发送消息\""
+    },
+    {
+      "original": "\"Switched to \"",
+      "chinese": "\"已切换到 \""
+    },
+    {
+      "original": "\"marketplace!\"",
+      "chinese": "\"应用市场！\""
+    },
+    {
+      "original": "\"Back to list\"",
+      "chinese": "\"返回列表\""
+    },
+    {
+      "original": ", isn't added.",
+      "chinese": "，尚未添加。"
+    },
+    {
+      "original": "\"Refresh list\"",
+      "chinese": "\"刷新列表\""
+    },
+    {
+      "original": "\"for everyone\"",
+      "chinese": "\"对所有人生效\""
+    },
+    {
+      "original": "\"just for you\"",
+      "chinese": "\"仅对你生效\""
+    },
+    {
+      "original": "\"Turning off…\"",
+      "chinese": "\"正在关闭…\""
+    },
+    {
+      "original": "\" to select ·\"",
+      "chinese": "\" 选择 ·\""
+    },
+    {
+      "original": "\"Session type\"",
+      "chinese": "\"会话类型\""
+    },
+    {
+      "original": "\"Add to group\"",
+      "chinese": "\"添加到分组\""
+    },
+    {
+      "original": "\"Mark as read\"",
+      "chinese": "\"标记为已读\""
+    },
+    {
+      "original": "\"Rename group\"",
+      "chinese": "\"重命名分组\""
+    },
+    {
+      "original": "\"Delete group\"",
+      "chinese": "\"删除分组\""
+    },
+    {
+      "original": "\"Clear search\"",
+      "chinese": "\"清除搜索\""
+    },
+    {
+      "original": "\"View details\"",
+      "chinese": "\"查看详情\""
+    },
+    {
+      "original": "\"Next Message\"",
+      "chinese": "\"下一条消息\""
+    },
+    {
+      "original": "\"Find in chat\"",
+      "chinese": "\"在聊天中查找\""
+    },
+    {
+      "original": "\"Edit failed\"",
+      "chinese": "\"编辑失败\""
+    },
+    {
+      "original": "\"Glob output\"",
+      "chinese": "\"Glob 输出\""
+    },
+    {
+      "original": "\"Grep output\"",
+      "chinese": "\"Grep 输出\""
+    },
+    {
+      "original": "\"Arguments: \"",
+      "chinese": "\"参数：\""
+    },
+    {
+      "original": "\"You, queued\"",
+      "chinese": "\"你（已排队）\""
+    },
+    {
+      "original": "\"Signing in…\"",
+      "chinese": "\"正在登录…\""
+    },
+    {
+      "original": "\" of output.\"",
+      "chinese": "\" 的输出。\""
+    },
+    {
+      "original": "\"Spawned by \"",
+      "chinese": "\"创建者：\""
+    },
+    {
+      "original": "\"manual mode\"",
+      "chinese": "\"手动模式\""
+    },
+    {
+      "original": "\"hidden step\"",
+      "chinese": "\"个隐藏步骤\""
+    },
+    {
+      "original": "\"Save report\"",
+      "chinese": "\"保存报告\""
+    },
+    {
+      "original": "\"Script file\"",
+      "chinese": "\"脚本文件\""
+    },
+    {
+      "original": "\" configured\"",
+      "chinese": "\" 个已配置\""
+    },
+    {
+      "original": "\"the removal\"",
+      "chinese": "\"移除操作\""
+    },
+    {
+      "original": "\"Copy failed\"",
+      "chinese": "\"复制失败\""
+    },
+    {
+      "original": "\"Yes, allow \"",
+      "chinese": "\"是，允许 \""
+    },
+    {
+      "original": "\"Workspace (\"",
+      "chinese": "\"工作区（\""
+    },
+    {
+      "original": "\"Remove rule\"",
+      "chinese": "\"移除规则\""
+    },
+    {
+      "original": "\"Third Party\"",
+      "chinese": "\"第三方\""
+    },
+    {
+      "original": "\"browser tab\"",
+      "chinese": "\"浏览器标签页\""
+    },
+    {
+      "original": "\"these files\"",
+      "chinese": "\"这些文件\""
+    },
+    {
+      "original": "\"(unchanged)\"",
+      "chinese": "\"（未更改）\""
+    },
+    {
+      "original": "\"Private Key\"",
+      "chinese": "\"私钥\""
+    },
+    {
+      "original": "\"Turning on…\"",
+      "chinese": "\"正在开启…\""
+    },
+    {
+      "original": "\"Needs input\"",
+      "chinese": "\"需要输入\""
+    },
+    {
+      "original": "\"Connecting…\"",
+      "chinese": "\"正在连接…\""
+    },
+    {
+      "original": "\"Thinking...\"",
+      "chinese": "\"思考中...\""
+    },
+    {
+      "original": "'pattern: \"'",
+      "chinese": "'模式：\"'"
+    },
+    {
+      "original": "\"Web Search\"",
+      "chinese": "\"网页搜索\""
+    },
+    {
+      "original": "\"No output.\"",
+      "chinese": "\"无输出。\""
+    },
+    {
+      "original": "\"Stop agent\"",
+      "chinese": "\"停止 Agent\""
+    },
+    {
+      "original": "\"MCP server\"",
+      "chinese": "\"MCP 服务器\""
+    },
+    {
+      "original": "\"Copy error\"",
+      "chinese": "\"复制错误\""
+    },
+    {
+      "original": "\"Add server\"",
+      "chinese": "\"添加服务器\""
+    },
+    {
+      "original": "\"Disabling…\"",
+      "chinese": "\"正在禁用…\""
+    },
+    {
+      "original": "\"1 year ago\"",
+      "chinese": "\"1 年前\""
+    },
+    {
+      "original": "\"the change\"",
+      "chinese": "\"更改操作\""
+    },
+    {
+      "original": "\"to go back\"",
+      "chinese": "\"返回\""
+    },
+    {
+      "original": "\"unknown OS\"",
+      "chinese": "\"未知操作系统\""
+    },
+    {
+      "original": "\" · current\"",
+      "chinese": "\" · 当前\""
+    },
+    {
+      "original": "\"files were\"",
+      "chinese": "\"个文件被\""
+    },
+    {
+      "original": "\"No sandbox\"",
+      "chinese": "\"不使用沙盒\""
+    },
+    {
+      "original": "\"Total cost\"",
+      "chinese": "\"总成本\""
+    },
+    {
+      "original": "\"View usage\"",
+      "chinese": "\"查看用量\""
+    },
+    {
+      "original": ": not loaded",
+      "chinese": "：未加载"
+    },
+    {
+      "original": "\"Switch to \"",
+      "chinese": "\"切换到 \""
+    },
+    {
+      "original": "\"Rewind to…\"",
+      "chinese": "\"回滚到…\""
+    },
+    {
+      "original": "\"git output\"",
+      "chinese": "\"git 输出\""
+    },
+    {
+      "original": "\"No results\"",
+      "chinese": "\"无结果\""
+    },
+    {
+      "original": "\"Next Match\"",
+      "chinese": "\"下一个匹配项\""
+    },
+    {
+      "original": "\"Use skill\"",
+      "chinese": "\"使用技能\""
+    },
+    {
+      "original": "\"Web Fetch\"",
+      "chinese": "\"网页抓取\""
+    },
+    {
+      "original": "\"Diff View\"",
+      "chinese": "\"差异视图\""
+    },
+    {
+      "original": "\"Edited by\"",
+      "chinese": "\"编辑者\""
+    },
+    {
+      "original": "\"Agent map\"",
+      "chinese": "\"Agent 地图\""
+    },
+    {
+      "original": "\"Stopping…\"",
+      "chinese": "\"正在停止…\""
+    },
+    {
+      "original": "\"plan mode\"",
+      "chinese": "\"计划模式\""
+    },
+    {
+      "original": "\"don't ask\"",
+      "chinese": "\"不再询问\""
+    },
+    {
+      "original": "\"No, keep \"",
+      "chinese": "\"否，保留 \""
+    },
+    {
+      "original": "\"Show more\"",
+      "chinese": "\"显示更多\""
+    },
+    {
+      "original": "\"Show less\"",
+      "chinese": "\"显示更少\""
+    },
+    {
+      "original": "\"tool call\"",
+      "chinese": "\"次工具调用\""
+    },
+    {
+      "original": "\"Edit hook\"",
+      "chinese": "\"编辑钩子\""
+    },
+    {
+      "original": "\"Save hook\"",
+      "chinese": "\"保存钩子\""
+    },
+    {
+      "original": "\"runs once\"",
+      "chinese": "\"运行一次\""
+    },
+    {
+      "original": "\"Retrying…\"",
+      "chinese": "\"正在重试…\""
+    },
+    {
+      "original": "\"Clearing…\"",
+      "chinese": "\"正在清除…\""
+    },
+    {
+      "original": "\"Enabling…\"",
+      "chinese": "\"正在启用…\""
+    },
+    {
+      "original": "\"The code \"",
+      "chinese": "\"代码 \""
+    },
+    {
+      "original": "\"Add rule…\"",
+      "chinese": "\"添加规则…\""
+    },
+    {
+      "original": "\"Don't ask\"",
+      "chinese": "\"不再询问\""
+    },
+    {
+      "original": "\"this file\"",
+      "chinese": "\"此文件\""
+    },
+    {
+      "original": "\"Try again\"",
+      "chinese": "\"重试\""
+    },
+    {
+      "original": "\" installs\"",
+      "chinese": "\" 次安装\""
+    },
+    {
+      "original": "\" to close\"",
+      "chinese": "\" 关闭\""
+    },
+    {
+      "original": "\"Name only\"",
+      "chinese": "\"仅名称\""
+    },
+    {
+      "original": "\"User only\"",
+      "chinese": "\"仅用户\""
+    },
+    {
+      "original": "\" · locked\"",
+      "chinese": "\" · 已锁定\""
+    },
+    {
+      "original": "\"New group\"",
+      "chinese": "\"新建分组\""
+    },
+    {
+      "original": "\"Active · \"",
+      "chinese": "\"活跃 · \""
+    },
+    {
+      "original": " months ago",
+      "chinese": " 个月前"
+    },
+    {
+      "original": "\"a plugin\"",
+      "chinese": "\"一个插件\""
+    },
+    {
+      "original": "\"Sign out\"",
+      "chinese": "\"退出登录\""
+    },
+    {
+      "original": "\"MCP task\"",
+      "chinese": "\"MCP 任务\""
+    },
+    {
+      "original": "\"MCP tool\"",
+      "chinese": "\"MCP 工具\""
+    },
+    {
+      "original": "\"Add hook\"",
+      "chinese": "\"添加钩子\""
+    },
+    {
+      "original": "\"the save\"",
+      "chinese": "\"保存操作\""
+    },
+    {
+      "original": "\"to close\"",
+      "chinese": "\"关闭\""
+    },
+    {
+      "original": "\"file was\"",
+      "chinese": "\"个文件被\""
+    },
+    {
+      "original": "\"Save for\"",
+      "chinese": "\"保存到\""
+    },
+    {
+      "original": "\"Add rule\"",
+      "chinese": "\"添加规则\""
+    },
+    {
+      "original": "\"just now\"",
+      "chinese": "\"刚刚\""
+    },
+    {
+      "original": " weeks ago",
+      "chinese": " 周前"
+    },
+    {
+      "original": " years ago",
+      "chinese": " 年前"
+    },
+    {
+      "original": "\"Show me\"",
+      "chinese": "\"演示给我看\""
+    },
+    {
+      "original": "\"You've \"",
+      "chinese": "\"你已 \""
+    },
+    {
+      "original": "channel @",
+      "chinese": "频道 @"
+    },
+    {
+      "original": "\" plugin\"",
+      "chinese": "\" 插件\""
+    },
+    {
+      "original": "\"Save to\"",
+      "chinese": "\"保存到\""
+    },
+    {
+      "original": "\"Saving…\"",
+      "chinese": "\"正在保存…\""
+    },
+    {
+      "original": "\"Remove \"",
+      "chinese": "\"移除 \""
+    },
+    {
+      "original": "\"Resets \"",
+      "chinese": "\"重置于 \""
+    },
+    {
+      "original": "Install \"",
+      "chinese": "安装 \""
+    },
+    {
+      "original": "\"Show it\"",
+      "chinese": "\"显示它\""
+    },
+    {
+      "original": "\"Scope: \"",
+      "chinese": "\"范围：\""
+    },
+    {
+      "original": " days ago",
+      "chinese": " 天前"
+    },
+    {
+      "original": "\" skill\"",
+      "chinese": "\" 技能\""
+    },
+    {
+      "original": "\"Found \"",
+      "chinese": "\"找到 \""
+    },
+    {
+      "original": "\" rule?\"",
+      "chinese": "\" 规则？\""
+    },
+    {
+      "original": "\" file\"",
+      "chinese": "\" 文件\""
+    },
+    {
+      "original": "\"Sent \"",
+      "chinese": "\"已发送 \""
+    },
+    {
+      "original": "\"From \"",
+      "chinese": "\"来自 \""
+    },
+    {
+      "original": "\"(all)\"",
+      "chinese": "\"（全部）\""
+    },
+    {
+      "original": "\" line\"",
+      "chinese": "\" 行\""
+    },
+    {
+      "original": "\" for \"",
+      "chinese": "\"，用于 \""
+    },
+    {
+      "original": "\" more\"",
+      "chinese": "\" 个\""
+    },
+    {
+      "original": "\" rule\"",
+      "chinese": "\" 规则\""
+    },
+    {
+      "original": "\"Last \"",
+      "chinese": "\"最近 \""
+    },
+    {
+      "original": "\"from \"",
+      "chinese": "\"来自 \""
+    },
+    {
+      "original": "Added \"",
+      "chinese": "已将 \""
+    },
+    {
+      "original": "\"Run \"",
+      "chinese": "\"运行 \""
+    },
+    {
+      "original": "[Re: \"",
+      "chinese": "[回复：\""
+    },
+    {
+      "original": "\" and\"",
+      "chinese": "\" 以及另外\""
+    },
+    {
+      "original": "\"for \"",
+      "chinese": "\"，用于 \""
+    },
+    {
+      "original": "\" for\"",
+      "chinese": "\"，用于\""
+    },
+    {
+      "original": "\"Add \"",
+      "chinese": "\"添加 \""
+    },
+    {
+      "original": "\" or \"",
+      "chinese": "\" 或 \""
+    },
+    {
+      "original": "\"Why?\"",
+      "chinese": "\"为什么？\""
+    },
+    {
+      "original": "that \"",
+      "chinese": "将 \""
+    },
+    {
+      "original": "\"and \"",
+      "chinese": "\"以及另外 \""
+    },
+    {
+      "original": "m ago",
+      "chinese": " 分钟前"
+    },
+    {
+      "original": "h ago",
+      "chinese": " 小时前"
+    },
+    {
+      "original": "d ago",
+      "chinese": " 天前"
+    },
     {
       "original": "\"Ask before edits\"",
       "chinese": "\"修改前询问\""
@@ -504,9 +5216,7 @@
     },
     {
       "original": "\"Run \",(.+?),\" in terminal\"",
-      "chinese": "\"在终端中运行 \", $1, \"\"",
-      "regex": true,
-      "flags": "g"
+      "chinese": "\"在终端中运行 \", $1, \"\""
     },
     {
       "original": "\"Marketplaces\"",
@@ -830,28 +5540,23 @@
     },
     {
       "original": "\"Yes, allow \",([\\w\\[\\].]+),\" for \",([\\w.]+)",
-      "chinese": "\"是的，允许 \",$1,\" 用于 \",$2",
-      "regex": true
+      "chinese": "\"是的，允许 \",$1,\" 用于 \",$2"
     },
     {
       "original": "\"Yes, allow \",([\\w\\[\\].]+),\" and \",([\\w\\[\\].]+),\" for\",\" \",([\\w.]+)",
-      "chinese": "\"是的，允许 \",$1,\" 和 \",$2,\" 用于 \",$3",
-      "regex": true
+      "chinese": "\"是的，允许 \",$1,\" 和 \",$2,\" 用于 \",$3"
     },
     {
       "original": "\"Yes, allow \",([\\w\\[\\].]+),\" and \",([\\w\\[\\].-]+),\" \",\"more for \",([\\w.]+)",
-      "chinese": "\"是的，允许 \",$1,\" 和另外 \",$2,\" 个，用于 \",$3",
-      "regex": true
+      "chinese": "\"是的，允许 \",$1,\" 和另外 \",$2,\" 个，用于 \",$3"
     },
     {
       "original": "\"Yes, allow access to \",([\\w\\[\\].]+),\" for \",([\\w.]+)",
-      "chinese": "\"是的，允许访问 \",$1,\" 用于 \",$2",
-      "regex": true
+      "chinese": "\"是的，允许访问 \",$1,\" 用于 \",$2"
     },
     {
       "original": "\"Yes, allow access to \",([\\w\\[\\].]+),\" directories for\",\" \",([\\w.]+)",
-      "chinese": "\"是的，允许访问 \",$1,\" 个目录，用于 \",$2",
-      "regex": true
+      "chinese": "\"是的，允许访问 \",$1,\" 个目录，用于 \",$2"
     },
     {
       "original": "\"this project (just you)\"",
@@ -1459,33 +6164,23 @@
     },
     {
       "original": "\"Max\"",
-      "chinese": "\"最大\"",
-      "regex": true,
-      "flags": "gi"
+      "chinese": "\"最大\""
     },
     {
       "original": "\"medium\"",
-      "chinese": "\"中等\"",
-      "regex": true,
-      "flags": "gi"
+      "chinese": "\"中等\""
     },
     {
       "original": "\"low\"",
-      "chinese": "\"低\"",
-      "regex": true,
-      "flags": "gi"
+      "chinese": "\"低\""
     },
     {
       "original": "\"high\"",
-      "chinese": "\"高\"",
-      "regex": true,
-      "flags": "gi"
+      "chinese": "\"高\""
     },
     {
       "original": "\"Extra high\"",
-      "chinese": "\"极高\"",
-      "regex": true,
-      "flags": "gi"
+      "chinese": "\"极高\""
     },
     {
       "original": "\"Ultracode - xhigh + workflows\"",
@@ -1994,6 +6689,582 @@
     {
       "original": "\"Claude’s Plan \"",
       "chinese": "\"Claude 的计划 \""
+    },
+    {
+      "original": " The link's marketplace wasn't added and the plugin wasn't installed. To use the link's instead, remove yours on the Marketplaces tab, then open the link again. The first name below is yours.",
+      "chinese": " 链接的应用市场未添加，插件也未安装。若要改用链接中的来源，请在“应用市场”标签页移除你的来源，然后再次打开链接。下方的第一个名称属于你。"
+    },
+    {
+      "original": "To add it, list it under extraKnownMarketplaces in your Claude Code user settings, or ask an admin to list it in your organization's settings. ",
+      "chinese": "若要添加它，请在 Claude Code 用户设置的 extraKnownMarketplaces 中列出它，或请管理员在组织设置中列出它。"
+    },
+    {
+      "original": " settings. If the change is not shown yet, Claude Code is still re-reading its settings; reopen this dialog to check.",
+      "chinese": " 设置。如果更改尚未显示，说明 Claude Code 仍在重新读取设置；请重新打开此对话框检查。"
+    },
+    {
+      "original": "This path can't be @-mentioned, because Claude Code would read it as a different mention: ",
+      "chinese": "无法用 @ 引用此路径，因为 Claude Code 会将其当作其他引用："
+    },
+    {
+      "original": " was not updated because the plugins that use it limit which version it can have.",
+      "chinese": " 未更新，因为使用它的插件限制了可用的版本。"
+    },
+    {
+      "original": " may already be at the latest version; the marketplace couldn't be checked.",
+      "chinese": " 可能已是最新版本；无法检查应用市场。"
+    },
+    {
+      "original": " was not updated because its marketplace's version file couldn't be used.",
+      "chinese": " 未更新，因为无法使用其应用市场的版本文件。"
+    },
+    {
+      "original": "A folder or repository needs a .claude-plugin/marketplace.json file. ",
+      "chinese": "文件夹或仓库需要包含 .claude-plugin/marketplace.json 文件。"
+    },
+    {
+      "original": " Your most recent messages may not have reached Claude. ",
+      "chinese": " 你最近的消息可能未能送达 Claude。"
+    },
+    {
+      "original": "Usage: /copy [N] where N is 1 (latest), 2, 3, … Got: ",
+      "chinese": "用法：/copy [N]，其中 N 为 1（最新）、2、3……实际为："
+    },
+    {
+      "original": " could not be loaded, so the hook could not be saved.",
+      "chinese": " 无法加载，因此无法保存钩子。"
+    },
+    {
+      "original": "[Message truncated - exceeded 50,000 character limit]",
+      "chinese": "[消息已截断——超过 50,000 字符限制]"
+    },
+    {
+      "original": " config. Running sessions keep it until restarted.",
+      "chinese": " 配置。运行中的会话会保留它，直到重启。"
+    },
+    {
+      "original": "The sandbox is on in the settings but cannot run: ",
+      "chinese": "设置中已启用沙盒，但无法运行："
+    },
+    {
+      "original": " folder is ignored because its plugin.json lists ",
+      "chinese": " 文件夹被忽略，因为其 plugin.json 列出了 "
+    },
+    {
+      "original": "Environment variables must be KEY=value (line ",
+      "chinese": "环境变量必须为 KEY=value（第 "
+    },
+    {
+      "original": " config. It will be available in new sessions.",
+      "chinese": " 配置。它将在新会话中可用。"
+    },
+    {
+      "original": " was uninstalled, but it's still on for you.",
+      "chinese": " 已卸载，但对你仍处于开启状态。"
+    },
+    {
+      "original": "Headers must be \"Header-Name: value\" (line ",
+      "chinese": "请求头必须为 \"Header-Name: value\"（第 "
+    },
+    {
+      "original": " Don't accept it unless you expected them.",
+      "chinese": " 除非你预期如此，否则不要接受。"
+    },
+    {
+      "original": " is already a style name. Choose another.",
+      "chinese": " 已是样式名称，请换一个。"
+    },
+    {
+      "original": " to apply changes to the current session.",
+      "chinese": " 以将更改应用到当前会话。"
+    },
+    {
+      "original": "Couldn't switch to plan mode; not sent: ",
+      "chinese": "无法切换到计划模式；未发送："
+    },
+    {
+      "original": " by running a command on your computer.",
+      "chinese": "（会在你的电脑上运行命令）。"
+    },
+    {
+      "original": " isn't available in this environment.",
+      "chinese": " 在此环境中不可用。"
+    },
+    {
+      "original": "Microphone access denied — enable in ",
+      "chinese": "麦克风访问被拒绝——请在以下位置启用："
+    },
+    {
+      "original": "That entry names a different source. ",
+      "chinese": "该条目指定了不同的来源。"
+    },
+    {
+      "original": "Could not prepare the conversation: ",
+      "chinese": "无法准备对话："
+    },
+    {
+      "original": " more; Copy error includes them all.",
+      "chinese": " 个；复制错误可查看全部。"
+    },
+    {
+      "original": "More than one identical hook is in ",
+      "chinese": "多个完全相同的钩子位于 "
+    },
+    {
+      "original": "Continue in Terminal to configure ",
+      "chinese": "在终端中继续以配置 "
+    },
+    {
+      "original": " of saved data unless you keep it.",
+      "chinese": " 的已保存数据，除非你选择保留。"
+    },
+    {
+      "original": " is requesting permission to use ",
+      "chinese": " 正在请求使用权限："
+    },
+    {
+      "original": " plugin; change it in the plugin.",
+      "chinese": " 插件定义；请在插件中更改。"
+    },
+    {
+      "original": " · Run /remote-control to dismiss",
+      "chinese": " · 运行 /remote-control 关闭"
+    },
+    {
+      "original": " first, then turn this plugin on.",
+      "chinese": "，然后开启此插件。"
+    },
+    {
+      "original": ", so add a marketplace that has ",
+      "chinese": "，请先添加一个包含 "
+    },
+    {
+      "original": "Failed to export conversation: ",
+      "chinese": "导出对话失败："
+    },
+    {
+      "original": "Settings file failed to parse: ",
+      "chinese": "设置文件解析失败："
+    },
+    {
+      "original": "Failed to fork conversation: ",
+      "chinese": "分叉对话失败："
+    },
+    {
+      "original": " Copy the error to see which.",
+      "chinese": " 请复制错误以查看是哪一个。"
+    },
+    {
+      "original": "This usually also uninstalls ",
+      "chinese": "这通常还会卸载 "
+    },
+    {
+      "original": "A file it lists is missing: ",
+      "chinese": "它列出的某个文件缺失："
+    },
+    {
+      "original": " files; another plugin's is.",
+      "chinese": " 文件；使用的是另一个插件的。"
+    },
+    {
+      "original": " in any of your marketplaces",
+      "chinese": " 在你的任何应用市场中"
+    },
+    {
+      "original": "This plugin can't be turned ",
+      "chinese": "无法在此"
+    },
+    {
+      "original": "Cleared authentication for ",
+      "chinese": "已清除以下认证："
+    },
+    {
+      "original": "Code rewind completed, but ",
+      "chinese": "代码回滚已完成，但 "
+    },
+    {
+      "original": " Jupyter notebooks detected",
+      "chinese": " 检测到 Jupyter 笔记本"
+    },
+    {
+      "original": "Something went wrong while ",
+      "chinese": "执行以下操作时出错："
+    },
+    {
+      "original": " Copy the error to see why.",
+      "chinese": " 请复制错误以查看原因。"
+    },
+    {
+      "original": " is asking you a question.",
+      "chinese": " 正在向你提问。"
+    },
+    {
+      "original": " must be a number above 0.",
+      "chinese": " 必须是大于 0 的数字。"
+    },
+    {
+      "original": "This marketplace can't be ",
+      "chinese": "无法"
+    },
+    {
+      "original": "Failed to restart Claude: ",
+      "chinese": "重启 Claude 失败："
+    },
+    {
+      "original": "Failed to get an answer: ",
+      "chinese": "获取回答失败："
+    },
+    {
+      "original": "Could not save the file: ",
+      "chinese": "无法保存文件："
+    },
+    {
+      "original": "Couldn't switch browser: ",
+      "chinese": "无法切换浏览器："
+    },
+    {
+      "original": "Couldn't save the style. ",
+      "chinese": "无法保存样式。"
+    },
+    {
+      "original": "Failed to open the file: ",
+      "chinese": "打开文件失败："
+    },
+    {
+      "original": " isn't set up correctly.",
+      "chinese": " 配置不正确。"
+    },
+    {
+      "original": " is already provided by ",
+      "chinese": " 已由以下插件提供："
+    },
+    {
+      "original": "It was removed from the ",
+      "chinese": "它已从以下位置移除："
+    },
+    {
+      "original": "This plugin couldn't be ",
+      "chinese": "无法"
+    },
+    {
+      "original": "Uninstalling it deletes ",
+      "chinese": "卸载它会删除 "
+    },
+    {
+      "original": " when a session starts. ",
+      "chinese": "，"
+    },
+    {
+      "original": "Failed to rewind code: ",
+      "chinese": "回滚代码失败："
+    },
+    {
+      "original": "It is no longer in the ",
+      "chinese": "它已不再位于 "
+    },
+    {
+      "original": "This plugin is already ",
+      "chinese": "此插件已"
+    },
+    {
+      "original": "Remove this hook from ",
+      "chinese": "从以下位置移除此钩子："
+    },
+    {
+      "original": "Remote Control error: ",
+      "chinese": "远程控制错误："
+    },
+    {
+      "original": " stopped unexpectedly.",
+      "chinese": " 意外停止。"
+    },
+    {
+      "original": "This plugin is set in ",
+      "chinese": "此插件在以下位置设置："
+    },
+    {
+      "original": "Configure options for ",
+      "chinese": "配置以下插件的选项："
+    },
+    {
+      "original": " already exists here.",
+      "chinese": " 的样式文件已存在。"
+    },
+    {
+      "original": "Removing marketplace ",
+      "chinese": "正在移除应用市场 "
+    },
+    {
+      "original": "Failed to sign out: ",
+      "chinese": "退出登录失败："
+    },
+    {
+      "original": " (this session only)",
+      "chinese": "（仅本次会话）"
+    },
+    {
+      "original": " couldn't be loaded.",
+      "chinese": " 无法加载。"
+    },
+    {
+      "original": "Its language server ",
+      "chinese": "其语言服务器 "
+    },
+    {
+      "original": "No newer version of ",
+      "chinese": "未找到以下插件的新版本："
+    },
+    {
+      "original": " wasn't uninstalled.",
+      "chinese": " 未被卸载。"
+    },
+    {
+      "original": "Refresh marketplace ",
+      "chinese": "刷新应用市场 "
+    },
+    {
+      "original": "A style file named ",
+      "chinese": "名为 "
+    },
+    {
+      "original": " are not in effect.",
+      "chinese": " 未生效。"
+    },
+    {
+      "original": " couldn't be loaded",
+      "chinese": " 无法加载"
+    },
+    {
+      "original": "Remove marketplace ",
+      "chinese": "移除应用市场 "
+    },
+    {
+      "original": " levels of nesting",
+      "chinese": " 层嵌套"
+    },
+    {
+      "original": " available to copy",
+      "chinese": " 可复制"
+    },
+    {
+      "original": " isn't responding.",
+      "chinese": " 无响应。"
+    },
+    {
+      "original": " installed plugins",
+      "chinese": " 个已安装插件"
+    },
+    {
+      "original": "Filter by status, ",
+      "chinese": "按状态筛选，"
+    },
+    {
+      "original": "Authenticating...",
+      "chinese": "正在验证..."
+    },
+    {
+      "original": "Dictation error: ",
+      "chinese": "听写错误："
+    },
+    {
+      "original": "Its marketplace, ",
+      "chinese": "其应用市场 "
+    },
+    {
+      "original": "It is now called ",
+      "chinese": "它现在名为 "
+    },
+    {
+      "original": " was not updated.",
+      "chinese": " 未更新。"
+    },
+    {
+      "original": " — awaiting input",
+      "chinese": "——等待输入"
+    },
+    {
+      "original": " is not allowed.",
+      "chinese": " 不允许使用。"
+    },
+    {
+      "original": " must be a JSON ",
+      "chinese": " 必须是 JSON "
+    },
+    {
+      "original": " (not in effect)",
+      "chinese": "（未生效）"
+    },
+    {
+      "original": "Debugger error: ",
+      "chinese": "调试器错误："
+    },
+    {
+      "original": "Notebook error: ",
+      "chinese": "笔记本错误："
+    },
+    {
+      "original": " couldn't start.",
+      "chinese": " 无法启动。"
+    },
+    {
+      "original": " isn't used for ",
+      "chinese": " 未用于 "
+    },
+    {
+      "original": "Defined by the ",
+      "chinese": "由 "
+    },
+    {
+      "original": " settings files",
+      "chinese": " 设置文件"
+    },
+    {
+      "original": "Reconnected to ",
+      "chinese": "已重新连接到 "
+    },
+    {
+      "original": "Its MCP server ",
+      "chinese": "其 MCP 服务器 "
+    },
+    {
+      "original": " took too long.",
+      "chinese": " 耗时过长。"
+    },
+    {
+      "original": "This plugin is ",
+      "chinese": "此插件"
+    },
+    {
+      "original": " files itself.",
+      "chinese": " 文件。"
+    },
+    {
+      "original": "(code block, ",
+      "chinese": "（代码块，"
+    },
+    {
+      "original": "Invalid name ",
+      "chinese": "名称无效："
+    },
+    {
+      "original": "Removed from ",
+      "chinese": "已从以下位置移除："
+    },
+    {
+      "original": " marketplace.",
+      "chinese": " 应用市场中。"
+    },
+    {
+      "original": "Claude reads ",
+      "chinese": "Claude 会在会话启动时读取 "
+    },
+    {
+      "original": "Header name ",
+      "chinese": "请求头名称 "
+    },
+    {
+      "original": " connected):",
+      "chinese": " 已连接）："
+    },
+    {
+      "original": " assistant ",
+      "chinese": " 条助手"
+    },
+    {
+      "original": "Directory: ",
+      "chinese": "目录："
+    },
+    {
+      "original": " was found.",
+      "chinese": "。"
+    },
+    {
+      "original": " There are ",
+      "chinese": " 还有 "
+    },
+    {
+      "original": "Auto-memory",
+      "chinese": "自动记忆"
+    },
+    {
+      "original": "KB of text",
+      "chinese": "KB 文本"
+    },
+    {
+      "original": "Cancelled.",
+      "chinese": "已取消。"
+    },
+    {
+      "original": " settings?",
+      "chinese": " 设置？"
+    },
+    {
+      "original": "Uninstall ",
+      "chinese": "卸载 "
+    },
+    {
+      "original": ", locked. ",
+      "chinese": "，已锁定。"
+    },
+    {
+      "original": " — running",
+      "chinese": "——运行中"
+    },
+    {
+      "original": "Allowed: ",
+      "chinese": "允许："
+    },
+    {
+      "original": "Blocked: ",
+      "chinese": "阻止："
+    },
+    {
+      "original": " pictures",
+      "chinese": " 张图片"
+    },
+    {
+      "original": "Show me: ",
+      "chinese": "显示："
+    },
+    {
+      "original": "Saved to ",
+      "chinese": "已保存到 "
+    },
+    {
+      "original": "It needs ",
+      "chinese": "它需要 "
+    },
+    {
+      "original": "Updating ",
+      "chinese": "正在更新 "
+    },
+    {
+      "original": "(image: ",
+      "chinese": "（图片："
+    },
+    {
+      "original": "Claude: ",
+      "chinese": "Claude："
+    },
+    {
+      "original": "Enabled ",
+      "chinese": "已启用 "
+    },
+    {
+      "original": "Effort: ",
+      "chinese": "努力级别："
+    },
+    {
+      "original": "Weekly ",
+      "chinese": "每周 "
+    },
+    {
+      "original": " scope)",
+      "chinese": " 范围）"
+    },
+    {
+      "original": "glob: ",
+      "chinese": "glob："
     }
   ]
 }
