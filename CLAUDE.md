@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 这是一个 **Claude Code for VS Code 扩展的中文汉化工具**。通过 VS Code 扩展对 Claude Code 的 `webview/index.js` 文件进行字符串替换，将英文界面文本转换为中文。
 
-该项目是一个 **VS Code 扩展**，安装后自动汉化 Claude Code 扩展的界面。
+该项目是一个 **VS Code 扩展**，安装后通过命令面板手动执行汉化命令，汉化 Claude Code 扩展的界面。
 
 ## 常用命令
 
@@ -40,7 +40,7 @@ pnpm run build
 **重要说明**：
 - Claude Code 的界面文本位于 `webview/index.js` 而非 `extension.js`
 - 设置面板文本位于 Claude Code 扩展的 `package.json` 的 `contributes.configuration.properties` 中
-- 扩展自动查找并汉化 `webview/index.js` 和 `package.json`
+- 执行汉化命令时自动查找并汉化 `webview/index.js` 和 `package.json`
 - 支持用户通过配置添加前置和后置翻译规则
 
 ### 使用场景
@@ -48,9 +48,9 @@ pnpm run build
 **典型工作流程：**
 
 1. 用户安装本 VS Code 扩展
-2. 扩展自动定位 Claude Code 的 `webview/index.js`
-3. 自动创建备份并应用汉化
-4. 重启 VS Code 使变更生效
+2. 在命令面板执行 **Claude Code 汉化: 应用汉化**
+3. 扩展定位 Claude Code 的 `webview/index.js`，自动创建备份并应用汉化
+4. 重启 VS Code 或重新打开聊天窗口使变更生效
 
 ## 技术栈
 

@@ -74,41 +74,20 @@ async function activate(context) {
         'claudeCodeZhCn.reloadExtension',
         async () => {
             // 强制重新汉化：有备份时先还原再汉化
-            await applyTranslation(locator, translator, backup, config, context, false, true);
+            await applyTranslation(locator, translator, backup, config, context, true);
         }
     );
     context.subscriptions.push(reloadCommand);
 
-    // 监听 Claude Code 扩展的安装/更新
-    vscode.extensions.onDidChange(async () => {
-        if (config.get('autoApplyOnUpdate')) {
-            const claudeExt = vscode.extensions.getExtension(
-                config.get('claudeCodeExtensionId')
-            );
-            if (claudeExt) {
-                setTimeout(async () => {
-                    await applyTranslation(locator, translator, backup, config, context, true);
-                }, 1000);
-            }
-        }
-    });
-
-    // 启动时自动应用汉化
-    if (config.get('autoApplyOnStartup')) {
-        // 延迟执行，确保所有扩展都已加载
-        setTimeout(async () => {
-            await applyTranslation(locator, translator, backup, config, context, true);
-        }, 2000);
-    }
+    // 不进行任何自动汉化，汉化仅通过命令面板中的命令手动触发
 }
 
 /**
  * 应用汉化
  * @param {object} context - 扩展上下文（用于记录已应用的版本）
- * @param {boolean} silent - 静默模式（启动时自动调用）
  * @param {boolean} forceReapply - 强制重新汉化（重新加载命令使用）
  */
-async function applyTranslation(locator, translator, backup, config, context, silent = false, forceReapply = false) {
+async function applyTranslation(locator, translator, backup, config, context, forceReapply = false) {
     try {
         // 定位 Claude Code 扩展
         const claudePath = await locator.findClaudeCodeExtension();
@@ -172,19 +151,6 @@ async function applyTranslation(locator, translator, backup, config, context, si
                     '，重新汉化'
                 );
                 await backup.restoreBackup(mainFilePath);
-            } else if (silent) {
-                // 静默模式下，若文件仍是原版则继续汉化，否则跳过
-                const currentContent = fs.readFileSync(mainFilePath, 'utf8');
-                const originalContent = fs.readFileSync(
-                    backup.getBackupPath(mainFilePath),
-                    'utf8'
-                );
-                if (currentContent === originalContent) {
-                    console.log('检测到文件仍为原版，继续汉化');
-                } else {
-                    console.log('检测到备份文件，已汉化，跳过重复汉化');
-                    return;
-                }
             }
         }
 
@@ -251,7 +217,7 @@ async function applyTranslation(locator, translator, backup, config, context, si
         await context.globalState.update('appliedRulesVersion', rulesVersion);
 
         // 通知用户
-        if (config.get('showNotifications') && !silent) {
+        if (config.get('showNotifications')) {
             const choice = await vscode.window.showInformationMessage(
                 '汉化应用成功！需要重新打开新的聊天窗口或者重新加载窗口以生效。',
                 '立即重新加载', '稍后'

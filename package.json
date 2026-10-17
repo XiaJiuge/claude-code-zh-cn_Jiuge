@@ -2,7 +2,7 @@
   "name": "claude-code-zhcn",
   "displayName": "[非官方] Claude Code for VS Code 简体中文汉化包",
   "description": "非官方的 Claude Code for VS Code 插件的简体中文汉化插件",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "publisher": "zstings",
   "author": {
     "name": "zstings"
@@ -73,16 +73,6 @@
     "configuration": {
       "title": "Claude Code 汉化",
       "properties": {
-        "claudeCodeZhCn.autoApplyOnStartup": {
-          "type": "boolean",
-          "default": true,
-          "description": "VS Code 启动时自动应用汉化"
-        },
-        "claudeCodeZhCn.autoApplyOnUpdate": {
-          "type": "boolean",
-          "default": true,
-          "description": "检测到 Claude Code 更新时自动重新应用汉化"
-        },
         "claudeCodeZhCn.preTranslationRules": {
           "type": "array",
           "default": [],
