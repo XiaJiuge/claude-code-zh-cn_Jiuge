@@ -22,13 +22,13 @@
 
 1. 打开 VS Code 扩展视图（`Ctrl+Shift+X`）
 2. 点击右上角 `...` → **从 VSIX 安装…**
-3. 选择 `claude-code-zhcn-1.5.2.vsix`
+3. 选择 `claude-code-zhcn-1.5.3.vsix`
 4. 重新加载窗口
 
 也可以在命令行安装：
 
 ```bash
-code --install-extension claude-code-zhcn-1.5.2.vsix
+code --install-extension claude-code-zhcn-1.5.3.vsix
 ```
 
 安装后扩展会在启动时自动应用汉化。若界面未生效，请执行命令 **Claude Code 汉化: 重新加载汉化**，或重新打开聊天窗口。
@@ -146,7 +146,7 @@ claude-code-zh-cn/
 │   ├── locator.js         # 扩展定位器
 │   └── translator.js      # 翻译引擎
 ├── translations/
-│   └── built-in.json      # 内置 Webview 翻译规则（1802 条）
+│   └── built-in.json      # 内置 Webview 翻译规则（1995 条）
 ├── test/                  # IPC 协议保护测试
 ├── extension.js           # 扩展主入口
 ├── package.json           # 扩展配置

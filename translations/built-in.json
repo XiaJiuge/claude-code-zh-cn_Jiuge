@@ -1,10 +1,726 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Claude Code 内置汉化规则（Webview 全量）",
   "translations": [
     {
-      "original": "JA5={low:\"Low\",medium:\"Medium\",high:\"High\",xhigh:\"Extra high\",max:\"Max\"}",
-      "chinese": "JA5={low:\"低\",medium:\"中等\",high:\"高\",xhigh:\"极高\",max:\"最大\"}"
+      "original": "`Remove ${b0($)} from ${J} config?`",
+      "chinese": "`从 ${J} 配置中移除 ${b0($)}？`"
+    },
+    {
+      "original": "`${UW(U.map(Z.plugin))} ${U.length===1?\"uses\":\"use\"} it. Turn ${U.length===1?\"it\":\"them\"} off first.`",
+      "chinese": "`${UW(U.map(Z.plugin))} 正在使用它。请先关闭${U.length===1?\"它\":\"它们\"}。`"
+    },
+    {
+      "original": "`${UW(q.map(Z.plugin))} ${V?\"needs\":\"need\"} this plugin. Turn ${V?UW(q.map(Z.plugin)):\"them\"} off too?`",
+      "chinese": "`${UW(q.map(Z.plugin))} 需要此插件。是否也关闭${V?UW(q.map(Z.plugin)):\"它们\"}？`"
+    },
+    {
+      "original": "children:\"destructive\"",
+      "chinese": "children:\"破坏性\""
+    },
+    {
+      "original": "${CV($.usageData.value.totalTokens)} tokens in context",
+      "chinese": "${CV($.usageData.value.totalTokens)} 个 token（上下文）"
+    },
+    {
+      "original": "label:\"Copied\"",
+      "chinese": "label:\"已复制\""
+    },
+    {
+      "original": "label:\"Sandbox\",description:\"View and change how commands are sandboxed\"",
+      "chinese": "label:\"沙盒\",description:\"查看并更改命令的沙盒方式\""
+    },
+    {
+      "original": "`Switched to ${s1.slice(B71.length)}`",
+      "chinese": "`已切换到 ${s1.slice(B71.length)}`"
+    },
+    {
+      "original": "` Cancel leaves ${UW(J.map((Q)=>Z.plugin(Q.pluginId)))} as ${J.length===1?\"it is\":\"they are\"}.`",
+      "chinese": "` 取消后 ${UW(J.map((Q)=>Z.plugin(Q.pluginId)))} 将保持原状。`"
+    },
+    {
+      "original": "`Claude is requesting permission to ${x_1($.toolName,mI($.toolName))}.`",
+      "chinese": "`Claude 正在请求权限以 ${x_1($.toolName,mI($.toolName))}`"
+    },
+    {
+      "original": "q.title||\"Document\"",
+      "chinese": "q.title||\"文档\""
+    },
+    {
+      "original": "trim()===\"\"?\"(none)\":rz($)",
+      "chinese": "trim()===\"\"?\"(无)\":rz($)"
+    },
+    {
+      "original": "$.status===\"error\"?\"Retry\":\"Connect\"",
+      "chinese": "$.status===\"error\"?\"重试\":\"连接\""
+    },
+    {
+      "original": "ariaLabel:\"Back\"",
+      "chinese": "ariaLabel:\"返回\""
+    },
+    {
+      "original": "\"its memory index\",\"Reload\"",
+      "chinese": "\"其记忆索引\",\"重新加载\""
+    },
+    {
+      "original": "children:\"Session\"",
+      "chinese": "children:\"会话\""
+    },
+    {
+      "original": "c1.kind===\"update\"?\"Updating…\":\"Installing…\"",
+      "chinese": "c1.kind===\"update\"?\"正在更新…\":\"正在安装…\""
+    },
+    {
+      "original": "\"Uninstalling…\"",
+      "chinese": "\"正在卸载…\""
+    },
+    {
+      "original": "label:\"Type\"",
+      "chinese": "label:\"类型\""
+    },
+    {
+      "original": "children:\"Remove\"",
+      "chinese": "children:\"移除\""
+    },
+    {
+      "original": "children:\"Command\"",
+      "chinese": "children:\"命令\""
+    },
+    {
+      "original": "label:\"Close\"",
+      "chinese": "label:\"关闭\""
+    },
+    {
+      "original": "G(\"interrupt\"),children:\"Stop\"",
+      "chinese": "G(\"interrupt\"),children:\"停止\""
+    },
+    {
+      "original": "E=\"Stop\"",
+      "chinese": "E=\"停止\""
+    },
+    {
+      "original": "children:\"Close\"",
+      "chinese": "children:\"关闭\""
+    },
+    {
+      "original": "Av1=\"Buy usage credits on claude.ai\"",
+      "chinese": "Av1=\"在 claude.ai 购买用量额度\""
+    },
+    {
+      "original": "`${Y} requires usage credits`",
+      "chinese": "`${Y} 需要用量额度`"
+    },
+    {
+      "original": "`${Y} runs on usage credits, billed separately from your plan. You don't have usage credits yet.`",
+      "chinese": "`${Y} 使用用量额度运行，费用与你的套餐分开计费。你还没有用量额度。`"
+    },
+    {
+      "original": "`${Y} runs on usage credits — you have ${Dv1(0,X)} in credits.`",
+      "chinese": "`${Y} 使用用量额度运行 — 你的额度余额为 ${Dv1(0,X)}。`"
+    },
+    {
+      "original": "` — you have ${Dv1(Z,X)} in credits`",
+      "chinese": "` — 你的额度余额为 ${Dv1(Z,X)}`"
+    },
+    {
+      "original": "\", billed separately from your plan\"",
+      "chinese": "\"，费用与你的套餐分开计费\""
+    },
+    {
+      "original": "`Continue on ${Y} with usage credits?`",
+      "chinese": "`继续使用 ${Y} 并消耗用量额度？`"
+    },
+    {
+      "original": "`${Y} runs on usage credits${z}. Your other models remain included in your plan.`",
+      "chinese": "`${Y} 使用用量额度运行${z}。你的其他模型仍包含在套餐内。`"
+    },
+    {
+      "original": "`Continue with ${Y}`",
+      "chinese": "`继续使用 ${Y}`"
+    },
+    {
+      "original": "`${U} requires usage credits — buy at ${Bl}. Switched to your default model for this session`",
+      "chinese": "`${U} 需要用量额度 — 请在 ${Bl} 购买。已为本会话切换到你的默认模型`"
+    },
+    {
+      "original": "`Switched to your default model, now your saved default — ${U} requires usage credits`",
+      "chinese": "`已切换到你的默认模型，现已保存为默认 — ${U} 需要用量额度`"
+    },
+    {
+      "original": "`Switched to your default model for this session — ${U} requires usage credits`",
+      "chinese": "`已为本会话切换到你的默认模型 — ${U} 需要用量额度`"
+    },
+    {
+      "original": "`Switched to your default model — ${U} requires usage credits`",
+      "chinese": "`已切换到你的默认模型 — ${U} 需要用量额度`"
+    },
+    {
+      "original": "Its plugin.json isn't valid JSON.",
+      "chinese": "其 plugin.json 不是有效的 JSON。"
+    },
+    {
+      "original": "Its plugin.json has settings that aren't valid.",
+      "chinese": "其 plugin.json 包含无效设置。"
+    },
+    {
+      "original": "title:\"Other plugins still use this plugin.\"",
+      "chinese": "title:\"其他插件仍在使用此插件。\""
+    },
+    {
+      "original": "\"Philosophizing\"",
+      "chinese": "\"正在哲思\""
+    },
+    {
+      "original": "\"Channeling\"",
+      "chinese": "\"正在汇聚灵感\""
+    },
+    {
+      "original": "\"Unraveling\"",
+      "chinese": "\"正在抽丝剥茧\""
+    },
+    {
+      "original": "{open:\"Open\",closed:\"Closed\"}",
+      "chinese": "{open:\"打开\",closed:\"已关闭\"}"
+    },
+    {
+      "original": "var Ly5={needs_input:\"Needs input\",working:\"Working\",completed:\"Completed\"}",
+      "chinese": "var Ly5={needs_input:\"需要输入\",working:\"正在工作\",completed:\"已完成\"}"
+    },
+    {
+      "original": "return\"Unread\"",
+      "chinese": "return\"未读\""
+    },
+    {
+      "original": "\"aria-label\":F4?\"Sessions\"",
+      "chinese": "\"aria-label\":F4?\"会话\""
+    },
+    {
+      "original": "S4.archived.length===1?\"Unarchive session\":",
+      "chinese": "S4.archived.length===1?\"取消归档会话\":"
+    },
+    {
+      "original": "`Unarchive all ${S4.archived.length} sessions`",
+      "chinese": "`取消归档全部 ${S4.archived.length} 个会话`"
+    },
+    {
+      "original": "name:\"Ungrouped\"",
+      "chinese": "name:\"未分组\""
+    },
+    {
+      "original": "E81,{className:I5.tabIcon}),\"Web\"]",
+      "chinese": "E81,{className:I5.tabIcon}),\"网页\"]"
+    },
+    {
+      "original": "by5=\"Status\",Iy5=\"Tabs\"",
+      "chinese": "by5=\"状态\",Iy5=\"标签页\""
+    },
+    {
+      "original": "input.placeholder = \"Find\";",
+      "chinese": "input.placeholder = \"查找\";"
+    },
+    {
+      "original": "label:\"Okay\"",
+      "chinese": "label:\"好的\""
+    },
+    {
+      "original": "children:\"Checkout\"",
+      "chinese": "children:\"检出\""
+    },
+    {
+      "original": "Z.is_error?\"Failed\":\"Success\":\"Pending\"",
+      "chinese": "Z.is_error?\"失败\":\"成功\":\"待处理\""
+    },
+    {
+      "original": "r61=\"Answering…\"",
+      "chinese": "r61=\"正在回答…\""
+    },
+    {
+      "original": "`Prompt from ${lp([$.name])}`",
+      "chinese": "`来自 ${lp([$.name])} 的提示`"
+    },
+    {
+      "original": "`Claude is requesting permission to ${x_1($.toolName,$.toolName)}`",
+      "chinese": "`Claude 正在请求权限以 ${x_1($.toolName,$.toolName)}`"
+    },
+    {
+      "original": "return`use ${J}`",
+      "chinese": "return`使用 ${J}`"
+    },
+    {
+      "original": "`${J} is requesting permission to ${x_1($.toolName,mI($.toolName))}.`",
+      "chinese": "`${J} 正在请求权限以 ${x_1($.toolName,mI($.toolName))}。`"
+    },
+    {
+      "original": "Z??\"Message\"",
+      "chinese": "Z??\"消息\""
+    },
+    {
+      "original": "z=J?\"You\":Z",
+      "chinese": "z=J?\"你\":Z"
+    },
+    {
+      "original": "var dI=\"You\"",
+      "chinese": "var dI=\"你\""
+    },
+    {
+      "original": "EL0=\"Side question: \"",
+      "chinese": "EL0=\"侧边问题：\""
+    },
+    {
+      "original": "X===\"\"?\"(image)\"",
+      "chinese": "X===\"\"?\"（图片）\""
+    },
+    {
+      "original": "?\"line\":\"lines\"",
+      "chinese": "?\"行\":\"行\""
+    },
+    {
+      "original": "function Oz($,J=\"From\")",
+      "chinese": "function Oz($,J=\"来自\")"
+    },
+    {
+      "original": "function Xk({plugins:$,lead:J=\"From\"})",
+      "chinese": "function Xk({plugins:$,lead:J=\"来自\"})"
+    },
+    {
+      "original": "J===\"From\"",
+      "chinese": "J===\"来自\""
+    },
+    {
+      "original": "function v_1($){if($.length===0)return[\"a plugin\"];let J=[\"the \"];for(let[Z,X]of $.entries()){let Y=Z<$.length-2?\", \":Z===$.length-2?\" and \":$.length===1?\" plugin\":\" plugins\";J.push(fC(X),Y)}return J}",
+      "chinese": "function v_1($){if($.length===0)return[\"一个插件\"];let J=[\"插件 \"];for(let[Z,X]of $.entries()){let Y=Z<$.length-2?\"、\":Z===$.length-2?\" 和 \":\"\";J.push(fC(X),Y)}return J}"
+    },
+    {
+      "original": "children:\"Category\"",
+      "chinese": "children:\"类别\""
+    },
+    {
+      "original": "children:\"Tokens\"",
+      "chinese": "children:\"token\""
+    },
+    {
+      "original": "children:\"Now\"",
+      "chinese": "children:\"当前\""
+    },
+    {
+      "original": "children:G?\"Stopping…\":\"Stop\"",
+      "chinese": "children:G?\"正在停止…\":\"停止\""
+    },
+    {
+      "original": "B?\"Running\":A===void 0?\"Ended\":sT1[A]",
+      "chinese": "B?\"运行中\":A===void 0?\"已结束\":sT1[A]"
+    },
+    {
+      "original": "$.visiblyBusy.value?\"Working\":\"Idle\"",
+      "chinese": "$.visiblyBusy.value?\"正在工作\":\"空闲\""
+    },
+    {
+      "original": "var sT1={working:\"Working\",waiting:\"Waiting for your permission\",finished:\"Finished\",failed:\"Failed\",stopped:\"Stopped\"}",
+      "chinese": "var sT1={working:\"正在工作\",waiting:\"等待你的许可\",finished:\"已完成\",failed:\"失败\",stopped:\"已停止\"}"
+    },
+    {
+      "original": "children:\"Explored\"",
+      "chinese": "children:\"已探索\""
+    },
+    {
+      "original": "children:[F(jU,{}),\"Prompt\"]",
+      "chinese": "children:[F(jU,{}),\"提示词\"]"
+    },
+    {
+      "original": "children:[F(jU,{}),\"Output\"]",
+      "chinese": "children:[F(jU,{}),\"输出\"]"
+    },
+    {
+      "original": "[{rating:\"bad\",label:\"Bad\"},{rating:\"fine\",label:\"Fine\"},{rating:\"good\",label:\"Good\"}]",
+      "chinese": "[{rating:\"bad\",label:\"差\"},{rating:\"fine\",label:\"一般\"},{rating:\"good\",label:\"好\"}]"
+    },
+    {
+      "original": "children:\"Skip\"",
+      "chinese": "children:\"跳过\""
+    },
+    {
+      "original": "children:[\"Source:\",\" \"",
+      "chinese": "children:[\"来源：\",\" \""
+    },
+    {
+      "original": "X===\"copied\"?\"Copied\":X===\"failed\"?\"Copy failed\":\"\"",
+      "chinese": "X===\"copied\"?\"已复制\":X===\"failed\"?\"复制失败\":\"\""
+    },
+    {
+      "original": "children:\"Retry\"",
+      "chinese": "children:\"重试\""
+    },
+    {
+      "original": "children:\"Back\"",
+      "chinese": "children:\"返回\""
+    },
+    {
+      "original": "\"aria-label\":\"Dismiss\"",
+      "chinese": "\"aria-label\":\"关闭\""
+    },
+    {
+      "original": "ariaLabel:\"Bookmarks\"",
+      "chinese": "ariaLabel:\"书签\""
+    },
+    {
+      "original": "children:\"Docs\"",
+      "chinese": "children:\"文档\""
+    },
+    {
+      "original": "children:\"Feedback\"",
+      "chinese": "children:\"反馈\""
+    },
+    {
+      "original": "children:\"Get more usage\"",
+      "chinese": "children:\"获取更多用量\""
+    },
+    {
+      "original": "X?\"Hide\":\"Why?\"",
+      "chinese": "X?\"隐藏\":\"为什么？\""
+    },
+    {
+      "original": "children:\"Setting\"",
+      "chinese": "children:\"设置\""
+    },
+    {
+      "original": "children:\"Browser\"",
+      "chinese": "children:\"浏览器\""
+    },
+    {
+      "original": "children:\"Extension\"",
+      "chinese": "children:\"扩展\""
+    },
+    {
+      "original": "formLabel,children:\"Status\"",
+      "chinese": "formLabel,children:\"状态\""
+    },
+    {
+      "original": "children:\"Submit\"",
+      "chinese": "children:\"提交\""
+    },
+    {
+      "original": "K===\"saving\"?\"Saving…\":\"Save\"",
+      "chinese": "K===\"saving\"?\"正在保存…\":\"保存\""
+    },
+    {
+      "original": "R?\"Reload and keep my edits\":\"Reload\"",
+      "chinese": "R?\"重新加载并保留我的修改\":\"重新加载\""
+    },
+    {
+      "original": "x=$===\"memory\"?\"Memory\":\"Instructions\"",
+      "chinese": "x=$===\"memory\"?\"记忆\":\"指令\""
+    },
+    {
+      "original": "instructions:{label:\"Instructions\"",
+      "chinese": "instructions:{label:\"指令\""
+    },
+    {
+      "original": "`Delete ${PX($.name)}? This cannot be undone.`",
+      "chinese": "`删除 ${PX($.name)}？此操作无法撤销。`"
+    },
+    {
+      "original": "\"aria-label\":\"Actions\"",
+      "chinese": "\"aria-label\":\"操作\""
+    },
+    {
+      "original": "\"aria-label\":\"Suggestions\"",
+      "chinese": "\"aria-label\":\"建议\""
+    },
+    {
+      "original": "children:\"Restrictions\"",
+      "chinese": "children:\"限制\""
+    },
+    {
+      "original": "children:\"Dependencies\"",
+      "chinese": "children:\"依赖项\""
+    },
+    {
+      "original": "children:\"Exclude\"",
+      "chinese": "children:\"排除\""
+    },
+    {
+      "original": "children:\"None\"",
+      "chinese": "children:\"无\""
+    },
+    {
+      "original": "children:\"Overrides\"",
+      "chinese": "children:\"覆盖设置\""
+    },
+    {
+      "original": "children:\"Mode\"",
+      "chinese": "children:\"模式\""
+    },
+    {
+      "original": "\"aria-label\":\"Mode\"",
+      "chinese": "\"aria-label\":\"模式\""
+    },
+    {
+      "original": "title:\"Sandbox\"",
+      "chinese": "title:\"沙盒\""
+    },
+    {
+      "original": "sk0={allow:\"Allow\",ask:\"Ask\",deny:\"Deny\"}",
+      "chinese": "sk0={allow:\"允许\",ask:\"询问\",deny:\"拒绝\"}"
+    },
+    {
+      "original": "G.signed_in?\"Authorized\":\"Not authorized\"",
+      "chinese": "G.signed_in?\"已授权\":\"未授权\""
+    },
+    {
+      "original": "children:[\"Status:\",\" \"",
+      "chinese": "children:[\"状态：\",\" \""
+    },
+    {
+      "original": "Comments on the plan:\n",
+      "chinese": "计划评论：\n"
+    },
+    {
+      "original": "label:\"Description\"",
+      "chinese": "label:\"描述\""
+    },
+    {
+      "original": "back:\"Back\",next:\"Next\",saveButton:\"Save\",replace:\"Replace\",done:\"Done\"",
+      "chinese": "back:\"返回\",next:\"下一步\",saveButton:\"保存\",replace:\"替换\",done:\"完成\""
+    },
+    {
+      "original": "label:W?\"Restore\"",
+      "chinese": "label:W?\"恢复\""
+    },
+    {
+      "original": "children:\"Event\"",
+      "chinese": "children:\"事件\""
+    },
+    {
+      "original": "children:\"Matcher\"",
+      "chinese": "children:\"匹配器\""
+    },
+    {
+      "original": "children:[\"Matcher:\",\" \"",
+      "chinese": "children:[\"匹配器：\",\" \""
+    },
+    {
+      "original": "children:\"Type\"",
+      "chinese": "children:\"类型\""
+    },
+    {
+      "original": "children:\"Source\"",
+      "chinese": "children:\"来源\""
+    },
+    {
+      "original": "children:\"Timeout\"",
+      "chinese": "children:\"超时\""
+    },
+    {
+      "original": "children:\"Flags\"",
+      "chinese": "children:\"标志\""
+    },
+    {
+      "original": "children:\"Plugin\"",
+      "chinese": "children:\"插件\""
+    },
+    {
+      "original": "return\"Definition\"",
+      "chinese": "return\"定义\""
+    },
+    {
+      "original": "J.file!==void 0?\"Script file\":\"Script\"",
+      "chinese": "J.file!==void 0?\"脚本文件\":\"脚本\""
+    },
+    {
+      "original": "return\"Prompt\";case\"http\":return\"URL\";case\"mcp_tool\":return\"MCP tool\"",
+      "chinese": "return\"提示词\";case\"http\":return\"URL\";case\"mcp_tool\":return\"MCP 工具\""
+    },
+    {
+      "original": "q81={userSettings:\"User\",projectSettings:\"Project\",localSettings:\"Local\",flagSettings:\"Flag\",policySettings:\"Managed\",sessionHook:\"Session\",pluginHook:\"Plugin\",builtinHook:\"Built-in\"}",
+      "chinese": "q81={userSettings:\"用户\",projectSettings:\"项目\",localSettings:\"本地\",flagSettings:\"启动参数\",policySettings:\"托管\",sessionHook:\"会话\",pluginHook:\"插件\",builtinHook:\"内置\"}"
+    },
+    {
+      "original": "badge:\"User\"",
+      "chinese": "badge:\"用户\""
+    },
+    {
+      "original": "badge:\"Project\"",
+      "chinese": "badge:\"项目\""
+    },
+    {
+      "original": "badge:\"Local\"",
+      "chinese": "badge:\"本地\""
+    },
+    {
+      "original": "badge:\"Flag\"",
+      "chinese": "badge:\"启动参数\""
+    },
+    {
+      "original": "badge:\"Managed\"",
+      "chinese": "badge:\"托管\""
+    },
+    {
+      "original": "label:Y=\"Remove\"",
+      "chinese": "label:Y=\"移除\""
+    },
+    {
+      "original": "label:\"Remove\"",
+      "chinese": "label:\"移除\""
+    },
+    {
+      "original": "`Collapse ${qE1($)}`",
+      "chinese": "`收起 ${qE1($)}`"
+    },
+    {
+      "original": "formLabel,children:\"Scope\"",
+      "chinese": "formLabel,children:\"范围\""
+    },
+    {
+      "original": "\"aria-label\":\"Scope\"",
+      "chinese": "\"aria-label\":\"范围\""
+    },
+    {
+      "original": "children:\"Transport\"",
+      "chinese": "children:\"传输方式\""
+    },
+    {
+      "original": "\"aria-label\":\"Transport\"",
+      "chinese": "\"aria-label\":\"传输方式\""
+    },
+    {
+      "original": "htmlFor:\"mcp-add-name\",children:\"Name\"",
+      "chinese": "htmlFor:\"mcp-add-name\",children:\"名称\""
+    },
+    {
+      "original": "label:\"Name\"",
+      "chinese": "label:\"名称\""
+    },
+    {
+      "original": "label:\"Command\"",
+      "chinese": "label:\"命令\""
+    },
+    {
+      "original": "label:\"Prompt\"",
+      "chinese": "label:\"提示词\""
+    },
+    {
+      "original": "label:\"User\"",
+      "chinese": "label:\"用户\""
+    },
+    {
+      "original": "label:\"Project\"",
+      "chinese": "label:\"项目\""
+    },
+    {
+      "original": "label:\"Local\"",
+      "chinese": "label:\"本地\""
+    },
+    {
+      "original": "label:\"Default\"",
+      "chinese": "label:\"默认\""
+    },
+    {
+      "original": "label:\"Disable\"",
+      "chinese": "label:\"禁用\""
+    },
+    {
+      "original": "PY={failed:\"Failed to load\",enabled:\"Enabled\",disabled:\"Disabled\"}[c6]",
+      "chinese": "PY={failed:\"加载失败\",enabled:\"已启用\",disabled:\"已禁用\"}[c6]"
+    },
+    {
+      "original": "title:`Configure ${i6.pluginName}`",
+      "chinese": "title:`配置 ${i6.pluginName}`"
+    },
+    {
+      "original": "label:\"Keep\"",
+      "chinese": "label:\"保留\""
+    },
+    {
+      "original": "label:\"Uninstall\"",
+      "chinese": "label:\"卸载\""
+    },
+    {
+      "original": "au={on:\"On\",\"name-only\":\"Name only\",\"user-invocable-only\":\"User only\",off:\"Off\"}",
+      "chinese": "au={on:\"开启\",\"name-only\":\"仅名称\",\"user-invocable-only\":\"仅用户\",off:\"关闭\"}"
+    },
+    {
+      "original": "\"aria-label\":`Install ${Y2} from ${b0(l1.marketplaceName)}`",
+      "chinese": "\"aria-label\":`从 ${b0(l1.marketplaceName)} 安装 ${Y2}`"
+    },
+    {
+      "original": ":`Update ${oK}`",
+      "chinese": ":`更新 ${oK}`"
+    },
+    {
+      "original": "ariaLabel:`Why ${oK} can't be uninstalled here`",
+      "chinese": "ariaLabel:`为什么无法在此卸载 ${oK}`"
+    },
+    {
+      "original": "`Added ${j0} to ${N1} config. It will be available in new sessions.`",
+      "chinese": "`已将 ${j0} 添加到 ${N1} 配置。它将在新会话中可用。`"
+    },
+    {
+      "original": "`Removed ${j0} from ${N1} config. Running sessions keep it until restarted.`",
+      "chinese": "`已从 ${N1} 配置中移除 ${j0}。运行中的会话会保留它，直到重启。`"
+    },
+    {
+      "original": "`Disabled ${j0}`",
+      "chinese": "`已禁用 ${j0}`"
+    },
+    {
+      "original": "m===\"Unknown request type.\"?\"Reload the window to start using session delete.\"",
+      "chinese": "m===\"Unknown request type.\"?\"请重新加载窗口以使用会话删除功能。\""
+    },
+    {
+      "original": "B71=\"Set model to \"",
+      "chinese": "B71=\"已设置模型为 \""
+    },
+    {
+      "original": "AR5=\"Kept model as \"",
+      "chinese": "AR5=\"模型保持不变：\""
+    },
+    {
+      "original": "PR5=\"Current model: \"",
+      "chinese": "PR5=\"当前模型：\""
+    },
+    {
+      "original": "jR5=\"No response from the cloud session — the switch to \"",
+      "chinese": "jR5=\"云会话无响应——切换到 \""
+    },
+    {
+      "original": "MR5=\"Cloud session couldn't switch to \"",
+      "chinese": "MR5=\"云会话无法切换到 \""
+    },
+    {
+      "original": "NR5=\"✗ Sandbox settings not changed: \"",
+      "chinese": "NR5=\"✗ 沙盒设置未更改：\""
+    },
+    {
+      "original": "wR5=\" · model set to \"",
+      "chinese": "wR5=\" · 模型已设置为 \""
+    },
+    {
+      "original": "OR5=\"Fast mode ON\"",
+      "chinese": "OR5=\"快速模式已开启\""
+    },
+    {
+      "original": "$?\" Your sign-in may not have gone through.\"",
+      "chinese": "$?\" 你的登录可能未完成。\""
+    },
+    {
+      "original": "Y===\"Saving a file is not available here\"?\"Saving a file is not available here; Export conversation copies it instead\"",
+      "chinese": "Y===\"Saving a file is not available here\"?\"此处无法保存文件；请改用“导出对话”进行复制\""
+    },
+    {
+      "original": "Mb5=\"Open it anyway\"",
+      "chinese": "Mb5=\"仍然打开\""
+    },
+    {
+      "original": "`${$!==void 0?`“${$}”`:\"Your last conversation\"} was not reopened. It did not finish opening the last ${J} times, and opening it again may stop Claude Code from responding here.`",
+      "chinese": "`${$!==void 0?`“${$}”`:\"你上次的对话\"}未能重新打开。它已连续 ${J} 次未能完成打开，再次打开可能导致 Claude Code 在此处停止响应。`"
+    },
+    {
+      "original": "Y.fast?\" Fast\":\"\"",
+      "chinese": "Y.fast?\" 快速\":\"\""
+    },
+    {
+      "original": "{low:\"Low\",medium:\"Medium\",high:\"High\",xhigh:\"Extra high\",max:\"Max\"}",
+      "chinese": "{low:\"低\",medium:\"中等\",high:\"高\",xhigh:\"极高\",max:\"最大\"}"
     },
     {
       "original": "description:N0(G.description),argumentHint:N0(G.argumentHint||void 0)",
@@ -139,8 +855,8 @@
       "chinese": "children:[\"匹配器：\",\" \",F(\"span\",{className:F4.matcherValue,children:G||\"（全部）\"})]"
     },
     {
-      "original": "`Code rewind completed, but ${$} ${$===1?\"file was\":\"files were\"} skipped: ${Xh1}`",
-      "chinese": "`代码回滚已完成，但跳过了 ${$} 个文件：${Xh1}`"
+      "original": "`Code rewind completed, but ${$} ${$===1?\"file was\":\"files were\"} skipped: ${Qp1}`",
+      "chinese": "`代码回滚已完成，但跳过了 ${$} 个文件：${Qp1}`"
     },
     {
       "original": "`The ${J.event} entry in ${Z} is not a list, so the hook could not be saved.`",

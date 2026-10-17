@@ -98,7 +98,7 @@ pnpm run build
 - 修改汉化规则时，编辑 [translations/built-in.json](translations/built-in.json) 中的翻译条目
 - 每条规则包含 `original`（英文原文）和 `chinese`（中文翻译）
 - 支持正则表达式：设置 `"regex": true` 和 `"flags": "g"`
-- 当前规则共 1816 条，执行顺序为：**精确复合规则 → 生成规则 → 原有规则 → 短语兜底规则**
+- 当前规则共 1995 条，执行顺序为：**精确复合规则 → 生成规则 → 原有规则 → 短语兜底规则**
   - 短语规则会替换整句中的片段，必须放在最后，否则会破坏更长的精确规则
   - 含复数辅助函数 `h9()` 的文本，用完整中文模板覆盖整段调用，不要单独修改 `h9` 函数或其中的参数
 - 更新前运行 `npm run lint` 检查代码质量（ESLint 9 扁平配置见 [eslint.config.js](eslint.config.js)）
