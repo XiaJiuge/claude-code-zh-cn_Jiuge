@@ -24,7 +24,7 @@
     },
     {
       "original": "'Keep working from anywhere: check progress or reply to this session from the mobile app, desktop app, or claude.ai. To keep sessions in this IDE only, turn off \"Enable Remote Control for all sessions\" in Claude settings.'",
-      "chinese": "'随时随地继续工作：在移动应用、桌面应用或 claude.ai 中查看进度或回复此会话。若要让会话仅保留在此 IDE 中，请在 Claude 设置中关闭 “为所有会话启用远程控制”。'"
+      "chinese": "'随时随地继续工作：在移动应用、桌面应用或 claude.ai 中查看进度或回复此会话。若要让会话仅保留在此 IDE 中，请在 Claude 设置中关闭“为所有会话启用远程控制”。'"
     },
     {
       "original": "\"Couldn't open that file. Its path is in the Claude Code output logs.\"",
