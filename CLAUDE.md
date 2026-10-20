@@ -113,7 +113,7 @@ pnpm run build
   - `packageWalkthroughs` 按演练/步骤 id 翻译 `package.json`，`walkthroughMarkdown` 按文件名翻译演练 Markdown
 - 更新前运行 `npm run lint` 检查代码质量（ESLint 9 扁平配置见 [eslint.config.js](eslint.config.js)）
 - 打包扩展前确保测试通过：`npm test`
-- 当前版本设置面板翻译由 `extension.js` 中的 `ENABLE_SETTINGS_TRANSLATION` 控制，默认关闭
+- 当前版本设置面板翻译已启用，由 `extension.js` 中的 `ENABLE_SETTINGS_TRANSLATION = true` 控制
 
 ### 设置面板翻译规范（重要！踩坑记录）
 
@@ -127,19 +127,24 @@ pnpm run build
 5. **不要使用 `enumItemLabels`** — VS Code 1.126.0 有已知 bug（[#243901](https://github.com/microsoft/vscode/issues/243901)），会导致下拉菜单空白、黑块。等官方修复后再使用
 
 **✅ 正确操作**：
-- **只替换现有字段的值**，不新增、不删除字段
+- **只替换现有 `description` / `markdownDescription` 的值**，不新增 `markdownDescription`、不删除 `description`
 - 标题翻译格式：`中文标题：描述文本`（冒号连接，放在 description 里）
-- 枚举下拉选项：用 `enumDescriptions`（稳定无 bug），在每个英文选项下方显示中文描述
+- 枚举下拉选项：用 `enumDescriptions`（稳定无 bug），在每个英文选项下方显示中文描述；允许新增该字段
+- `itemsDescriptions` 只替换数组项对象中已有的字段描述（如环境变量的 `name`、`value`）
 - `usePythonEnvironment` 用的是 `markdownDescription`（含链接），翻译时保持 markdown 格式
+- 当前覆盖 23 个设置项
 
 **translator.js 翻译逻辑**：
 ```
 for each property:
-  if settings.descriptions[key] exists:
-    if prop.description exists → replace prop.description (不删除!)
-    if prop.markdownDescription exists → replace prop.markdownDescription (不删除!)
-  if settings.enumItemLabels[key] exists → set prop.enumItemLabels
-  if settings.enumDescriptions[key] exists → set prop.enumDescriptions
+  if descriptions[key] exists && prop.description exists
+    → replace prop.description
+  if markdownDescriptions[key] exists && prop.markdownDescription exists
+    → replace prop.markdownDescription
+  if enumDescriptions[key] exists
+    → set prop.enumDescriptions
+  if itemsDescriptions[key] exists
+    → for each existing items.properties[name].description: replace
 ```
 
 ## 未来改进方向

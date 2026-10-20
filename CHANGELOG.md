@@ -14,6 +14,11 @@
   - Chrome 扩展安装提示、插件安装链接错误、退出登录结果、侧边栏兼容性提示
   - 状态栏“打开 Claude Code”提示、终端启动提示
 - **新手演练汉化**：汉化 `package.json` 中 walkthrough 的标题、描述与步骤，以及 `resources/walkthrough/step1.md`～`step4.md` 内容
+- **设置面板汉化**：启用 `ENABLE_SETTINGS_TRANSLATION`，汉化 VS Code 设置中 Claude Code 的 23 个设置项
+  - 补全描述：专注视图、锁定编辑器组、附加打开的文件、附加选中内容、重新加载后继续、发送后滚动到底部、消息时间戳、工作动词、自动归档非活动会话等
+  - 补全枚举说明：初始权限模式 5 个选项、首选位置、自动归档时长
+  - 汉化环境变量数组子字段（名称、值）
+  - 仅替换已有 `description` / `markdownDescription`，不新增字段、不改动 `enumItemLabels`
 - 新增原生界面与演练文件的 `.bak` 备份、版本感知重新汉化及“还原原版”支持
 - 新增 `appliedHostRulesVersion` 版本记录，原生界面规则更新后可自动还原并重新汉化
 
@@ -25,7 +30,7 @@
 
 ### 说明
 
-- 设置面板（配置项描述）翻译仍暂时关闭（`ENABLE_SETTINGS_TRANSLATION = false`）
+- 设置面板翻译已启用（`ENABLE_SETTINGS_TRANSLATION = true`）
 - MCP 工具描述、日志与模型交互文本不属于界面文本，未做汉化
 
 ## [1.5.4] - 2026-10-17

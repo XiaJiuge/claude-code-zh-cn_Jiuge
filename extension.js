@@ -6,8 +6,8 @@ const Translator = require('./lib/translator');
 const BackupManager = require('./lib/backup');
 const ConfigManager = require('./lib/config');
 
-// 设置面板翻译暂时关闭；其余界面（Webview、扩展宿主、演练）均会汉化
-const ENABLE_SETTINGS_TRANSLATION = false;
+// 设置面板翻译开关；Webview、扩展宿主、演练与设置面板均会汉化
+const ENABLE_SETTINGS_TRANSLATION = true;
 
 /**
  * 原子写入：先写临时文件再 rename，防止中途失败导致文件损坏

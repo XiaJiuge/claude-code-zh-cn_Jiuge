@@ -1,41 +1,37 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Claude Code 设置面板汉化规则（用于 package.json）",
   "descriptions": {
-    "claudeCode.environmentVariables": "环境变量：启动 Claude 时设置的环境变量。建议在 Claude 的 settings.json 中设置环境变量。详见文档：https://code.claude.com/docs/en/settings",
+    "claudeCode.environmentVariables": "环境变量：启动 Claude 时设置的环境变量。建议在 Claude 的 settings.json 中设置。详见文档：https://code.claude.com/docs/en/settings",
     "claudeCode.useTerminal": "使用终端：在终端而非原生 UI 中启动 Claude。",
     "claudeCode.allowDangerouslySkipPermissions": "允许危险跳过权限：允许绕过权限模式。仅建议在无网络访问的沙盒环境中使用。",
     "claudeCode.claudeProcessWrapper": "Claude 进程包装器：用于启动 Claude 进程的可执行文件路径。",
     "claudeCode.respectGitIgnore": "遵循 Git 忽略规则：执行文件搜索时遵循 .gitignore 文件。提示：禁用此选项后，仍可通过 .ignore 中的其他排除模式进行过滤。",
-    "claudeCode.initialPermissionMode": "初始权限模式：新对话的初始权限模式。",
+    "claudeCode.initialPermissionMode": "初始权限模式：新对话的初始权限模式。未设置时，将使用 Claude Code CLI 为该会话解析的默认值。“manual”是“default”的别名，即界面中标记为“手动”的模式；设置其中任一值即可始终以手动模式启动。",
     "claudeCode.disableLoginPrompt": "禁用登录提示：设为 true 时，扩展内不再提示登录/认证。适用于外部处理认证的场景。",
     "claudeCode.autosave": "自动保存：Claude 在读写文件前自动保存。",
+    "claudeCode.focusView": "专注视图：隐藏聊天中的工具调用和其他进行中的活动，仅显示你的提示和 Claude 的回复。折叠的活动仍可一键展开，并通过实时指示器显示当前运行的工具。通常可通过聊天输入框的命令菜单、Claude Code: 切换专注视图 命令或 ctrl+alt+f 快捷键切换。",
     "claudeCode.useCtrlEnterToSend": "使用 Ctrl+Enter 发送：启用后，使用 Ctrl/Cmd+Enter 发送提示，而非仅按 Enter。这样 Enter 键可以换行。",
-    "claudeCode.preferredLocation": "首选位置：Claude 默认打开位置。此设置会在您在新位置打开 Claude 时自动更新。",
+    "claudeCode.preferredLocation": "首选位置：Claude 默认打开位置。此设置会在你于新位置打开 Claude 时自动更新。",
+    "claudeCode.lockEditorGroups": "锁定编辑器组：锁定 Claude 为其标签页启动的编辑器组，使你在 Claude 标签页获得焦点时打开的文件进入其他编辑器组，而不是紧邻其旁。关闭后，Claude 不会锁定任何编辑器组。已锁定的编辑器组将保持锁定，直到你手动解锁。",
     "claudeCode.enableNewConversationShortcut": "新建对话快捷键：使用 Cmd/Ctrl+N 快捷键在 Claude 获得焦点时开启新对话。",
-    "claudeCode.enableReopenClosedSessionShortcut": "重新打开已关闭会话快捷键：使用 Cmd/Ctrl+Shift+T 重新打开最近关闭的 Claude 会话标签页。",
+    "claudeCode.enableReopenClosedSessionShortcut": "重新打开已关闭会话快捷键：使用 Cmd/Ctrl+Shift+T 重新打开最近关闭的 Claude 会话标签页。仅当最后关闭的是 Claude 标签页时才会拦截该快捷键；否则将交由 VS Code 常规的“重新打开已关闭编辑器”行为处理。",
     "claudeCode.hideOnboarding": "隐藏新手引导：隐藏 Claude Code 中的新手引导清单。",
-    "claudeCode.usePythonEnvironment": "使用 Python 环境：运行 Claude 时自动激活工作区的 Python 环境。需要 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) 扩展。"
+    "claudeCode.attachOpenFile": "附加打开的文件：将编辑器中打开的文件添加到消息中，并显示在消息框内。关闭后，仅在选中文本时随文本一同添加文件。",
+    "claudeCode.attachSelection": "附加选中内容：将编辑器中选中的文本添加到消息中，并显示在消息框内。关闭后，仍可通过 @ 提及的方式从编辑器添加选中内容。",
+    "claudeCode.continueAfterReload": "重新加载后继续：窗口重新加载或编辑器重启扩展后，已恢复的会话会继续执行此前中断的步骤。",
+    "claudeCode.scrollToBottomOnSend": "发送后滚动到底部：发送消息时将对话滚动到底部。关闭后，对话会保持在当前位置。",
+    "claudeCode.showMessageTimestamps": "显示消息时间戳：显示每条消息的发送时间。日期分隔线会标出日期变化的位置。",
+    "claudeCode.spinnerVerbs": "工作动词：自定义 Claude 工作时显示的动词。模式“append”（追加）会将你的动词追加到内置动词中；模式“replace”（替换）仅显示你的动词。未列出任何动词时，Claude 显示内置动词。",
+    "claudeCode.archiveInactiveSessions": "自动归档非活动会话：会话在指定时间无活动后自动归档。处于打开、运行、等待输入或未读状态的会话永远不会被自动归档。"
   },
   "markdownDescriptions": {
-    "claudeCode.environmentVariables": "**环境变量：** 启动 Claude 时设置的环境变量。建议在 Claude 的 settings.json 中设置环境变量。详见文档：https://code.claude.com/docs/en/settings",
-    "claudeCode.useTerminal": "**使用终端：** 在终端而非原生 UI 中启动 Claude。",
-    "claudeCode.allowDangerouslySkipPermissions": "**允许危险跳过权限：** 允许绕过权限模式。仅建议在无网络访问的沙盒环境中使用。",
-    "claudeCode.claudeProcessWrapper": "**Claude 进程包装器：** 用于启动 Claude 进程的可执行文件路径。",
-    "claudeCode.respectGitIgnore": "**遵循 Git 忽略规则：** 执行文件搜索时遵循 .gitignore 文件。提示：禁用此选项后，仍可通过 .ignore 中的其他排除模式进行过滤。",
-    "claudeCode.initialPermissionMode": "**初始权限模式：** 新对话的初始权限模式。",
-    "claudeCode.disableLoginPrompt": "**禁用登录提示：** 设为 true 时，扩展内不再提示登录/认证。适用于外部处理认证的场景。",
-    "claudeCode.autosave": "**自动保存：** Claude 在读写文件前自动保存。",
-    "claudeCode.useCtrlEnterToSend": "**使用 Ctrl+Enter 发送：** 启用后，使用 Ctrl/Cmd+Enter 发送提示，而非仅按 Enter。这样 Enter 键可以换行。",
-    "claudeCode.preferredLocation": "**首选位置：** Claude 默认打开位置。此设置会在您在新位置打开 Claude 时自动更新。",
-    "claudeCode.enableNewConversationShortcut": "**新建对话快捷键：** 使用 Cmd/Ctrl+N 快捷键在 Claude 获得焦点时开启新对话。",
-    "claudeCode.enableReopenClosedSessionShortcut": "**重新打开已关闭会话快捷键：** 使用 Cmd/Ctrl+Shift+T 重新打开最近关闭的 Claude 会话标签页。",
-    "claudeCode.hideOnboarding": "**隐藏新手引导：** 隐藏 Claude Code 中的新手引导清单。",
     "claudeCode.usePythonEnvironment": "**使用 Python 环境：** 运行 Claude 时自动激活工作区的 Python 环境。需要 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) 扩展。"
   },
   "enumDescriptions": {
     "claudeCode.initialPermissionMode": [
       "默认：使用默认权限模式",
+      "手动：等同于 default，始终以手动模式启动",
       "自动接受编辑：自动接受文件编辑",
       "计划模式：在编辑前先制定计划",
       "绕过权限：跳过所有权限确认"
@@ -43,7 +39,20 @@
     "claudeCode.preferredLocation": [
       "侧边栏（右侧）",
       "面板（新标签页）"
+    ],
+    "claudeCode.archiveInactiveSessions": [
+      "从不自动归档",
+      "1 天无活动后归档",
+      "2 天无活动后归档",
+      "7 天无活动后归档",
+      "14 天无活动后归档"
     ]
+  },
+  "itemsDescriptions": {
+    "claudeCode.environmentVariables": {
+      "name": "环境变量名称",
+      "value": "环境变量值"
+    }
   },
   "commands": {
     "claude-vscode.editor.open": "Claude Code: 在新标签页中打开",
