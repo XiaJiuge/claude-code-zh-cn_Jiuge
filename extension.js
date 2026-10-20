@@ -1,11 +1,12 @@
 const vscode = require('vscode');
 const fs = require('fs');
+const path = require('path');
 const Locator = require('./lib/locator');
 const Translator = require('./lib/translator');
 const BackupManager = require('./lib/backup');
 const ConfigManager = require('./lib/config');
 
-// 本次更新范围仅限 Webview 界面；设置面板翻译暂时关闭
+// 设置面板翻译暂时关闭；其余界面（Webview、扩展宿主、演练）均会汉化
 const ENABLE_SETTINGS_TRANSLATION = false;
 
 /**
@@ -15,6 +16,34 @@ function atomicWriteSync(filePath, content) {
     const tmpPath = filePath + '.tmp';
     fs.writeFileSync(tmpPath, content, 'utf8');
     fs.renameSync(tmpPath, filePath);
+}
+
+/**
+ * 准备待汉化文件：
+ * - Claude Code 版本变化时重建备份，避免还原成旧版文件
+ * - 需要重新汉化时先还原备份，保证从英文原文重新翻译
+ * - 未创建备份时按需创建
+ */
+async function prepareFileForTranslation(
+    filePath,
+    backup,
+    config,
+    claudeVersionChanged,
+    needsRestore
+) {
+    if (claudeVersionChanged) {
+        if (config.get('createBackup')) {
+            await backup.overwriteBackup(filePath);
+        } else if (backup.hasBackup(filePath)) {
+            await backup.deleteBackup(filePath);
+        }
+    } else if (needsRestore && backup.hasBackup(filePath)) {
+        await backup.restoreBackup(filePath);
+    }
+
+    if (config.get('createBackup') && !backup.hasBackup(filePath)) {
+        await backup.createBackup(filePath);
+    }
 }
 
 /**
@@ -193,12 +222,13 @@ async function applyTranslation(locator, translator, backup, config, context, fo
                 await backup.createBackup(packageJsonPath);
             }
 
-            // 翻译 VS Code 命令面板中的命令标题
+            // 翻译 VS Code 命令面板中的命令标题与演练（walkthrough）文本
             const pkgContent = fs.readFileSync(packageJsonPath, 'utf8');
-            const translatedPkg = await translator.translateCommandTitles(pkgContent);
+            let translatedPkg = await translator.translateCommandTitles(pkgContent);
+            translatedPkg = await translator.translatePackageInterface(translatedPkg);
             if (translatedPkg !== pkgContent) {
                 atomicWriteSync(packageJsonPath, translatedPkg);
-                console.log('package.json 命令标题汉化完成');
+                console.log('package.json 命令标题与演练文本汉化完成');
             }
 
             // 翻译设置面板文本（当前版本暂不启用）
@@ -211,10 +241,56 @@ async function applyTranslation(locator, translator, backup, config, context, fo
             }
         }
 
+        // 汉化扩展宿主（extension.js）：原生通知、快捷选择框、输入框等
+        const hostRulesVersion = translator.loadHostRules()?.version || 'unknown';
+        const appliedHostRulesVersion = context.globalState.get('appliedHostRulesVersion');
+        const hostRulesVersionChanged = appliedHostRulesVersion !== hostRulesVersion;
+        const hostFilePath = locator.findExtensionHostFile(claudePath);
+
+        if (hostFilePath) {
+            await prepareFileForTranslation(
+                hostFilePath,
+                backup,
+                config,
+                claudeVersionChanged,
+                forceReapply || hostRulesVersionChanged
+            );
+
+            const hostContent = fs.readFileSync(hostFilePath, 'utf8');
+            const translatedHost = await translator.translateHost(hostContent);
+            if (translatedHost !== hostContent) {
+                atomicWriteSync(hostFilePath, translatedHost);
+                console.log('extension.js 原生界面汉化完成');
+            }
+        }
+
+        // 汉化演练（walkthrough）步骤的 Markdown 文本
+        const walkthroughDir = locator.findWalkthroughDirectory(claudePath);
+        const walkthroughFiles = locator.findWalkthroughMarkdownFiles(walkthroughDir);
+        for (const walkthroughFile of walkthroughFiles) {
+            await prepareFileForTranslation(
+                walkthroughFile,
+                backup,
+                config,
+                claudeVersionChanged,
+                forceReapply || hostRulesVersionChanged
+            );
+
+            const originalContent = fs.readFileSync(walkthroughFile, 'utf8');
+            const translatedContent = await translator.translateWalkthrough(
+                path.basename(walkthroughFile),
+                originalContent
+            );
+            if (translatedContent !== originalContent) {
+                atomicWriteSync(walkthroughFile, translatedContent);
+            }
+        }
+
         // 记录已应用的版本，供下次启动判断
         // 规则版本未记录过（例如从旧版扩展升级）时也视为需要重新汉化
         await context.globalState.update('appliedClaudeVersion', claudeVersion);
         await context.globalState.update('appliedRulesVersion', rulesVersion);
+        await context.globalState.update('appliedHostRulesVersion', hostRulesVersion);
 
         // 通知用户
         if (config.get('showNotifications')) {
@@ -271,6 +347,23 @@ async function restoreOriginal(locator, backup, config) {
         if (packageJsonPath && backup.hasBackup(packageJsonPath)) {
             await backup.restoreBackup(packageJsonPath);
             console.log('package.json 已还原');
+        }
+
+        // 还原扩展宿主文件（extension.js）备份
+        const hostFilePath = locator.findExtensionHostFile(claudePath);
+        if (hostFilePath && backup.hasBackup(hostFilePath)) {
+            await backup.restoreBackup(hostFilePath);
+            console.log('extension.js 已还原');
+        }
+
+        // 还原演练（walkthrough）Markdown 备份
+        const walkthroughDir = locator.findWalkthroughDirectory(claudePath);
+        const walkthroughFiles = locator.findWalkthroughMarkdownFiles(walkthroughDir);
+        for (const walkthroughFile of walkthroughFiles) {
+            if (backup.hasBackup(walkthroughFile)) {
+                await backup.restoreBackup(walkthroughFile);
+                console.log('演练文件已还原:', path.basename(walkthroughFile));
+            }
         }
 
         // 通知用户

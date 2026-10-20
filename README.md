@@ -12,8 +12,10 @@
 - ✅ **自动备份**：修改前自动创建备份文件
 - ✅ **一键还原**：随时还原到原版
 - ✅ **版本感知**：Claude Code 或汉化规则升级后，再次执行汉化命令会按新版本重新翻译，不会还原成旧版文件
+- ✅ **原生界面汉化**：汉化扩展宿主中的通知、输入框、快捷选择框，例如命令菜单操作的弹出框、会话标签页重命名、会话分组、Notebook 执行确认
+- ✅ **演练界面汉化**：汉化欢迎页演练的标题、描述与步骤内容
 
-> **当前版本范围**：仅汉化 Claude Code 的 Webview 聊天界面；设置面板（`package.json`）翻译在本版本中暂时关闭。
+> **当前版本范围**：汉化 Webview 聊天界面、扩展宿主原生界面与新手演练；设置面板（`package.json` 中的配置项描述）翻译暂时关闭。
 
 ## 安装
 
@@ -21,13 +23,13 @@
 
 1. 打开 VS Code 扩展视图（`Ctrl+Shift+X`）
 2. 点击右上角 `...` → **从 VSIX 安装…**
-3. 选择 `claude-code-zhcn-1.5.4.vsix`
+3. 选择 `claude-code-zhcn-1.6.0.vsix`
 4. 重新加载窗口
 
 也可以在命令行安装：
 
 ```bash
-code --install-extension claude-code-zhcn-1.5.4.vsix
+code --install-extension claude-code-zhcn-1.6.0.vsix
 ```
 
 安装后扩展不会自动汉化。请在命令面板中执行 **Claude Code 汉化: 应用汉化**，然后重新打开聊天窗口。
@@ -122,11 +124,14 @@ code --install-extension claude-code-zhcn-1.5.4.vsix
 1. **定位扩展**：优先使用 VS Code API (`vscode.extensions.getExtension`) 查找 Claude Code 扩展
    - 这种方法最可靠，即使用户修改了扩展安装位置也能正常工作
    - 只在 API 失败时才使用手动搜索作为备用方案
-2. **查找 webview 文件**：找到 `webview/index.js` 文件（Claude Code 的界面文本所在位置）
-3. **创建备份**：在修改前创建 `.bak` 备份文件
-4. **应用汉化**：按照 前置规则 → 内置规则 → 后置规则 的顺序替换文本
-5. **写入文件**：将汉化后的内容原子写回 webview 文件
-6. **记录版本**：保存 Claude Code 版本与规则版本，下次手动执行汉化时据此判断是否需要重新翻译
+2. **查找界面文件**：
+   - `webview/index.js`：聊天界面文本
+   - `extension.js`：扩展宿主原生通知、输入框、快捷选择框等
+   - `resources/walkthrough/step*.md`：新手演练步骤内容
+3. **创建备份**：在修改前为每个文件创建 `.bak` 备份
+4. **应用汉化**：按照 前置规则 → 内置规则 → 后置规则 的顺序替换文本；原生界面与演练使用独立的内置规则
+5. **写入文件**：将汉化后的内容原子写回目标文件
+6. **记录版本**：保存 Claude Code 版本、Webview 规则版本与原生界面规则版本，下次手动执行汉化时据此判断是否需要重新翻译
 7. **重新加载**：提示用户重新加载窗口以生效
 
 ## 项目结构
@@ -139,7 +144,9 @@ claude-code-zh-cn/
 │   ├── locator.js         # 扩展定位器
 │   └── translator.js      # 翻译引擎
 ├── translations/
-│   └── built-in.json      # 内置 Webview 翻译规则（1995 条）
+│   ├── built-in.json      # 内置 Webview 翻译规则（2017 条）
+│   ├── host.json          # 原生界面与演练翻译规则（48 条 + 演练文本）
+│   └── settings.json      # 设置面板与命令标题翻译规则
 ├── test/                  # IPC 协议保护测试
 ├── extension.js           # 扩展主入口
 ├── package.json           # 扩展配置

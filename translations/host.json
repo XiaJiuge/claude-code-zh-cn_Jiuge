@@ -1,0 +1,312 @@
+{
+  "version": "1.0.0",
+  "description": "扩展宿主（extension.js）及其他非 Webview 界面的翻译规则",
+  "hostStrings": [
+    {
+      "original": "\"Claude in Chrome: Install the browser extension to control Chrome from Claude Code\"",
+      "chinese": "\"Claude in Chrome：安装浏览器扩展，以便从 Claude Code 控制 Chrome\""
+    },
+    {
+      "original": "\"Install Extension\"",
+      "chinese": "\"安装扩展\""
+    },
+    {
+      "original": "\"Don't Show Again\"",
+      "chinese": "\"不再显示\""
+    },
+    {
+      "original": "\"An update to our Consumer Terms and Privacy Policy has taken effect on October 8, 2025. You must run claude in the terminal to review the updated terms.\"",
+      "chinese": "\"我们的消费者条款与隐私政策更新已于 2025 年 10 月 8 日生效。你需要在终端中运行 claude 以查看更新后的条款。\""
+    },
+    {
+      "original": "\"Resolve in Terminal\"",
+      "chinese": "\"在终端中处理\""
+    },
+    {
+      "original": "'Keep working from anywhere: check progress or reply to this session from the mobile app, desktop app, or claude.ai. To keep sessions in this IDE only, turn off \"Enable Remote Control for all sessions\" in Claude settings.'",
+      "chinese": "'随时随地继续工作：在移动应用、桌面应用或 claude.ai 中查看进度或回复此会话。若要让会话仅保留在此 IDE 中，请在 Claude 设置中关闭 “为所有会话启用远程控制”。'"
+    },
+    {
+      "original": "\"Couldn't open that file. Its path is in the Claude Code output logs.\"",
+      "chinese": "\"无法打开该文件。其路径位于 Claude Code 输出日志中。\""
+    },
+    {
+      "original": "Failed to sign out: ",
+      "chinese": "退出登录失败："
+    },
+    {
+      "original": "\"Invalid plugin installation URL. The plugin name can't be used in a link, so nothing was installed.\"",
+      "chinese": "\"插件安装链接无效：插件名无法用于链接，因此未安装任何内容。\""
+    },
+    {
+      "original": "\"Invalid plugin installation URL. The link contains a '#', so nothing was installed.\"",
+      "chinese": "\"插件安装链接无效：链接中包含“#”，因此未安装任何内容。\""
+    },
+    {
+      "original": "\"Invalid plugin installation URL. The marketplace can't be used in a link, so nothing was installed.\"",
+      "chinese": "\"插件安装链接无效：市场无法用于链接，因此未安装任何内容。\""
+    },
+    {
+      "original": "\"Invalid plugin installation URL. The plugin parameter is required.\"",
+      "chinese": "\"插件安装链接无效：必须提供插件参数。\""
+    },
+    {
+      "original": "\"plugin@marketplace (e.g. my-plugin@https://github.com/org/repo)\"",
+      "chinese": "\"plugin@marketplace（例如 my-plugin@https://github.com/org/repo）\""
+    },
+    {
+      "original": "\"1 session\"",
+      "chinese": "\"1 个会话\""
+    },
+    {
+      "original": "`${$} sessions`",
+      "chinese": "`${$} 个会话`"
+    },
+    {
+      "original": "\"with no recent activity\"",
+      "chinese": "\"，无近期活动\""
+    },
+    {
+      "original": "\"with no activity in the last day\"",
+      "chinese": "\"，过去一天无活动\""
+    },
+    {
+      "original": "`with no activity in the last ${J} days`",
+      "chinese": "`，过去 ${J} 天内无活动`"
+    },
+    {
+      "original": "`Claude Code archived ${Q} ${X}. ${$===1?\"It is\":\"They are\"} still available under Archived sessions in your session history.`",
+      "chinese": "`Claude Code 已归档 ${Q}${X}。${$===1?\"它\":\"它们\"}仍可在会话历史的“已归档会话”下找到。`"
+    },
+    {
+      "original": "\"Unarchive\"",
+      "chinese": "\"取消归档\""
+    },
+    {
+      "original": "\"Open Settings\"",
+      "chinese": "\"打开设置\""
+    },
+    {
+      "original": "\"This session tab is still connecting — try again in a moment.\"",
+      "chinese": "\"此会话标签页仍在连接，请稍后重试。\""
+    },
+    {
+      "original": "\"This session tab cannot be renamed until it finishes opening.\"",
+      "chinese": "\"此会话标签页在完成打开前无法重命名。\""
+    },
+    {
+      "original": "\"Rename session tab\"",
+      "chinese": "\"重命名会话标签页\""
+    },
+    {
+      "original": "\"Enter a session name\"",
+      "chinese": "\"输入会话名称\""
+    },
+    {
+      "original": "\"This session could not be renamed.\"",
+      "chinese": "\"无法重命名此会话。\""
+    },
+    {
+      "original": "\"This session is archived. Unarchive it to add it to a group.\"",
+      "chinese": "\"此会话已归档。请先取消归档，再将其添加到分组。\""
+    },
+    {
+      "original": "\"New group…\"",
+      "chinese": "\"新建分组…\""
+    },
+    {
+      "original": "\"Add this session tab to a group\"",
+      "chinese": "\"将此会话标签页添加到分组\""
+    },
+    {
+      "original": "\"New group name\"",
+      "chinese": "\"新分组名称\""
+    },
+    {
+      "original": "\"New group\"",
+      "chinese": "\"新建分组\""
+    },
+    {
+      "original": "\"Current group\"",
+      "chinese": "\"当前分组\""
+    },
+    {
+      "original": "\"No active Claude Code session tab to mark as unread.\"",
+      "chinese": "\"没有活动的 Claude Code 会话标签页可标记为未读。\""
+    },
+    {
+      "original": "\"No active Claude Code session tab to rename.\"",
+      "chinese": "\"没有活动的 Claude Code 会话标签页可重命名。\""
+    },
+    {
+      "original": "\"No active Claude Code session tab to add to a group.\"",
+      "chinese": "\"没有活动的 Claude Code 会话标签页可添加到分组。\""
+    },
+    {
+      "original": "\"No open Claude Code conversation to focus.\"",
+      "chinese": "\"没有可聚焦的 Claude Code 对话。\""
+    },
+    {
+      "original": "`${J} session${J>1?\"s\":\"\"} waiting for input`",
+      "chinese": "`${J} 个会话正在等待输入`"
+    },
+    {
+      "original": "\"Session is already open. Your prompt was not applied — enter it manually.\"",
+      "chinese": "\"会话已打开。你的提示未能应用，请手动输入。\""
+    },
+    {
+      "original": "[{label:\"Execute\",description:\"Run the code in the notebook\"},{label:\"Cancel\",description:\"Do not execute the code\"}],{title:\"Claude Code Execution\",placeHolder:\"Choose whether to execute the code\"}))?.label===\"Execute\"",
+      "chinese": "[{label:\"执行\",description:\"在 Notebook 中运行代码\"},{label:\"取消\",description:\"不执行代码\"}],{title:\"Claude Code 执行\",placeHolder:\"选择是否执行代码\"}))?.label===\"执行\""
+    },
+    {
+      "original": "\"Claude Code launching...\"",
+      "chinese": "\"Claude Code 正在启动…\""
+    },
+    {
+      "original": "Failed to run Claude Code: ",
+      "chinese": "运行 Claude Code 失败："
+    },
+    {
+      "original": "Failed to start MCP server: ",
+      "chinese": "启动 MCP 服务器失败："
+    },
+    {
+      "original": "\"Could not locate the Claude CLI on PATH. Launching by name in a PowerShell terminal would run a 'claude' from the open folder instead of the installed CLI, so the launch was blocked. Make sure the Claude CLI's install directory is on your system PATH (not only your PowerShell profile), then restart VS Code and try again. VS Code reads PATH when it starts, so PATH changes take effect only after a restart.\"",
+      "chinese": "\"无法在 PATH 中定位 Claude CLI。如果按名称在 PowerShell 终端中启动，将会运行当前打开文件夹中的 “claude”，而不是已安装的 CLI，因此已阻止启动。请确保 Claude CLI 的安装目录位于系统 PATH 中（而不只是 PowerShell 配置文件中），然后重启 VS Code 并重试。VS Code 在启动时读取 PATH，因此 PATH 的更改仅在重启后生效。\""
+    },
+    {
+      "original": "\"Open Claude Code\"",
+      "chinese": "\"打开 Claude Code\""
+    },
+    {
+      "original": "\"Successfully logged out from Claude\"",
+      "chinese": "\"已成功从 Claude 退出登录\""
+    },
+    {
+      "original": "\"Failed to logout completely. Some credentials may remain.\"",
+      "chinese": "\"未能完全退出登录，可能仍保留部分凭据。\""
+    },
+    {
+      "original": "\"Secondary Sidebar not supported in this version of VSCode. Please update your VSCode to use. Opening in Activity Bar instead.\"",
+      "chinese": "\"此版本的 VS Code 不支持辅助侧边栏。请更新 VS Code 后使用，将改为在活动栏中打开。\""
+    },
+    {
+      "original": "Failed to activate Claude Code extension: ",
+      "chinese": "激活 Claude Code 扩展失败："
+    }
+  ],
+  "packageWalkthroughs": {
+    "claude-code-walkthrough": {
+      "title": "开始使用 Claude Code",
+      "description": "了解如何使用 Claude Code 编写、编辑和理解你的代码。",
+      "steps": {
+        "welcome": {
+          "title": "你的 AI 编程伙伴",
+          "description": "Claude Code 帮助你在 VS Code 中直接编写、编辑和理解代码。"
+        },
+        "open-claude": {
+          "title": "打开 Claude Code",
+          "description": "点击右上角的橙色 Claude 图标，或按 Ctrl+Escape（Mac 上为 Cmd+Escape）开始对话。"
+        },
+        "chat": {
+          "title": "与 Claude 聊天",
+          "description": "输入消息并按 Enter。你可以提问、请求修改，或获取代码理解方面的帮助。使用 @ 提及文件以提供上下文，或先选中代码再就此提问。"
+        },
+        "sessions": {
+          "title": "历史对话",
+          "description": "点击顶部的“历史对话”按钮，或输入 /resume 浏览过去的会话。你也可以随时点击“新建对话”按钮开始新对话。"
+        }
+      }
+    }
+  },
+  "walkthroughMarkdown": {
+    "step1.md": [
+      {
+        "original": "![Welcome to Claude Code](welcome.png)",
+        "chinese": "![欢迎使用 Claude Code](welcome.png)"
+      },
+      {
+        "original": "**Claude Code helps you write, edit, and understand code right in VS Code.**",
+        "chinese": "**Claude Code 帮助你在 VS Code 中直接编写、编辑和理解代码。**"
+      },
+      {
+        "original": "Claude can read your files, make edits, run terminal commands, and help you navigate complex codebases. It understands context and works alongside you like a knowledgeable teammate.",
+        "chinese": "Claude 可以读取你的文件、进行编辑、运行终端命令，并帮助你浏览复杂的代码库。它能理解上下文，像一位知识渊博的队友一样与你协作。"
+      },
+      {
+        "original": "Prefer a terminal experience? Run **Claude Code: Open in Terminal** from the Command Palette, or enable it permanently in Settings.",
+        "chinese": "更喜欢终端体验？在命令面板中运行 **Claude Code: 在终端中打开**，或在设置中永久启用。"
+      }
+    ],
+    "step2.md": [
+      {
+        "original": "![Open Claude Code](click.png)",
+        "chinese": "![打开 Claude Code](click.png)"
+      },
+      {
+        "original": "**Click the orange Claude icon in the top right corner of your editor.**",
+        "chinese": "**点击编辑器右上角的橙色 Claude 图标。**"
+      },
+      {
+        "original": "You can also use the keyboard shortcut **Ctrl+Escape** (Windows/Linux) or **Cmd+Escape** (Mac) to quickly open or focus Claude Code.",
+        "chinese": "你也可以使用快捷键 **Ctrl+Escape**（Windows/Linux）或 **Cmd+Escape**（Mac）快速打开或聚焦 Claude Code。"
+      }
+    ],
+    "step3.md": [
+      {
+        "original": "![Chat with Claude](chat.png)",
+        "chinese": "![与 Claude 聊天](chat.png)"
+      },
+      {
+        "original": "**Ask questions, request changes, or get help understanding your code.**",
+        "chinese": "**提问、请求修改，或获取代码理解方面的帮助。**"
+      },
+      {
+        "original": "Type your message in the input field and press Enter. Claude can help you:",
+        "chinese": "在输入框中输入消息并按 Enter。Claude 可以帮助你："
+      },
+      {
+        "original": "- Explain what code does",
+        "chinese": "- 解释代码的作用"
+      },
+      {
+        "original": "- Fix bugs and errors",
+        "chinese": "- 修复缺陷和错误"
+      },
+      {
+        "original": "- Write new features",
+        "chinese": "- 编写新功能"
+      },
+      {
+        "original": "- Refactor existing code",
+        "chinese": "- 重构现有代码"
+      },
+      {
+        "original": "- Run terminal commands",
+        "chinese": "- 运行终端命令"
+      },
+      {
+        "original": "Use **@** to mention specific files or folders for context. You can also highlight text in your editor and ask Claude about your selection.",
+        "chinese": "使用 **@** 提及特定文件或文件夹以提供上下文。你也可以在编辑器中高亮文本，并让 Claude 针对所选内容作答。"
+      }
+    ],
+    "step4.md": [
+      {
+        "original": "![Manage Sessions](past.png)",
+        "chinese": "![管理会话](past.png)"
+      },
+      {
+        "original": "**Access your chat history and start new conversations anytime.**",
+        "chinese": "**随时访问聊天历史并开始新对话。**"
+      },
+      {
+        "original": "Your conversations are saved automatically. Click the **Past Conversations** button at the top or type **/resume** to browse past sessions and pick up where you left off.",
+        "chinese": "你的对话会自动保存。点击顶部的 **历史对话** 按钮，或输入 **/resume** 浏览过去的会话，并从中断处继续。"
+      },
+      {
+        "original": "To start a fresh conversation, click the **New Chat** button. You can also enable the **Ctrl+N** / **Cmd+N** shortcut in settings (`claudeCode.enableNewConversationShortcut`).",
+        "chinese": "要开始新对话，请点击 **新建对话** 按钮。你也可以在设置中启用 **Ctrl+N** / **Cmd+N** 快捷键（`claudeCode.enableNewConversationShortcut`）。"
+      }
+    ]
+  }
+}

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-这是一个 **Claude Code for VS Code 扩展的中文汉化工具**。通过 VS Code 扩展对 Claude Code 的 `webview/index.js` 文件进行字符串替换，将英文界面文本转换为中文。
+这是一个 **Claude Code for VS Code 扩展的中文汉化工具**。通过 VS Code 扩展对 Claude Code 的 `webview/index.js`、`extension.js` 以及新手演练文件进行字符串替换，将英文界面文本转换为中文。
 
 该项目是一个 **VS Code 扩展**，安装后通过命令面板手动执行汉化命令，汉化 Claude Code 扩展的界面。
 
@@ -30,18 +30,21 @@ pnpm run build
 
 ### 核心模块
 
-- [lib/locator.js](lib/locator.js) - 扩展定位器，查找 Claude Code 的 `webview/index.js` 和 `package.json`
-- [lib/translator.js](lib/translator.js) - 翻译引擎，实现三阶段汉化（前置→内置→后置）+ 设置面板翻译
+- [lib/locator.js](lib/locator.js) - 扩展定位器，查找 Claude Code 的 `webview/index.js`、`extension.js`、`package.json` 和演练目录
+- [lib/translator.js](lib/translator.js) - 翻译引擎，实现三阶段汉化（前置→内置→后置）+ 原生界面、演练与设置面板翻译
 - [lib/backup.js](lib/backup.js) - 备份管理器，创建和还原 `.bak` 备份
 - [lib/config.js](lib/config.js) - 配置管理器，读取用户自定义规则
-- [translations/built-in.json](translations/built-in.json) - 内置 webview 翻译规则
-- [translations/settings.json](translations/settings.json) - 设置面板翻译规则
+- [translations/built-in.json](translations/built-in.json) - 内置 Webview 翻译规则（2017 条）
+- [translations/host.json](translations/host.json) - 原生界面（`extension.js`）与演练翻译规则（48 条 + 演练文本）
+- [translations/settings.json](translations/settings.json) - 设置面板与命令标题翻译规则
 
 **重要说明**：
-- Claude Code 的界面文本位于 `webview/index.js` 而非 `extension.js`
+- Webview 聊天界面文本位于 `webview/index.js`
+- 原生通知、输入框、快捷选择框等文本位于 `extension.js`
+- 新手演练文本位于 `package.json` 的 `contributes.walkthroughs` 和 `resources/walkthrough/step*.md`
 - 设置面板文本位于 Claude Code 扩展的 `package.json` 的 `contributes.configuration.properties` 中
-- 执行汉化命令时自动查找并汉化 `webview/index.js` 和 `package.json`
-- 支持用户通过配置添加前置和后置翻译规则
+- 执行汉化命令时自动查找并汉化以上文件
+- 支持用户通过配置添加前置和后置翻译规则（仅对 Webview 生效）
 
 ### 使用场景
 
@@ -49,7 +52,7 @@ pnpm run build
 
 1. 用户安装本 VS Code 扩展
 2. 在命令面板执行 **Claude Code 汉化: 应用汉化**
-3. 扩展定位 Claude Code 的 `webview/index.js`，自动创建备份并应用汉化
+3. 扩展定位 Claude Code 的 `webview/index.js`、`extension.js`、`package.json` 和演练文件，自动创建备份并应用汉化
 4. 重启 VS Code 或重新打开聊天窗口使变更生效
 
 ## 技术栈
@@ -65,8 +68,9 @@ pnpm run build
 | [extension.js](extension.js) | VS Code 扩展入口 |
 | [package.json](package.json) | 项目配置和依赖定义 |
 | [lib/](lib/) | 核心模块（locator、translator、backup、config） |
-| [translations/built-in.json](translations/built-in.json) | 内置 webview 翻译规则 |
-| [translations/settings.json](translations/settings.json) | 设置面板翻译规则 |
+| [translations/built-in.json](translations/built-in.json) | 内置 Webview 翻译规则 |
+| [translations/host.json](translations/host.json) | 原生界面与演练翻译规则 |
+| [translations/settings.json](translations/settings.json) | 设置面板与命令标题翻译规则 |
 | [README.md](README.md) | 项目说明 |
 | [CHANGELOG.md](CHANGELOG.md) | 版本更新日志 |
 
@@ -98,9 +102,15 @@ pnpm run build
 - 修改汉化规则时，编辑 [translations/built-in.json](translations/built-in.json) 中的翻译条目
 - 每条规则包含 `original`（英文原文）和 `chinese`（中文翻译）
 - 支持正则表达式：设置 `"regex": true` 和 `"flags": "g"`
-- 当前规则共 1995 条，执行顺序为：**精确复合规则 → 生成规则 → 原有规则 → 短语兜底规则**
+- Webview 规则共 2017 条，执行顺序为：**精确复合规则 → 生成规则 → 原有规则 → 短语兜底规则**
   - 短语规则会替换整句中的片段，必须放在最后，否则会破坏更长的精确规则
   - 含复数辅助函数 `h9()` 的文本，用完整中文模板覆盖整段调用，不要单独修改 `h9` 函数或其中的参数
+- 原生界面规则位于 [translations/host.json](translations/host.json) 的 `hostStrings`，共 48 条
+  - `original` 必须与压缩后的 `extension.js` 原文完全一致；建议保留外层引号（如 `"Open Settings"`）避免误匹配
+  - 对于同时用于按钮标签和 `if` 比较的字符串，`replaceAll` 会一并替换，比较逻辑仍然成立
+  - Notebook 执行确认等复合表达式用完整片段作为一条规则，避免单独替换 `"Execute"` 等通用词
+  - **不要翻译** MCP 工具描述、日志、遥测、模型交互文本和协议标识符
+  - `packageWalkthroughs` 按演练/步骤 id 翻译 `package.json`，`walkthroughMarkdown` 按文件名翻译演练 Markdown
 - 更新前运行 `npm run lint` 检查代码质量（ESLint 9 扁平配置见 [eslint.config.js](eslint.config.js)）
 - 打包扩展前确保测试通过：`npm test`
 - 当前版本设置面板翻译由 `extension.js` 中的 `ENABLE_SETTINGS_TRANSLATION` 控制，默认关闭

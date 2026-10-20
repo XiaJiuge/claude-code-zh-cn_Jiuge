@@ -2,7 +2,7 @@
   "name": "claude-code-zhcn",
   "displayName": "[非官方] Claude Code for VS Code 简体中文汉化包",
   "description": "非官方的 Claude Code for VS Code 插件的简体中文汉化插件",
-  "version": "1.5.4",
+  "version": "1.6.0",
   "publisher": "zstings",
   "author": {
     "name": "zstings"

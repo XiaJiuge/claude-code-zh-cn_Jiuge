@@ -1,7 +1,95 @@
 {
-  "version": "1.1.3",
+  "version": "1.1.5",
   "description": "Claude Code 内置汉化规则（Webview 全量）",
   "translations": [
+    {
+      "original": "`Claude is requesting permission to ${HT1($.toolName,tI($.toolName))}.`",
+      "chinese": "`Claude 正在请求权限以 ${HT1($.toolName,tI($.toolName))}。`"
+    },
+    {
+      "original": "`Claude is requesting permission to ${HT1($.toolName,$.toolName)}`",
+      "chinese": "`Claude 正在请求权限以 ${HT1($.toolName,$.toolName)}`"
+    },
+    {
+      "original": "`${J} is requesting permission to ${HT1($.toolName,tI($.toolName))}.`",
+      "chinese": "`${J} 正在请求权限以 ${HT1($.toolName,tI($.toolName))}。`"
+    },
+    {
+      "original": "`Prompt from ${Zu([$.name])}`",
+      "chinese": "`来自 ${Zu([$.name])} 的提示`"
+    },
+    {
+      "original": "Rz($,J=\"From\")",
+      "chinese": "Rz($,J=\"来自\")"
+    },
+    {
+      "original": "k71=\"Set model to \"",
+      "chinese": "k71=\"已设置模型为 \""
+    },
+    {
+      "original": "BR5=\"Kept model as \"",
+      "chinese": "BR5=\"模型保持不变：\""
+    },
+    {
+      "original": "KR5=\"Current model: \"",
+      "chinese": "KR5=\"当前模型：\""
+    },
+    {
+      "original": "FR5=\"No response from the cloud session — the switch to \"",
+      "chinese": "FR5=\"云端会话无响应 — 切换至 \""
+    },
+    {
+      "original": "DR5=\"Cloud session couldn't switch to \"",
+      "chinese": "DR5=\"云端会话无法切换到 \""
+    },
+    {
+      "original": "AR5=\"✗ Sandbox settings not changed: \"",
+      "chinese": "AR5=\"✗ 沙盒设置未更改：\""
+    },
+    {
+      "original": "PR5=\"Fast mode ON\"",
+      "chinese": "PR5=\"快速模式已开启\""
+    },
+    {
+      "original": "jR5=\" · model set to \"",
+      "chinese": "jR5=\" · 模型已设置为 \""
+    },
+    {
+      "original": "`Switched to ${s1.slice(k71.length)}`",
+      "chinese": "`已切换到 ${s1.slice(k71.length)}`"
+    },
+    {
+      "original": "`Working in the background: ${J}`",
+      "chinese": "`正在后台工作：${J}`"
+    },
+    {
+      "original": "\"Working in the background\"",
+      "chinese": "\"正在后台工作\""
+    },
+    {
+      "original": "\"Open it anyway\"",
+      "chinese": "\"仍然打开\""
+    },
+    {
+      "original": "`Why ${$F} can't be uninstalled here`",
+      "chinese": "`为何无法在此卸载 ${$F}`"
+    },
+    {
+      "original": "` Cancel leaves ${KW(J.map((Q)=>Z.plugin(Q.pluginId)))} as ${J.length===1?\"it is\":\"they are\"}.`",
+      "chinese": "` 取消后 ${KW(J.map((Q)=>Z.plugin(Q.pluginId)))} 将保持原状。`"
+    },
+    {
+      "original": "`${KW(U.map(Z.plugin))} ${U.length===1?\"uses\":\"use\"} it. Turn ${U.length===1?\"it\":\"them\"} off first.`",
+      "chinese": "`${KW(U.map(Z.plugin))} 正在使用它。请先关闭${U.length===1?\"它\":\"它们\"}。`"
+    },
+    {
+      "original": "`${KW(q.map(Z.plugin))} ${V?\"needs\":\"need\"} this plugin. Turn ${V?KW(q.map(Z.plugin)):\"them\"} off too?`",
+      "chinese": "`${KW(q.map(Z.plugin))} 需要此插件。是否也关闭${V?KW(q.map(Z.plugin)):\"它们\"}？`"
+    },
+    {
+      "original": "`Unarchive all ${h4.archived.length} sessions`",
+      "chinese": "`取消归档全部 ${h4.archived.length} 个会话`"
+    },
     {
       "original": "`Remove ${b0($)} from ${J} config?`",
       "chinese": "`从 ${J} 配置中移除 ${b0($)}？`"
